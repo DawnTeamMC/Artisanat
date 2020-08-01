@@ -1,0 +1,33 @@
+{
+	"name": "NookBuild",
+	"id": "nookbuild",
+	"version": "${version}",
+	"icon": "assets/nookbuild/textures/logo.png",
+	"description": "More building blocks!",
+	"authors": [
+		"Hugman"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/nookbuild",
+		"sources": "https://github.com/DawnTeamMC/NookBuild",
+		"issues": "https://github.com/DawnTeamMC/NookBuild/issues"
+	},
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.hugman.nookbuild.NookBuild"
+		]
+	},
+	"depends": {
+		"fabric": "*",
+		"dawn": "*"
+	},
+	"custom": {
+		"modupdater": {
+			"strategy": "curseforge",
+			"projectID": 399443
+		}
+	},
+	"license": "MIT",
+	"schemaVersion": 1
+}
