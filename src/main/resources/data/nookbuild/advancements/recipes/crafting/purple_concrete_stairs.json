@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:crafting/purple_concrete_stairs"
+		]
+	},
+	"criteria": {
+		"has_concrete": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "nookbuild:concrete/blocks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:crafting/purple_concrete_stairs"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_concrete",
+			"has_the_recipe"
+		]
+	]
+}

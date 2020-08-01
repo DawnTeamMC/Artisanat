@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:crafting/red_concrete_pressure_plate"
+		]
+	},
+	"criteria": {
+		"has_concrete": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "nookbuild:concrete/blocks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:crafting/red_concrete_pressure_plate"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_concrete",
+			"has_the_recipe"
+		]
+	]
+}

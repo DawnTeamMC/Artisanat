@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:concrete_vertical_slab",
+	"pattern": [
+		"#",
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:black_concrete"
+		}
+	},
+	"result": {
+		"item": "nookbuild:black_concrete_vertical_slab",
+		"count": 6
+	}
+}

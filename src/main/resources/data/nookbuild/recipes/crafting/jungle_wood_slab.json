@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:wood_slab",
+	"pattern": [
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:jungle_wood"
+		}
+	},
+	"result": {
+		"item": "nookbuild:jungle_wood_slab",
+		"count": 6
+	}
+}

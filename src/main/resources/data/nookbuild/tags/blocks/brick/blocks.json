@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:bricks",
+		"nookbuild:white_bricks",
+		"nookbuild:light_gray_bricks",
+		"nookbuild:gray_bricks",
+		"nookbuild:black_bricks",
+		"nookbuild:brown_bricks",
+		"nookbuild:red_bricks",
+		"nookbuild:orange_bricks",
+		"nookbuild:yellow_bricks",
+		"nookbuild:lime_bricks",
+		"nookbuild:green_bricks",
+		"nookbuild:cyan_bricks",
+		"nookbuild:light_blue_bricks",
+		"nookbuild:blue_bricks",
+		"nookbuild:purple_bricks",
+		"nookbuild:magenta_bricks",
+		"nookbuild:pink_bricks"
+	]
+}

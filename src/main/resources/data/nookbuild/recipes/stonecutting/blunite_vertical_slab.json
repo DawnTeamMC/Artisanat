@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "nookbuild:blunite"
+	},
+	"result": "nookbuild:blunite_vertical_slab",
+	"count": 2
+}

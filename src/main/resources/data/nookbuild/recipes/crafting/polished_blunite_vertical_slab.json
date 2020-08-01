@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"#",
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "nookbuild:polished_blunite"
+		}
+	},
+	"result": {
+		"item": "nookbuild:polished_blunite_vertical_slab",
+		"count": 6
+	}
+}

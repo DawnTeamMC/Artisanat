@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:brick_wall",
+	"pattern": [
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "nookbuild:white_bricks"
+		}
+	},
+	"result": {
+		"item": "nookbuild:white_brick_wall",
+		"count": 6
+	}
+}

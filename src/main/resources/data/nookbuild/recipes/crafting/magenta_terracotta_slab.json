@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:terracotta_slab",
+	"pattern": [
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:magenta_terracotta"
+		}
+	},
+	"result": {
+		"item": "nookbuild:magenta_terracotta_slab",
+		"count": 6
+	}
+}

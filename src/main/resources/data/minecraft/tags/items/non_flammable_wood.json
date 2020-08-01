@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"nookbuild:crimson_hyphae_stairs",
+		"nookbuild:crimson_hyphae_slab",
+		"nookbuild:crimson_hyphae_vertical_slab",
+		"nookbuild:crimson_hyphae_button",
+		"nookbuild:warped_hyphae_stairs",
+		"nookbuild:warped_hyphae_slab",
+		"nookbuild:warped_hyphae_vertical_slab",
+		"nookbuild:warped_hyphae_button"
+	]
+}

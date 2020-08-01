@@ -1,0 +1,8 @@
+{
+	"parent": "block/inner_stairs",
+	"textures": {
+		"bottom": "nookbuild:block/polished_blunite",
+		"top": "nookbuild:block/polished_blunite",
+		"side": "nookbuild:block/polished_blunite"
+	}
+}

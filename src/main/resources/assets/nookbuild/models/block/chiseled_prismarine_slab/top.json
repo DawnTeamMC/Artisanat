@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab_top",
+	"textures": {
+		"bottom": "nookbuild:block/chiseled_prismarine",
+		"top": "nookbuild:block/chiseled_prismarine",
+		"side": "nookbuild:block/chiseled_prismarine"
+	}
+}

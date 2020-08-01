@@ -1,0 +1,25 @@
+{
+	"replace": false,
+	"values": [
+		"#nookbuild:brick/stairs",
+		"#nookbuild:concrete/stairs",
+		"#nookbuild:dark_prismarine/stairs",
+		"#nookbuild:terracotta/stairs",
+		"nookbuild:cobblestone_brick_stairs",
+		"nookbuild:mossy_cobblestone_brick_stairs",
+		"nookbuild:granite_brick_stairs",
+		"nookbuild:diorite_brick_stairs",
+		"nookbuild:andesite_brick_stairs",
+		"nookbuild:sandstone_brick_stairs",
+		"nookbuild:polished_sandstone_stairs",
+		"nookbuild:red_sandstone_brick_stairs",
+		"nookbuild:polished_red_sandstone_stairs",
+		"nookbuild:smooth_stone_paving_stairs",
+		"nookbuild:chiseled_prismarine_stairs",
+		"nookbuild:prismarine_brick_paving_stairs",
+		"nookbuild:blunite_stairs",
+		"nookbuild:polished_blunite_stairs",
+		"nookbuild:carbonite_stairs",
+		"nookbuild:polished_carbonite_stairs"
+	]
+}

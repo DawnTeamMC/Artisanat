@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab",
+	"textures": {
+		"bottom": "nookbuild:block/lime_quartz_paving",
+		"top": "nookbuild:block/lime_quartz_paving",
+		"side": "nookbuild:block/lime_quartz_paving"
+	}
+}

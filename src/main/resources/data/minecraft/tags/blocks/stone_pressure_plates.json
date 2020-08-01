@@ -1,0 +1,7 @@
+{
+	"replace": false,
+	"values": [
+		"#nookbuild:concrete/pressure_plates",
+		"#nookbuild:terracotta/pressure_plates"
+	]
+}

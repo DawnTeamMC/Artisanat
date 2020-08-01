@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:stonecutting/brown_dark_prismarine_slab"
+		]
+	},
+	"criteria": {
+		"has_brown_dark_prismarine": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "nookbuild:brown_dark_prismarine"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:stonecutting/brown_dark_prismarine_slab"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_brown_dark_prismarine",
+			"has_the_recipe"
+		]
+	]
+}

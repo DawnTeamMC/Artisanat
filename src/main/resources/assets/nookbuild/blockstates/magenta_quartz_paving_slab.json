@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "nookbuild:block/magenta_quartz_paving_slab/bottom"
+		},
+		"type=top": {
+			"model": "nookbuild:block/magenta_quartz_paving_slab/top"
+		},
+		"type=double": {
+			"model": "nookbuild:block/magenta_quartz_paving"
+		}
+	}
+}

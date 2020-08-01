@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:andesite"
+		},
+		{
+			"item": "nookbuild:andesite_bricks"
+		}
+	],
+	"result": "nookbuild:andesite_brick_slab",
+	"count": 2
+}

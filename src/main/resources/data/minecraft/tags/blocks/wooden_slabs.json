@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"nookbuild:oak_wood_slab",
+		"nookbuild:spruce_wood_slab",
+		"nookbuild:birch_wood_slab",
+		"nookbuild:jungle_wood_slab",
+		"nookbuild:acacia_wood_slab",
+		"nookbuild:dark_oak_wood_slab",
+		"nookbuild:crimson_hyphae_slab",
+		"nookbuild:warped_hyphae_slab"
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:prismarine"
+		},
+		{
+			"item": "nookbuild:chiseled_prismarine"
+		}
+	],
+	"result": "nookbuild:chiseled_prismarine_vertical_slab",
+	"count": 2
+}

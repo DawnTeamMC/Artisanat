@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"nookbuild:white_concrete_wall",
+		"nookbuild:light_gray_concrete_wall",
+		"nookbuild:gray_concrete_wall",
+		"nookbuild:black_concrete_wall",
+		"nookbuild:brown_concrete_wall",
+		"nookbuild:red_concrete_wall",
+		"nookbuild:orange_concrete_wall",
+		"nookbuild:yellow_concrete_wall",
+		"nookbuild:yellow_concrete_wall",
+		"nookbuild:lime_concrete_wall",
+		"nookbuild:green_concrete_wall",
+		"nookbuild:cyan_concrete_wall",
+		"nookbuild:light_blue_concrete_wall",
+		"nookbuild:blue_concrete_wall",
+		"nookbuild:purple_concrete_wall",
+		"nookbuild:magenta_concrete_wall",
+		"nookbuild:pink_concrete_wall"
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"dawn:dark_prismarine_vertical_slab",
+		"nookbuild:white_dark_prismarine_vertical_slab",
+		"nookbuild:light_gray_dark_prismarine_vertical_slab",
+		"nookbuild:gray_dark_prismarine_vertical_slab",
+		"nookbuild:black_dark_prismarine_vertical_slab",
+		"nookbuild:brown_dark_prismarine_vertical_slab",
+		"nookbuild:red_dark_prismarine_vertical_slab",
+		"nookbuild:orange_dark_prismarine_vertical_slab",
+		"nookbuild:yellow_dark_prismarine_vertical_slab",
+		"nookbuild:lime_dark_prismarine_vertical_slab",
+		"nookbuild:green_dark_prismarine_vertical_slab",
+		"nookbuild:cyan_dark_prismarine_vertical_slab",
+		"nookbuild:light_blue_dark_prismarine_vertical_slab",
+		"nookbuild:blue_dark_prismarine_vertical_slab",
+		"nookbuild:purple_dark_prismarine_vertical_slab",
+		"nookbuild:magenta_dark_prismarine_vertical_slab",
+		"nookbuild:pink_dark_prismarine_vertical_slab"
+	]
+}

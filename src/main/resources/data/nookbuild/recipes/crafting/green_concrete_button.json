@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:concrete_button",
+	"pattern": [
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:green_concrete"
+		}
+	},
+	"result": {
+		"item": "nookbuild:green_concrete_button"
+	}
+}

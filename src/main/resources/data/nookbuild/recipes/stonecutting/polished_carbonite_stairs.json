@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "nookbuild:carbonite"
+		},
+		{
+			"item": "nookbuild:polished_carbonite"
+		}
+	],
+	"result": "nookbuild:polished_carbonite_stairs",
+	"count": 1
+}

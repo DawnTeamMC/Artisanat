@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"powered=false": {
+			"model": "nookbuild:block/lime_concrete_pressure_plate/unpressed"
+		},
+		"powered=true": {
+			"model": "nookbuild:block/lime_concrete_pressure_plate/pressed"
+		}
+	}
+}

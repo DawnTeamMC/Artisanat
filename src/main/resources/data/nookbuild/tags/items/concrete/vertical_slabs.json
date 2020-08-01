@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"nookbuild:white_concrete_vertical_slab",
+		"nookbuild:light_gray_concrete_vertical_slab",
+		"nookbuild:gray_concrete_vertical_slab",
+		"nookbuild:black_concrete_vertical_slab",
+		"nookbuild:brown_concrete_vertical_slab",
+		"nookbuild:red_concrete_vertical_slab",
+		"nookbuild:orange_concrete_vertical_slab",
+		"nookbuild:yellow_concrete_vertical_slab",
+		"nookbuild:yellow_concrete_vertical_slab",
+		"nookbuild:lime_concrete_vertical_slab",
+		"nookbuild:green_concrete_vertical_slab",
+		"nookbuild:cyan_concrete_vertical_slab",
+		"nookbuild:light_blue_concrete_vertical_slab",
+		"nookbuild:blue_concrete_vertical_slab",
+		"nookbuild:purple_concrete_vertical_slab",
+		"nookbuild:magenta_concrete_vertical_slab",
+		"nookbuild:pink_concrete_vertical_slab"
+	]
+}

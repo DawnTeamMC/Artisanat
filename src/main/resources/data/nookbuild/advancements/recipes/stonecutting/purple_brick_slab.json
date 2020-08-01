@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:stonecutting/purple_brick_slab"
+		]
+	},
+	"criteria": {
+		"has_purple_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "nookbuild:purple_bricks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:stonecutting/purple_brick_slab"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_purple_bricks",
+			"has_the_recipe"
+		]
+	]
+}

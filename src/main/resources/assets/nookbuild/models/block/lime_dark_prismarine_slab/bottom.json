@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab",
+	"textures": {
+		"bottom": "nookbuild:block/lime_dark_prismarine",
+		"top": "nookbuild:block/lime_dark_prismarine",
+		"side": "nookbuild:block/lime_dark_prismarine"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:red_sandstone"
+		},
+		{
+			"item": "nookbuild:polished_red_sandstone"
+		}
+	],
+	"result": "nookbuild:polished_red_sandstone_stairs",
+	"count": 1
+}

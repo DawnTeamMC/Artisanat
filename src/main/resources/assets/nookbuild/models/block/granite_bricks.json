@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "nookbuild:block/granite_bricks"
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab",
+	"textures": {
+		"bottom": "nookbuild:block/diorite_bricks",
+		"top": "nookbuild:block/diorite_bricks",
+		"side": "nookbuild:block/diorite_bricks"
+	}
+}

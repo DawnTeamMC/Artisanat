@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:stonecutting/red_brick_wall"
+		]
+	},
+	"criteria": {
+		"has_red_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "nookbuild:red_bricks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:stonecutting/red_brick_wall"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_red_bricks",
+			"has_the_recipe"
+		]
+	]
+}

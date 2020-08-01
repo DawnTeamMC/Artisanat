@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"#",
+		"#",
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "nookbuild:polished_carbonite"
+		}
+	},
+	"result": {
+		"item": "nookbuild:polished_carbonite_vertical_slab",
+		"count": 6
+	}
+}

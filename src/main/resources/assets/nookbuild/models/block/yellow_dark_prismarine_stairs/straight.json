@@ -1,0 +1,8 @@
+{
+	"parent": "block/stairs",
+	"textures": {
+		"bottom": "nookbuild:block/yellow_dark_prismarine",
+		"top": "nookbuild:block/yellow_dark_prismarine",
+		"side": "nookbuild:block/yellow_dark_prismarine"
+	}
+}

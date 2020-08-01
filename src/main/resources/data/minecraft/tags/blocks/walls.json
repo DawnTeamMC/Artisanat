@@ -1,0 +1,19 @@
+{
+	"replace": false,
+	"values": [
+		"#nookbuild:brick/walls",
+		"#nookbuild:concrete/walls",
+		"#nookbuild:dark_prismarine/walls",
+		"#nookbuild:terracotta/walls",
+		"nookbuild:cobblestone_brick_wall",
+		"nookbuild:mossy_cobblestone_brick_wall",
+		"nookbuild:granite_brick_wall",
+		"nookbuild:diorite_brick_wall",
+		"nookbuild:andesite_brick_wall",
+		"nookbuild:sandstone_brick_wall",
+		"nookbuild:red_sandstone_brick_wall",
+		"nookbuild:chiseled_prismarine_wall",
+		"nookbuild:blunite_wall",
+		"nookbuild:carbonite_wall"
+	]
+}

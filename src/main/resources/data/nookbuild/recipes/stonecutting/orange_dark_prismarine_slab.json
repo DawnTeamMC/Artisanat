@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "nookbuild:orange_dark_prismarine"
+	},
+	"result": "nookbuild:orange_dark_prismarine_slab",
+	"count": 2
+}

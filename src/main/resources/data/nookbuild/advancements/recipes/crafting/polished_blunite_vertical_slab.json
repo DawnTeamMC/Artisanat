@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:crafting/polished_blunite_vertical_slab"
+		]
+	},
+	"criteria": {
+		"has_polished_blunite": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "nookbuild:polished_blunite"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:crafting/polished_blunite_vertical_slab"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_polished_blunite",
+			"has_the_recipe"
+		]
+	]
+}

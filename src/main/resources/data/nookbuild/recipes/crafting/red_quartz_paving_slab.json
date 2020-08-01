@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:quartz_paving_slab",
+	"pattern": [
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "nookbuild:red_quartz_paving"
+		}
+	},
+	"result": {
+		"item": "nookbuild:red_quartz_paving_slab",
+		"count": 6
+	}
+}

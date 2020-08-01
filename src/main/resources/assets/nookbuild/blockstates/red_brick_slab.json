@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "nookbuild:block/red_brick_slab/bottom"
+		},
+		"type=top": {
+			"model": "nookbuild:block/red_brick_slab/top"
+		},
+		"type=double": {
+			"model": "nookbuild:block/red_bricks"
+		}
+	}
+}

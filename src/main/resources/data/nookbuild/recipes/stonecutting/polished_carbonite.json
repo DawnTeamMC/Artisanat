@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "nookbuild:carbonite"
+	},
+	"result": "nookbuild:polished_carbonite",
+	"count": 1
+}

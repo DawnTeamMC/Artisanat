@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"nookbuild:oak_wood_stairs",
+		"nookbuild:spruce_wood_stairs",
+		"nookbuild:birch_wood_stairs",
+		"nookbuild:jungle_wood_stairs",
+		"nookbuild:acacia_wood_stairs",
+		"nookbuild:dark_oak_wood_stairs",
+		"nookbuild:crimson_hyphae_stairs",
+		"nookbuild:warped_hyphae_stairs"
+	]
+}

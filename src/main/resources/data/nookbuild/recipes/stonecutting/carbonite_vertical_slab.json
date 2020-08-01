@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "nookbuild:carbonite"
+	},
+	"result": "nookbuild:carbonite_vertical_slab",
+	"count": 2
+}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:granite"
+		},
+		{
+			"item": "nookbuild:granite_bricks"
+		}
+	],
+	"result": "nookbuild:granite_brick_wall",
+	"count": 1
+}

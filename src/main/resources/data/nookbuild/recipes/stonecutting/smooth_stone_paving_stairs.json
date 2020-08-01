@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:smooth_stone"
+		},
+		{
+			"item": "nookbuild:smooth_stone_paving"
+		}
+	],
+	"result": "nookbuild:smooth_stone_paving_stairs",
+	"count": 1
+}

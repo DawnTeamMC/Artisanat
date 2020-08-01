@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "nookbuild:light_gray_bricks"
+	},
+	"result": "nookbuild:light_gray_brick_wall",
+	"count": 1
+}

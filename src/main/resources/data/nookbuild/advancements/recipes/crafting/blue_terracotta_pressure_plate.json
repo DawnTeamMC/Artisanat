@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:crafting/blue_terracotta_pressure_plate"
+		]
+	},
+	"criteria": {
+		"has_terracotta": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "nookbuild:terracotta/blocks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:crafting/blue_terracotta_pressure_plate"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_terracotta",
+			"has_the_recipe"
+		]
+	]
+}

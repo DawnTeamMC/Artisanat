@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "nookbuild:block/oak_wood_slab/bottom"
+		},
+		"type=top": {
+			"model": "nookbuild:block/oak_wood_slab/top"
+		},
+		"type=double": {
+			"model": "minecraft:block/oak_wood"
+		}
+	}
+}

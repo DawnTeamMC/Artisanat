@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "nookbuild:green_quartz_paving"
+	},
+	"result": "nookbuild:green_quartz_paving_slab",
+	"count": 2
+}

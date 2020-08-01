@@ -1,0 +1,6 @@
+{
+	"parent": "dawn:block/pile",
+	"textures": {
+		"pile": "nookbuild:block/allium_pile"
+	}
+}

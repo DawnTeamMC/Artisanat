@@ -1,0 +1,13 @@
+{
+	"replace": false,
+	"values": [
+		"nookbuild:oak_wood_button",
+		"nookbuild:spruce_wood_button",
+		"nookbuild:birch_wood_button",
+		"nookbuild:jungle_wood_button",
+		"nookbuild:acacia_wood_button",
+		"nookbuild:dark_oak_wood_button",
+		"nookbuild:crimson_hyphae_button",
+		"nookbuild:warped_hyphae_button"
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:dark_prismarine_stairs",
+		"nookbuild:white_dark_prismarine_stairs",
+		"nookbuild:light_gray_dark_prismarine_stairs",
+		"nookbuild:gray_dark_prismarine_stairs",
+		"nookbuild:black_dark_prismarine_stairs",
+		"nookbuild:brown_dark_prismarine_stairs",
+		"nookbuild:red_dark_prismarine_stairs",
+		"nookbuild:orange_dark_prismarine_stairs",
+		"nookbuild:yellow_dark_prismarine_stairs",
+		"nookbuild:lime_dark_prismarine_stairs",
+		"nookbuild:green_dark_prismarine_stairs",
+		"nookbuild:cyan_dark_prismarine_stairs",
+		"nookbuild:light_blue_dark_prismarine_stairs",
+		"nookbuild:blue_dark_prismarine_stairs",
+		"nookbuild:purple_dark_prismarine_stairs",
+		"nookbuild:magenta_dark_prismarine_stairs",
+		"nookbuild:pink_dark_prismarine_stairs"
+	]
+}

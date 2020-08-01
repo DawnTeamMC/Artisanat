@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:mossy_cobblestone"
+		},
+		{
+			"item": "nookbuild:mossy_cobblestone_bricks"
+		}
+	],
+	"result": "nookbuild:mossy_cobblestone_brick_slab",
+	"count": 2
+}

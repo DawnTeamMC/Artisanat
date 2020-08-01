@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:cobblestone"
+		},
+		{
+			"item": "nookbuild:cobblestone_bricks"
+		}
+	],
+	"result": "nookbuild:cobblestone_brick_vertical_slab",
+	"count": 2
+}

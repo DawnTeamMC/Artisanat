@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:bricks",
+	"pattern": [
+		"XXX",
+		"XOX",
+		"XXX"
+	],
+	"key": {
+		"X": {
+			"item": "minecraft:bricks"
+		},
+		"O": {
+			"item": "minecraft:pink_dye"
+		}
+	},
+	"result": {
+		"item": "nookbuild:pink_bricks",
+		"count": 8
+	}
+}

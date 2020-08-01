@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:quartz_paving",
+	"pattern": [
+		"XO",
+		"OX"
+	],
+	"key": {
+		"X": {
+			"item": "minecraft:quartz_block"
+		},
+		"O": {
+			"item": "minecraft:red_dye"
+		}
+	},
+	"result": {
+		"item": "nookbuild:red_quartz_paving",
+		"count": 2
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:sandstone"
+		},
+		{
+			"item": "nookbuild:sandstone_bricks"
+		}
+	],
+	"result": "nookbuild:sandstone_brick_slab",
+	"count": 2
+}

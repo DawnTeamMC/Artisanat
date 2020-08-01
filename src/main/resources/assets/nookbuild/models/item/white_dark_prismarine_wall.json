@@ -1,0 +1,6 @@
+{
+	"parent": "block/wall_inventory",
+	"textures": {
+		"wall": "nookbuild:block/white_dark_prismarine"
+	}
+}

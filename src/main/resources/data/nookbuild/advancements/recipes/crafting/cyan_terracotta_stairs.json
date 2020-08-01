@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:crafting/cyan_terracotta_stairs"
+		]
+	},
+	"criteria": {
+		"has_terracotta": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "nookbuild:terracotta/blocks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:crafting/cyan_terracotta_stairs"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_terracotta",
+			"has_the_recipe"
+		]
+	]
+}
