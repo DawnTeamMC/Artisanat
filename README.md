@@ -34,7 +34,7 @@ Note that most of these features also come under the shape of stairs, slabs, ver
 
 #### Other Mods by the Dawn Team:
 <p align="center">
-	<strong>Check out our other mod <a href="https://www.curseforge.com/minecraft/mc-mods/mubble">Mubble</a> and <a href="https://www.curseforge.com/minecraft/mc-mods/wild-explorer">Wild Explorer</a>:</strong><br>
+	<strong>Check out our other mods <a href="https://www.curseforge.com/minecraft/mc-mods/mubble">Mubble</a> and <a href="https://www.curseforge.com/minecraft/mc-mods/wild-explorer">Wild Explorer</a>:</strong><br>
 	<a href="https://www.curseforge.com/minecraft/mc-mods/mubble"><img title="Mubble" height="100" src="https://raw.githubusercontent.com/DawnTeamMC/DawnTeamMC/master/mubble/header.png"></a>
 	<a href="https://www.curseforge.com/minecraft/mc-mods/wild-explorer"><img title="Wild Explorer" height="100" src="https://raw.githubusercontent.com/DawnTeamMC/DawnTeamMC/master/wild_explorer/header.png"></a><br>
 </p>

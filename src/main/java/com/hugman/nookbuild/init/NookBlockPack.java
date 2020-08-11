@@ -23,6 +23,8 @@ public class NookBlockPack extends NookPack {
 	public static final MSBlockPack CRIMSON_HYPHAE_BLOCKS = register(new MSBlockPack.Builder("crimson_hyphae", Blocks.CRIMSON_HYPHAE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.VERTICAL_SLAB, DefaultBlockGetter.WOOD_BUTTON));
 	public static final MSBlockPack WARPED_HYPHAE_BLOCKS = register(new MSBlockPack.Builder("warped_hyphae", Blocks.WARPED_HYPHAE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.VERTICAL_SLAB, DefaultBlockGetter.WOOD_BUTTON));
 
+	public static final Block DARK_PRISMARINE_WALL = register(new BlockCreator.Builder("dark_prismarine", DefaultBlockGetter.WALL, Blocks.DARK_PRISMARINE));
+
 	public static final MSBlockPack COBBLESTONE_BRICKS = register(new MSBlockPack.Builder("cobblestone_bricks", Blocks.MOSSY_COBBLESTONE, DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.VERTICAL_SLAB, DefaultBlockGetter.WALL));
 	public static final MSBlockPack MOSSY_COBBLESTONE_BRICKS = register(new MSBlockPack.Builder("mossy_cobblestone_bricks", Blocks.MOSSY_COBBLESTONE, DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.VERTICAL_SLAB, DefaultBlockGetter.WALL));
 	public static final MSBlockPack GRANITE_BRICKS = register(new MSBlockPack.Builder("granite_bricks", Blocks.GRANITE, DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.VERTICAL_SLAB, DefaultBlockGetter.WALL));
