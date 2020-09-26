@@ -16,6 +16,9 @@
 	"entrypoints": {
 		"main": [
 			"com.hugman.nookbuild.NookBuild"
+		],
+		"client": [
+			"com.hugman.nookbuild.NookBuildClient"
 		]
 	},
 	"depends": {

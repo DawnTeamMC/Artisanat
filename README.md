@@ -13,6 +13,7 @@
 
 #### Features:
 
+* Vertical slabs
 * Stained bricks
 * More terracotta/concrete blocks
 * Stained dark prismarine

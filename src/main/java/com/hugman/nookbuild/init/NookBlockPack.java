@@ -3,7 +3,6 @@ package com.hugman.nookbuild.init;
 import com.hugman.dawn.api.creator.BlockCreator;
 import com.hugman.dawn.api.creator.pack.block.MSBlockPack;
 import com.hugman.dawn.api.creator.pack.block.MSCBlockPack;
-import com.hugman.dawn.api.object.block.PlantPileBlock;
 import com.hugman.dawn.api.util.BlockSettings;
 import com.hugman.dawn.api.util.DefaultBlockGetter;
 import com.hugman.nookbuild.object.block.WitherRosePileBlock;
