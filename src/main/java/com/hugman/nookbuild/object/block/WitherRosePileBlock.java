@@ -30,8 +30,9 @@ public class WitherRosePileBlock extends PlantPileBlock {
 		return super.canPlantOnTop(state, worldIn, pos) || block == Blocks.SOUL_SAND;
 	}
 
+	@Override
 	@Environment(EnvType.CLIENT)
-	public void animateTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
+	public void randomDisplayTick(BlockState stateIn, World worldIn, BlockPos pos, Random rand) {
 		for(int i = 0; i < 5; ++i) {
 			if(rand.nextBoolean()) {
 				worldIn.addParticle(ParticleTypes.SMOKE, (double) pos.getX() + (double) (rand.nextInt(17) / 16), (double) pos.getY() + (0.5D - (double) rand.nextFloat()), (double) pos.getZ() + (double) (rand.nextInt(17) / 16), 0.0D, 0.0D, 0.0D);

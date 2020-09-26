@@ -1,0 +1,10 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:blackstone"
+		}
+	],
+	"result": "nookbuild:blackstone_vertical_slab",
+	"count": 2
+}

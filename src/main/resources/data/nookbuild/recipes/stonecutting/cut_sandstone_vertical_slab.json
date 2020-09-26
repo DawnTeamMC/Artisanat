@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:sandstone"
+		},
+		{
+			"item": "minecraft:cut_sandstone"
+		}
+	],
+	"result": "nookbuild:cut_sandstone_vertical_slab",
+	"count": 2
+}
