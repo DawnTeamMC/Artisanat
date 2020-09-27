@@ -26,12 +26,15 @@
 * Prismarine brick paving
 * Quartz paving
 * Blunite and carbonite
-* Flower piles
+* Leaf and flower piles
 
 Note that most of these features also come under the shape of stairs, slabs, vertical slabs, walls, buttons and even pressure plates!
 
 ##### Images of the added features can be found on the CurseForge [Images page](https://www.curseforge.com/minecraft/mc-mods/nookbuild/screenshots).
 
+#### Showcase Video:
+
+[![](http://img.youtube.com/vi/FtN8oOmF0gY/hqdefault.jpg)](http://www.youtube.com/watch?v=FtN8oOmF0gY)
 
 #### Other Mods by the Dawn Team:
 <p align="center">
