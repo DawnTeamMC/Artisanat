@@ -12,6 +12,6 @@ public class NookBuild implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		new NookBlocks();
+		NookBlocks.init();
 	}
 }

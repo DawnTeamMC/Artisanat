@@ -13,6 +13,10 @@ import net.minecraft.block.MaterialColor;
 import net.minecraft.item.ItemGroup;
 
 public class NookBlocks extends NookPack {
+	public static void init() {
+
+	}
+
 	public static final Block DARK_PRISMARINE_WALL = register(new BlockCreator.Builder("dark_prismarine", DefaultBlockGetter.WALL, FabricBlockSettings.copyOf(Blocks.DARK_PRISMARINE)));
 
 	public static final MSBlockPack OAK_WOOD_BLOCKS = register(new MSBlockPack.Builder("oak_wood", FabricBlockSettings.copyOf(Blocks.OAK_WOOD), DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WOOD_BUTTON));
