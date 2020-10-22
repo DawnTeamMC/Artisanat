@@ -12,8 +12,6 @@
 		"nookbuild:andesite_brick_wall",
 		"nookbuild:sandstone_brick_wall",
 		"nookbuild:red_sandstone_brick_wall",
-		"nookbuild:chiseled_prismarine_wall",
-		"nookbuild:blunite_wall",
-		"nookbuild:carbonite_wall"
+		"nookbuild:chiseled_prismarine_wall"
 	]
 }

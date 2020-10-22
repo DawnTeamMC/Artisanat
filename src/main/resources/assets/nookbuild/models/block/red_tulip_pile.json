@@ -1,6 +1,0 @@
-{
-	"parent": "dawn:block/pile",
-	"textures": {
-		"pile": "nookbuild:block/red_tulip_pile"
-	}
-}

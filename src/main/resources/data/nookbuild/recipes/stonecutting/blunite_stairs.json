@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "nookbuild:blunite"
-	},
-	"result": "nookbuild:blunite_stairs",
-	"count": 1
-}

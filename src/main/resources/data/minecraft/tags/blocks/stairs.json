@@ -16,10 +16,6 @@
 		"nookbuild:polished_red_sandstone_stairs",
 		"nookbuild:smooth_stone_paving_stairs",
 		"nookbuild:chiseled_prismarine_stairs",
-		"nookbuild:prismarine_brick_paving_stairs",
-		"nookbuild:blunite_stairs",
-		"nookbuild:polished_blunite_stairs",
-		"nookbuild:carbonite_stairs",
-		"nookbuild:polished_carbonite_stairs"
+		"nookbuild:prismarine_brick_paving_stairs"
 	]
 }

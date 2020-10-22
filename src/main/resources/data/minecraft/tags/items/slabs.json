@@ -16,10 +16,6 @@
 		"nookbuild:polished_red_sandstone_slab",
 		"nookbuild:smooth_stone_paving_slab",
 		"nookbuild:chiseled_prismarine_slab",
-		"nookbuild:prismarine_brick_paving_slab",
-		"nookbuild:blunite_slab",
-		"nookbuild:polished_blunite_slab",
-		"nookbuild:carbonite_slab",
-		"nookbuild:polished_carbonite_slab"
+		"nookbuild:prismarine_brick_paving_slab"
 	]
 }
