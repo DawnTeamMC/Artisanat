@@ -1,6 +1,6 @@
 package com.hugman.nookbuild;
 
-import com.hugman.dawn.api.creator.ModData;
+import com.hugman.dawn.api.util.ModData;
 import com.hugman.nookbuild.init.NookBlocks;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
@@ -13,5 +13,6 @@ public class NookBuild implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		NookBlocks.init();
+		MOD_DATA.registerCreators();
 	}
 }
