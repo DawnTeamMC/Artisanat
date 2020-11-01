@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "nookbuild:block/black_terracotta_brick_slab/bottom"
+		},
+		"type=top": {
+			"model": "nookbuild:block/black_terracotta_brick_slab/top"
+		},
+		"type=double": {
+			"model": "nookbuild:block/black_terracotta_bricks"
+		}
+	}
+}

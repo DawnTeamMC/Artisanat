@@ -1,0 +1,8 @@
+{
+	"parent": "block/inner_stairs",
+	"textures": {
+		"bottom": "nookbuild:block/gray_terracotta_bricks",
+		"top": "nookbuild:block/gray_terracotta_bricks",
+		"side": "nookbuild:block/gray_terracotta_bricks"
+	}
+}
