@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "nookbuild:terracotta_bricks",
+	"pattern": [
+		"XX",
+		"XX"
+	],
+	"key": {
+		"X": {
+			"item": "minecraft:blue_terracotta"
+		}
+	},
+	"result": {
+		"item": "nookbuild:blue_terracotta_bricks",
+		"count": 4
+	}
+}

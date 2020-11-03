@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:light_gray_terracotta"
+		},
+		{
+			"item": "nookbuild:light_gray_terracotta_bricks"
+		}
+	],
+	"result": "nookbuild:light_gray_terracotta_brick_stairs",
+	"count": 1
+}

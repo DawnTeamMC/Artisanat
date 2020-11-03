@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:black_terracotta"
+		},
+		{
+			"item": "nookbuild:black_terracotta_bricks"
+		}
+	],
+	"result": "nookbuild:black_terracotta_brick_slab",
+	"count": 2
+}
