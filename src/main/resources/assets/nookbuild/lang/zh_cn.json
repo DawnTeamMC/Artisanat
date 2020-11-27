@@ -1,7 +1,5 @@
 {
-	"comment": "BLOCKS",
 	"block.nookbuild.dark_prismarine_wall": "暗海晶墙",
-
 	"block.nookbuild.oak_wood_stairs": "橡木楼梯",
 	"block.nookbuild.spruce_wood_stairs": "云杉木楼梯",
 	"block.nookbuild.birch_wood_stairs": "白桦木楼梯",
@@ -10,7 +8,6 @@
 	"block.nookbuild.dark_oak_wood_stairs": "深色橡木楼梯",
 	"block.nookbuild.crimson_hyphae_stairs": "绯红菌核楼梯",
 	"block.nookbuild.warped_hyphae_stairs": "诡异菌核楼梯",
-
 	"block.nookbuild.oak_wood_slab": "橡木台阶",
 	"block.nookbuild.spruce_wood_slab": "云杉木台阶",
 	"block.nookbuild.birch_wood_slab": "白桦木台阶",
@@ -19,7 +16,6 @@
 	"block.nookbuild.dark_oak_wood_slab": "深色橡木台阶",
 	"block.nookbuild.crimson_hyphae_slab": "绯红菌核台阶",
 	"block.nookbuild.warped_hyphae_slab": "诡异菌核台阶",
-
 	"block.nookbuild.oak_wood_button": "橡木按钮",
 	"block.nookbuild.spruce_wood_button": "云杉木按钮",
 	"block.nookbuild.birch_wood_button": "白桦木按钮",
@@ -28,7 +24,6 @@
 	"block.nookbuild.dark_oak_wood_button": "深色橡木按钮",
 	"block.nookbuild.crimson_hyphae_button": "绯红菌核按钮",
 	"block.nookbuild.warped_hyphae_button": "诡异菌核按钮",
-
 	"block.nookbuild.cobblestone_bricks": "圆石砖",
 	"block.nookbuild.cobblestone_brick_stairs": "圆石砖楼梯",
 	"block.nookbuild.cobblestone_brick_slab": "圆石砖台阶",
@@ -49,7 +44,6 @@
 	"block.nookbuild.andesite_brick_stairs": "安山岩砖楼梯",
 	"block.nookbuild.andesite_brick_slab": "安山岩砖台阶",
 	"block.nookbuild.andesite_brick_wall": "安山岩砖墙",
-
 	"block.nookbuild.sandstone_bricks": "砂岩砖",
 	"block.nookbuild.sandstone_brick_stairs": "砂岩砖楼梯",
 	"block.nookbuild.sandstone_brick_slab": "砂岩砖台阶",
@@ -64,20 +58,16 @@
 	"block.nookbuild.polished_red_sandstone": "磨制红砂岩",
 	"block.nookbuild.polished_red_sandstone_stairs": "磨制红砂岩楼梯",
 	"block.nookbuild.polished_red_sandstone_slab": "磨制红砂岩台阶",
-
 	"block.nookbuild.smooth_stone_paving": "平滑石头铺路石",
 	"block.nookbuild.smooth_stone_paving_stairs": "平滑石头铺路石楼梯",
 	"block.nookbuild.smooth_stone_paving_slab": "平滑石头铺路石台阶",
-
 	"block.nookbuild.chiseled_prismarine": "錾制海晶石",
 	"block.nookbuild.chiseled_prismarine_stairs": "錾制海晶石楼梯",
 	"block.nookbuild.chiseled_prismarine_slab": "錾制海晶石台阶",
 	"block.nookbuild.chiseled_prismarine_wall": "錾制海晶石墙",
-
 	"block.nookbuild.prismarine_brick_paving": "海晶石砖铺路石",
 	"block.nookbuild.prismarine_brick_paving_stairs": "海晶石砖铺路石楼梯",
 	"block.nookbuild.prismarine_brick_paving_slab": "海晶石砖铺路石台阶",
-
 	"block.nookbuild.blue_bricks": "蓝色砖",
 	"block.nookbuild.light_blue_bricks": "淡蓝色砖",
 	"block.nookbuild.cyan_bricks": "青色砖",
@@ -94,7 +84,6 @@
 	"block.nookbuild.light_gray_bricks": "淡灰色砖",
 	"block.nookbuild.gray_bricks": "灰色砖",
 	"block.nookbuild.black_bricks": "黑色砖",
-
 	"block.nookbuild.blue_brick_stairs": "蓝色砖楼梯",
 	"block.nookbuild.light_blue_brick_stairs": "淡蓝色砖楼梯",
 	"block.nookbuild.cyan_brick_stairs": "青色砖楼梯",
@@ -111,7 +100,6 @@
 	"block.nookbuild.light_gray_brick_stairs": "淡灰色砖楼梯",
 	"block.nookbuild.gray_brick_stairs": "灰色砖楼梯",
 	"block.nookbuild.black_brick_stairs": "黑色砖楼梯",
-
 	"block.nookbuild.blue_brick_slab": "蓝色砖台阶",
 	"block.nookbuild.light_blue_brick_slab": "淡蓝色砖台阶",
 	"block.nookbuild.cyan_brick_slab": "青色砖台阶",
@@ -128,7 +116,6 @@
 	"block.nookbuild.light_gray_brick_slab": "淡灰色砖台阶",
 	"block.nookbuild.gray_brick_slab": "灰色砖台阶",
 	"block.nookbuild.black_brick_slab": "黑色砖台阶",
-
 	"block.nookbuild.blue_brick_wall": "蓝色砖墙",
 	"block.nookbuild.light_blue_brick_wall": "淡蓝色砖墙",
 	"block.nookbuild.cyan_brick_wall": "青色砖墙",
@@ -145,7 +132,6 @@
 	"block.nookbuild.light_gray_brick_wall": "淡灰色砖墙",
 	"block.nookbuild.gray_brick_wall": "灰色砖墙",
 	"block.nookbuild.black_brick_wall": "黑色砖墙",
-
 	"block.nookbuild.terracotta_stairs": "陶瓦楼梯",
 	"block.nookbuild.blue_terracotta_stairs": "蓝色陶瓦楼梯",
 	"block.nookbuild.light_blue_terracotta_stairs": "淡蓝色陶瓦楼梯",
@@ -163,7 +149,6 @@
 	"block.nookbuild.light_gray_terracotta_stairs": "淡灰色陶瓦楼梯",
 	"block.nookbuild.gray_terracotta_stairs": "灰色陶瓦楼梯",
 	"block.nookbuild.black_terracotta_stairs": "黑色陶瓦楼梯",
-
 	"block.nookbuild.terracotta_slab": "陶瓦台阶",
 	"block.nookbuild.blue_terracotta_slab": "蓝色陶瓦台阶",
 	"block.nookbuild.light_blue_terracotta_slab": "淡蓝色陶瓦台阶",
@@ -181,7 +166,6 @@
 	"block.nookbuild.light_gray_terracotta_slab": "淡灰色陶瓦台阶",
 	"block.nookbuild.gray_terracotta_slab": "灰色陶瓦台阶",
 	"block.nookbuild.black_terracotta_slab": "黑色陶瓦台阶",
-
 	"block.nookbuild.terracotta_wall": "陶瓦墙",
 	"block.nookbuild.blue_terracotta_wall": "蓝色陶瓦墙",
 	"block.nookbuild.light_blue_terracotta_wall": "淡蓝色陶瓦墙",
@@ -199,7 +183,6 @@
 	"block.nookbuild.light_gray_terracotta_wall": "淡灰色陶瓦墙",
 	"block.nookbuild.gray_terracotta_wall": "灰色陶瓦墙",
 	"block.nookbuild.black_terracotta_wall": "黑色陶瓦墙",
-
 	"block.nookbuild.terracotta_pressure_plate": "陶瓦压力板",
 	"block.nookbuild.blue_terracotta_pressure_plate": "蓝色陶瓦压力板",
 	"block.nookbuild.light_blue_terracotta_pressure_plate": "淡蓝色陶瓦压力板",
@@ -217,7 +200,6 @@
 	"block.nookbuild.light_gray_terracotta_pressure_plate": "淡灰色陶瓦压力板",
 	"block.nookbuild.gray_terracotta_pressure_plate": "灰色陶瓦压力板",
 	"block.nookbuild.black_terracotta_pressure_plate": "黑色陶瓦压力板",
-
 	"block.nookbuild.terracotta_button": "陶瓦按钮",
 	"block.nookbuild.blue_terracotta_button": "蓝色陶瓦按钮",
 	"block.nookbuild.light_blue_terracotta_button": "淡蓝色陶瓦按钮",
@@ -235,7 +217,6 @@
 	"block.nookbuild.light_gray_terracotta_button": "淡灰色陶瓦按钮",
 	"block.nookbuild.gray_terracotta_button": "灰色陶瓦按钮",
 	"block.nookbuild.black_terracotta_button": "黑色陶瓦按钮",
-
 	"block.nookbuild.blue_dark_prismarine": "蓝色深色海晶石",
 	"block.nookbuild.light_blue_dark_prismarine": "淡蓝色深色海晶石",
 	"block.nookbuild.cyan_dark_prismarine": "青色深色海晶石",
@@ -252,7 +233,6 @@
 	"block.nookbuild.light_gray_dark_prismarine": "淡灰色深色海晶石",
 	"block.nookbuild.gray_dark_prismarine": "灰色深色海晶石",
 	"block.nookbuild.black_dark_prismarine": "黑色深色海晶石",
-
 	"block.nookbuild.blue_dark_prismarine_stairs": "蓝色暗海晶楼梯",
 	"block.nookbuild.light_blue_dark_prismarine_stairs": "淡蓝色暗海晶楼梯",
 	"block.nookbuild.cyan_dark_prismarine_stairs": "青色暗海晶楼梯",
@@ -269,7 +249,6 @@
 	"block.nookbuild.light_gray_dark_prismarine_stairs": "淡灰色暗海晶楼梯",
 	"block.nookbuild.gray_dark_prismarine_stairs": "灰色暗海晶楼梯",
 	"block.nookbuild.black_dark_prismarine_stairs": "黑色暗海晶楼梯",
-
 	"block.nookbuild.blue_dark_prismarine_slab": "蓝色暗海晶台阶",
 	"block.nookbuild.light_blue_dark_prismarine_slab": "淡蓝色暗海晶台阶",
 	"block.nookbuild.cyan_dark_prismarine_slab": "青色暗海晶台阶",
@@ -286,7 +265,6 @@
 	"block.nookbuild.light_gray_dark_prismarine_slab": "淡灰色暗海晶台阶",
 	"block.nookbuild.gray_dark_prismarine_slab": "灰色暗海晶台阶",
 	"block.nookbuild.black_dark_prismarine_slab": "黑色暗海晶台阶",
-
 	"block.nookbuild.blue_dark_prismarine_wall": "蓝色暗海晶墙",
 	"block.nookbuild.light_blue_dark_prismarine_wall": "淡蓝色暗海晶墙",
 	"block.nookbuild.cyan_dark_prismarine_wall": "青色暗海晶墙",
@@ -303,7 +281,6 @@
 	"block.nookbuild.light_gray_dark_prismarine_wall": "淡灰色暗海晶墙",
 	"block.nookbuild.gray_dark_prismarine_wall": "灰色暗海晶墙",
 	"block.nookbuild.black_dark_prismarine_wall": "黑色暗海晶墙",
-
 	"block.nookbuild.blue_concrete_stairs": "蓝色混凝土楼梯",
 	"block.nookbuild.light_blue_concrete_stairs": "淡蓝色混凝土楼梯",
 	"block.nookbuild.cyan_concrete_stairs": "青色混凝土楼梯",
@@ -320,7 +297,6 @@
 	"block.nookbuild.light_gray_concrete_stairs": "淡灰色混凝土楼梯",
 	"block.nookbuild.gray_concrete_stairs": "灰色混凝土楼梯",
 	"block.nookbuild.black_concrete_stairs": "黑色混凝土楼梯",
-
 	"block.nookbuild.blue_concrete_slab": "蓝色混凝土台阶",
 	"block.nookbuild.light_blue_concrete_slab": "淡蓝色混凝土台阶",
 	"block.nookbuild.cyan_concrete_slab": "青色混凝土台阶",
@@ -337,7 +313,6 @@
 	"block.nookbuild.light_gray_concrete_slab": "淡灰色混凝土台阶",
 	"block.nookbuild.gray_concrete_slab": "灰色混凝土台阶",
 	"block.nookbuild.black_concrete_slab": "黑色混凝土台阶",
-
 	"block.nookbuild.blue_concrete_wall": "蓝色混凝土墙",
 	"block.nookbuild.light_blue_concrete_wall": "淡蓝色混凝土墙",
 	"block.nookbuild.cyan_concrete_wall": "青色混凝土墙",
@@ -354,7 +329,6 @@
 	"block.nookbuild.light_gray_concrete_wall": "淡灰色混凝土墙",
 	"block.nookbuild.gray_concrete_wall": "灰色混凝土墙",
 	"block.nookbuild.black_concrete_wall": "黑色混凝土墙",
-
 	"block.nookbuild.blue_concrete_pressure_plate": "蓝色混凝土压力板",
 	"block.nookbuild.light_blue_concrete_pressure_plate": "淡蓝色混凝土压力板",
 	"block.nookbuild.cyan_concrete_pressure_plate": "青色混凝土压力板",
@@ -371,7 +345,6 @@
 	"block.nookbuild.light_gray_concrete_pressure_plate": "淡灰色混凝土压力板",
 	"block.nookbuild.gray_concrete_pressure_plate": "灰色混凝土压力板",
 	"block.nookbuild.black_concrete_pressure_plate": "黑色混凝土压力板",
-
 	"block.nookbuild.blue_concrete_button": "蓝色混凝土按钮",
 	"block.nookbuild.light_blue_concrete_button": "淡蓝色混凝土按钮",
 	"block.nookbuild.cyan_concrete_button": "青色混凝土按钮",
@@ -388,7 +361,6 @@
 	"block.nookbuild.light_gray_concrete_button": "淡灰色混凝土按钮",
 	"block.nookbuild.gray_concrete_button": "灰色混凝土按钮",
 	"block.nookbuild.black_concrete_button": "黑色混凝土按钮",
-
 	"block.nookbuild.blue_quartz_paving": "蓝色石英铺路石",
 	"block.nookbuild.light_blue_quartz_paving": "淡蓝色石英铺路石",
 	"block.nookbuild.cyan_quartz_paving": "青色石英铺路石",
@@ -405,7 +377,6 @@
 	"block.nookbuild.light_gray_quartz_paving": "淡灰色石英铺路石",
 	"block.nookbuild.gray_quartz_paving": "灰色石英铺路石",
 	"block.nookbuild.black_quartz_paving": "黑色石英铺路石",
-
 	"block.nookbuild.blue_quartz_paving_stairs": "蓝色石英铺路石楼梯",
 	"block.nookbuild.light_blue_quartz_paving_stairs": "淡蓝色石英铺路石楼梯",
 	"block.nookbuild.cyan_quartz_paving_stairs": "青色石英铺路石楼梯",
@@ -422,7 +393,6 @@
 	"block.nookbuild.light_gray_quartz_paving_stairs": "淡灰色石英铺路石楼梯",
 	"block.nookbuild.gray_quartz_paving_stairs": "灰色石英铺路石楼梯",
 	"block.nookbuild.black_quartz_paving_stairs": "黑色石英铺路石楼梯",
-
 	"block.nookbuild.blue_quartz_paving_slab": "蓝色石英铺路石台阶",
 	"block.nookbuild.light_blue_quartz_paving_slab": "淡蓝色石英铺路石台阶",
 	"block.nookbuild.cyan_quartz_paving_slab": "青色石英铺路石台阶",

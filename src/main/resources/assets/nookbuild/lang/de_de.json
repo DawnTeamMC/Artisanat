@@ -1,83 +1,5 @@
 {
-	"comment": "BLOCKS",
 	"block.nookbuild.dark_prismarine_wall": "Dunkelprismarinmauer",
-
-	"//block.nookbuild.oak_wood_stairs": "Oak Wood Stairs",
-	"//block.nookbuild.spruce_wood_stairs": "Spruce Wood Stairs",
-	"//block.nookbuild.birch_wood_stairs": "Birch Wood Stairs",
-	"//block.nookbuild.jungle_wood_stairs": "Jungle Wood Stairs",
-	"//block.nookbuild.acacia_wood_stairs": "Acacia Wood Stairs",
-	"//block.nookbuild.dark_oak_wood_stairs": "Dark Oak Wood Stairs",
-	"//block.nookbuild.crimson_hyphae_stairs": "Crimson Hyphae Stairs",
-	"//block.nookbuild.warped_hyphae_stairs": "Warped Hyphae Stairs",
-
-	"//block.nookbuild.oak_wood_slab": "Oak Wood Slab",
-	"//block.nookbuild.spruce_wood_slab": "Spruce Wood Slab",
-	"//block.nookbuild.birch_wood_slab": "Birch Wood Slab",
-	"//block.nookbuild.jungle_wood_slab": "Jungle Wood Slab",
-	"//block.nookbuild.acacia_wood_slab": "Acacia Wood Slab",
-	"//block.nookbuild.dark_oak_wood_slab": "Dark Oak Wood Slab",
-	"//block.nookbuild.crimson_hyphae_slab": "Crimson Hyphae Slab",
-	"//block.nookbuild.warped_hyphae_slab": "Warped Hyphae Slab",
-
-	"//block.nookbuild.oak_wood_button": "Oak Wood Button",
-	"//block.nookbuild.spruce_wood_button": "Spruce Wood Button",
-	"//block.nookbuild.birch_wood_button": "Birch Wood Button",
-	"//block.nookbuild.jungle_wood_button": "Jungle Wood Button",
-	"//block.nookbuild.acacia_wood_button": "Acacia Wood Button",
-	"//block.nookbuild.dark_oak_wood_button": "Dark Oak Wood Button",
-	"//block.nookbuild.crimson_hyphae_button": "Crimson Hyphae Button",
-	"//block.nookbuild.warped_hyphae_button": "Warped Hyphae Button",
-
-	"//block.nookbuild.cobblestone_bricks": "Cobblestone Bricks",
-	"//block.nookbuild.cobblestone_brick_stairs": "Cobblestone Brick Stairs",
-	"//block.nookbuild.cobblestone_brick_slab": "Cobblestone Brick Slab",
-	"//block.nookbuild.cobblestone_brick_wall": "Cobblestone Brick Wall",
-	"//block.nookbuild.mossy_cobblestone_bricks": "Mossy Cobblestone Bricks",
-	"//block.nookbuild.mossy_cobblestone_brick_stairs": "Mossy Cobblestone Brick Stairs",
-	"//block.nookbuild.mossy_cobblestone_brick_slab": "Mossy Cobblestone Brick Slab",
-	"//block.nookbuild.mossy_cobblestone_brick_wall": "Mossy Cobblestone Brick Wall",
-	"//block.nookbuild.granite_bricks": "Granite Bricks",
-	"//block.nookbuild.granite_brick_stairs": "Granite Brick Stairs",
-	"//block.nookbuild.granite_brick_slab": "Granite Brick Slab",
-	"//block.nookbuild.granite_brick_wall": "Granite Brick Wall",
-	"//block.nookbuild.diorite_bricks": "Diorite Bricks",
-	"//block.nookbuild.diorite_brick_stairs": "Diorite Brick Stairs",
-	"//block.nookbuild.diorite_brick_slab": "Diorite Brick Slab",
-	"//block.nookbuild.diorite_brick_wall": "Diorite Brick Wall",
-	"//block.nookbuild.andesite_bricks": "Andesite Bricks",
-	"//block.nookbuild.andesite_brick_stairs": "Andesite Brick Stairs",
-	"//block.nookbuild.andesite_brick_slab": "Andesite Brick Slab",
-	"//block.nookbuild.andesite_brick_wall": "Andesite Brick Wall",
-
-	"//block.nookbuild.sandstone_bricks": "Sandstone Bricks",
-	"//block.nookbuild.sandstone_brick_stairs": "Sandstone Brick Stairs",
-	"//block.nookbuild.sandstone_brick_slab": "Sandstone Brick Slab",
-	"//block.nookbuild.sandstone_brick_wall": "Sandstone Brick Wall",
-	"//block.nookbuild.polished_sandstone": "Polished Sandstone",
-	"//block.nookbuild.polished_sandstone_stairs": "Polished Sandstone Stairs",
-	"//block.nookbuild.polished_sandstone_slab": "Polished Sandstone Slab",
-	"//block.nookbuild.red_sandstone_bricks": "Red Sandstone Bricks",
-	"//block.nookbuild.red_sandstone_brick_stairs": "Red Sandstone Brick Stairs",
-	"//block.nookbuild.red_sandstone_brick_slab": "Red Sandstone Brick Slab",
-	"//block.nookbuild.red_sandstone_brick_wall": "Red Sandstone Brick Wall",
-	"//block.nookbuild.polished_red_sandstone": "Polished Red Sandstone",
-	"//block.nookbuild.polished_red_sandstone_stairs": "Polished Red Sandstone Stairs",
-	"//block.nookbuild.polished_red_sandstone_slab": "Polished Red Sandstone Slab",
-
-	"//block.nookbuild.smooth_stone_paving": "Smooth Stone Paving",
-	"//block.nookbuild.smooth_stone_paving_stairs": "Smooth Stone Paving Stairs",
-	"//block.nookbuild.smooth_stone_paving_slab": "Smooth Stone Paving Slab",
-
-	"//block.nookbuild.chiseled_prismarine": "Chiseled Prismarine",
-	"//block.nookbuild.chiseled_prismarine_stairs": "Chiseled Prismarine Stairs",
-	"//block.nookbuild.chiseled_prismarine_slab": "Chiseled Prismarine Slab",
-	"//block.nookbuild.chiseled_prismarine_wall": "Chiseled Prismarine Wall",
-
-	"//block.nookbuild.prismarine_brick_paving": "Prismarine Brick Paving",
-	"//block.nookbuild.prismarine_brick_paving_stairs": "Prismarine Brick Paving Stairs",
-	"//block.nookbuild.prismarine_brick_paving_slab": "Prismarine Brick Paving Slab",
-
 	"block.nookbuild.blue_bricks": "Blaue Ziegelsteine",
 	"block.nookbuild.light_blue_bricks": "Hellblaue Ziegelsteine",
 	"block.nookbuild.cyan_bricks": "Türkise Ziegelsteine",
@@ -94,7 +16,6 @@
 	"block.nookbuild.light_gray_bricks": "Hellgraue Ziegelsteine",
 	"block.nookbuild.gray_bricks": "Graue Ziegelsteine",
 	"block.nookbuild.black_bricks": "Schwarze Ziegelsteine",
-
 	"block.nookbuild.blue_brick_stairs": "Blaue Ziegeltreppe",
 	"block.nookbuild.light_blue_brick_stairs": "Hellblaue Ziegeltreppe",
 	"block.nookbuild.cyan_brick_stairs": "Türkise Ziegeltreppe",
@@ -111,7 +32,6 @@
 	"block.nookbuild.light_gray_brick_stairs": "Hellgraue Ziegeltreppe",
 	"block.nookbuild.gray_brick_stairs": "Graue Ziegeltreppe",
 	"block.nookbuild.black_brick_stairs": "Schwarze Ziegeltreppe",
-
 	"block.nookbuild.blue_brick_slab": "Blaue Ziegelstufe",
 	"block.nookbuild.light_blue_brick_slab": "Hellblaue Ziegelstufe",
 	"block.nookbuild.cyan_brick_slab": "Türkise Ziegelstufe",
@@ -128,7 +48,6 @@
 	"block.nookbuild.light_gray_brick_slab": "Hellgraue Ziegelstufe",
 	"block.nookbuild.gray_brick_slab": "Graue Ziegelstufe",
 	"block.nookbuild.black_brick_slab": "Schwarze Ziegelstufe",
-
 	"block.nookbuild.blue_brick_wall": "Blaue Ziegelmauer",
 	"block.nookbuild.light_blue_brick_wall": "Hellblaue Ziegelmauer",
 	"block.nookbuild.cyan_brick_wall": "Türkise Ziegelmauer",
@@ -145,7 +64,6 @@
 	"block.nookbuild.light_gray_brick_wall": "Hellgraue Ziegelmauer",
 	"block.nookbuild.gray_brick_wall": "Graue Ziegelmauer",
 	"block.nookbuild.black_brick_wall": "Schwarze Ziegelmauer",
-
 	"block.nookbuild.terracotta_stairs": "Keramiktreppe",
 	"block.nookbuild.blue_terracotta_stairs": "Blaue Keramiktreppe",
 	"block.nookbuild.light_blue_terracotta_stairs": "Hellblaue Keramiktreppe",
@@ -163,7 +81,6 @@
 	"block.nookbuild.light_gray_terracotta_stairs": "Hellgraue Keramiktreppe",
 	"block.nookbuild.gray_terracotta_stairs": "Graue Keramiktreppe",
 	"block.nookbuild.black_terracotta_stairs": "Schwarze Keramiktreppe",
-
 	"block.nookbuild.terracotta_slab": "Keramikstufe",
 	"block.nookbuild.blue_terracotta_slab": "Blaue Keramikstufe",
 	"block.nookbuild.light_blue_terracotta_slab": "Hellblaue Keramikstufe",
@@ -181,7 +98,6 @@
 	"block.nookbuild.light_gray_terracotta_slab": "Hellgraue Keramikstufe",
 	"block.nookbuild.gray_terracotta_slab": "Graue Keramikstufe",
 	"block.nookbuild.black_terracotta_slab": "Schwarze Keramikstufe",
-
 	"block.nookbuild.terracotta_wall": "Keramikmauer",
 	"block.nookbuild.blue_terracotta_wall": "Blaue Keramikmauer",
 	"block.nookbuild.light_blue_terracotta_wall": "Hellblaue Keramikmauer",
@@ -199,7 +115,6 @@
 	"block.nookbuild.light_gray_terracotta_wall": "Hellgraue Keramikmauer",
 	"block.nookbuild.gray_terracotta_wall": "Graue Keramikmauer",
 	"block.nookbuild.black_terracotta_wall": "Schwarze Keramikmauer",
-
 	"block.nookbuild.terracotta_pressure_plate": "Keramikdruckplatte",
 	"block.nookbuild.blue_terracotta_pressure_plate": "Blaue Keramikdruckplatte",
 	"block.nookbuild.light_blue_terracotta_pressure_plate": "Hellblaue Keramikdruckplatte",
@@ -217,7 +132,6 @@
 	"block.nookbuild.light_gray_terracotta_pressure_plate": "Hellgraue Keramikdruckplatte",
 	"block.nookbuild.gray_terracotta_pressure_plate": "Graue Keramikdruckplatte",
 	"block.nookbuild.black_terracotta_pressure_plate": "Schwarze Keramikdruckplatte",
-
 	"block.nookbuild.terracotta_button": "Keramikknopf",
 	"block.nookbuild.blue_terracotta_button": "Blauer Keramikknopf",
 	"block.nookbuild.light_blue_terracotta_button": "Hellblauer Keramikknopf",
@@ -235,7 +149,6 @@
 	"block.nookbuild.light_gray_terracotta_button": "Hellgrauer Keramikknopf",
 	"block.nookbuild.gray_terracotta_button": "Grauer Keramikknopf",
 	"block.nookbuild.black_terracotta_button": "Schwarzer Keramikknopf",
-
 	"block.nookbuild.blue_dark_prismarine": "Blauer Dunkelprismarin",
 	"block.nookbuild.light_blue_dark_prismarine": "Hellblauer Dunkelprismarin",
 	"block.nookbuild.cyan_dark_prismarine": "Türkiser Dunkelprismarin",
@@ -252,7 +165,6 @@
 	"block.nookbuild.light_gray_dark_prismarine": "Hellgrauer Dunkelprismarin",
 	"block.nookbuild.gray_dark_prismarine": "Grauer Dunkelprismarin",
 	"block.nookbuild.black_dark_prismarine": "Schwarzer Dunkelprismarin",
-
 	"block.nookbuild.blue_dark_prismarine_stairs": "Blaue Dunkelprismarintreppe",
 	"block.nookbuild.light_blue_dark_prismarine_stairs": "Hellblaue Dunkelprismarintreppe",
 	"block.nookbuild.cyan_dark_prismarine_stairs": "Türkise Dunkelprismarintreppe",
@@ -269,7 +181,6 @@
 	"block.nookbuild.light_gray_dark_prismarine_stairs": "Hellgraue Dunkelprismarintreppe",
 	"block.nookbuild.gray_dark_prismarine_stairs": "Graue Dunkelprismarintreppe",
 	"block.nookbuild.black_dark_prismarine_stairs": "Schwarze Dunkelprismarintreppe",
-
 	"block.nookbuild.blue_dark_prismarine_slab": "Blaue Dunkelprismarinstufe",
 	"block.nookbuild.light_blue_dark_prismarine_slab": "Hellblaue Dunkelprismarinstufe",
 	"block.nookbuild.cyan_dark_prismarine_slab": "Türkise Dunkelprismarinstufe",
@@ -286,7 +197,6 @@
 	"block.nookbuild.light_gray_dark_prismarine_slab": "Hellgraue Dunkelprismarinstufe",
 	"block.nookbuild.gray_dark_prismarine_slab": "Graue Dunkelprismarinstufe",
 	"block.nookbuild.black_dark_prismarine_slab": "Schwarze Dunkelprismarinstufe",
-
 	"block.nookbuild.blue_dark_prismarine_wall": "Blaue Dunkelprismarinmauer",
 	"block.nookbuild.light_blue_dark_prismarine_wall": "Hellblaue Dunkelprismarinmauer",
 	"block.nookbuild.cyan_dark_prismarine_wall": "Türkise Dunkelprismarinmauer",
@@ -303,7 +213,6 @@
 	"block.nookbuild.light_gray_dark_prismarine_wall": "Hellgraue Dunkelprismarinmauer",
 	"block.nookbuild.gray_dark_prismarine_wall": "Graue Dunkelprismarinmauer",
 	"block.nookbuild.black_dark_prismarine_wall": "Schwarze Dunkelprismarinmauer",
-
 	"block.nookbuild.blue_concrete_stairs": "Blaue Betontreppe",
 	"block.nookbuild.light_blue_concrete_stairs": "Hellblaue Betontreppe",
 	"block.nookbuild.cyan_concrete_stairs": "Türkise Betontreppe",
@@ -320,7 +229,6 @@
 	"block.nookbuild.light_gray_concrete_stairs": "Hellgraue Betontreppe",
 	"block.nookbuild.gray_concrete_stairs": "Graue Betontreppe",
 	"block.nookbuild.black_concrete_stairs": "Schwarze Betontreppe",
-
 	"block.nookbuild.blue_concrete_slab": "Blaue Betonstufe",
 	"block.nookbuild.light_blue_concrete_slab": "Hellblaue Betonstufe",
 	"block.nookbuild.cyan_concrete_slab": "Türkise Betonstufe",
@@ -337,7 +245,6 @@
 	"block.nookbuild.light_gray_concrete_slab": "Hellgraue Betonstufe",
 	"block.nookbuild.gray_concrete_slab": "Graue Betonstufe",
 	"block.nookbuild.black_concrete_slab": "Schwarze Betonstufe",
-
 	"block.nookbuild.blue_concrete_wall": "Blaue Betonmauer",
 	"block.nookbuild.light_blue_concrete_wall": "Hellblaue Betonmauer",
 	"block.nookbuild.cyan_concrete_wall": "Türkise Betonmauer",
@@ -354,7 +261,6 @@
 	"block.nookbuild.light_gray_concrete_wall": "Hellgraue Betonmauer",
 	"block.nookbuild.gray_concrete_wall": "Graue Betonmauer",
 	"block.nookbuild.black_concrete_wall": "Schwarze Betonmauer",
-
 	"block.nookbuild.blue_concrete_pressure_plate": "Blaue Betondruckplatte",
 	"block.nookbuild.light_blue_concrete_pressure_plate": "Hellblaue Betondruckplatte",
 	"block.nookbuild.cyan_concrete_pressure_plate": "Trürkise Betondruckplatte",
@@ -371,7 +277,6 @@
 	"block.nookbuild.light_gray_concrete_pressure_plate": "Hellgraue Betondruckplatte",
 	"block.nookbuild.gray_concrete_pressure_plate": "Graue Betondruckplatte",
 	"block.nookbuild.black_concrete_pressure_plate": "Schwarze Betondruckplatte",
-
 	"block.nookbuild.blue_concrete_button": "Blauer Betonknopf",
 	"block.nookbuild.light_blue_concrete_button": "Hellblauer Betonknopf",
 	"block.nookbuild.cyan_concrete_button": "Türkiser Betonknopf",
@@ -388,7 +293,6 @@
 	"block.nookbuild.light_gray_concrete_button": "Hellgrauer Betonknopf",
 	"block.nookbuild.gray_concrete_button": "Grauer Betonknopf",
 	"block.nookbuild.black_concrete_button": "Schwarzer Betonknopf",
-
 	"block.nookbuild.blue_quartz_paving": "Blauer Quarzpflasterblock",
 	"block.nookbuild.light_blue_quartz_paving": "Hellblauer Quarzpflasterblock",
 	"block.nookbuild.cyan_quartz_paving": "Türkiser Quarzpflasterblock",
@@ -405,7 +309,6 @@
 	"block.nookbuild.light_gray_quartz_paving": "Hellgrauer Quarzpflasterblock",
 	"block.nookbuild.gray_quartz_paving": "Grauer Quarzpflasterblock",
 	"block.nookbuild.black_quartz_paving": "Schwarzer Quarzpflasterblock",
-
 	"block.nookbuild.blue_quartz_paving_stairs": "Blaue Quarzpflastertreppe",
 	"block.nookbuild.light_blue_quartz_paving_stairs": "Hellblaue Quarzpflastertreppe",
 	"block.nookbuild.cyan_quartz_paving_stairs": "Türkise Quarzpflastertreppe",
@@ -422,7 +325,6 @@
 	"block.nookbuild.light_gray_quartz_paving_stairs": "Hellgraue Quarzpflastertreppe",
 	"block.nookbuild.gray_quartz_paving_stairs": "Graue Quarzpflastertreppe",
 	"block.nookbuild.black_quartz_paving_stairs": "Schwarze Quarzpflastertreppe",
-
 	"block.nookbuild.blue_quartz_paving_slab": "Blaue Quarzpflasterstufe",
 	"block.nookbuild.light_blue_quartz_paving_slab": "Hellblaue Quarzpflasterstufe",
 	"block.nookbuild.cyan_quartz_paving_slab": "Türkise Quarzpflasterstufe",
