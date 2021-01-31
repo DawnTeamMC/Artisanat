@@ -28,7 +28,7 @@
 	"custom": {
 		"modupdater": {
 			"strategy": "curseforge",
-			"projectID": "${curseforge_id}"
+			"projectID": 399443
 		}
 	},
 	"license": "MIT"
