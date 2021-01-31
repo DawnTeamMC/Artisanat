@@ -11,7 +11,7 @@
 			"conditions": {
 				"items": [
 					{
-						"tag": "nookbuild:terracotta_brick/blocks"
+						"tag": "nookbuild:terracotta_bricks/blocks"
 					}
 				]
 			}
