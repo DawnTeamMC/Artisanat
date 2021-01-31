@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"nookbuild:crafting/red_terracotta_brick_stairs"
+		]
+	},
+	"criteria": {
+		"has_terracotta_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "nookbuild:terracotta_brick/blocks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "nookbuild:crafting/red_terracotta_brick_stairs"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_terracotta_bricks",
+			"has_the_recipe"
+		]
+	]
+}
