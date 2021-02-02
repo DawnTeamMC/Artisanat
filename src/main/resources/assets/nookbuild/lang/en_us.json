@@ -1,5 +1,6 @@
 {
-	"comment": "BLOCKS",
+	"modmenu.descriptionTranslation.nookbuild": "More building blocks!",
+
 	"block.nookbuild.dark_prismarine_wall": "Dark Prismarine Wall",
 
 	"block.nookbuild.oak_wood_stairs": "Oak Wood Stairs",
