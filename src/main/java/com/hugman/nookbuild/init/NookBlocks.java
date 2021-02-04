@@ -10,7 +10,6 @@ import net.minecraft.block.Blocks;
 
 public class NookBlocks extends NookPack {
 	public static void init() {
-
 	}
 
 	public static final Block DARK_PRISMARINE_WALL = register(new BlockCreator.Builder("dark_prismarine", DefaultBlockGetter.WALL, FabricBlockSettings.copyOf(Blocks.DARK_PRISMARINE)));
@@ -40,6 +39,8 @@ public class NookBlocks extends NookPack {
 	public static final MSBlockPack PRISMARINE_BRICK_PAVING = register(new MSBlockPack.Builder("prismarine_brick_paving", FabricBlockSettings.copyOf(Blocks.PRISMARINE_BRICKS), DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB));
 
 	public static final MSCBlockPack STAINED_BRICK_BLOCKS = register(new MSCBlockPack.Builder("bricks", FabricBlockSettings.copyOf(Blocks.BRICKS), DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL));
+	public static final MSBlockPack BRICK_TILE_BLOCKS = register(new MSBlockPack.Builder("brick_tiles", FabricBlockSettings.copyOf(Blocks.BRICKS), DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL));
+	public static final MSCBlockPack STAINED_BRICK_TILE_BLOCKS = register(new MSCBlockPack.Builder("brick_tiles", FabricBlockSettings.copyOf(Blocks.BRICKS), DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL));
 
 	public static final MSBlockPack TERRACOTTA_BLOCKS = register(new MSBlockPack.Builder("terracotta", FabricBlockSettings.copyOf(Blocks.TERRACOTTA), DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL, DefaultBlockGetter.STONE_PRESSURE_PLATE, DefaultBlockGetter.STONE_BUTTON));
 	public static final MSCBlockPack STAINED_TERRACOTTA_BLOCKS = register(new MSCBlockPack.Builder("terracotta", FabricBlockSettings.copyOf(Blocks.TERRACOTTA), DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL, DefaultBlockGetter.STONE_PRESSURE_PLATE, DefaultBlockGetter.STONE_BUTTON));

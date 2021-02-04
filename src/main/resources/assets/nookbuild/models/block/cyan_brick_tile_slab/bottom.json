@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab",
+	"textures": {
+		"bottom": "nookbuild:block/cyan_brick_tiles",
+		"top": "nookbuild:block/cyan_brick_tiles",
+		"side": "nookbuild:block/cyan_brick_tiles"
+	}
+}
