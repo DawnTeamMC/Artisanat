@@ -1,7 +1,8 @@
 {
 	"replace": false,
 	"values": [
-		"#nookbuild:brick/stairs",
+		"#nookbuild:bricks/stairs",
+		"#nookbuild:brick_tiles/stairs",
 		"#nookbuild:concrete/stairs",
 		"#nookbuild:dark_prismarine/stairs",
 		"#nookbuild:terracotta/stairs",

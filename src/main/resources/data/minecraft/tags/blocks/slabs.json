@@ -1,7 +1,8 @@
 {
 	"replace": false,
 	"values": [
-		"#nookbuild:brick/slabs",
+		"#nookbuild:bricks/slabs",
+		"#nookbuild:brick_tiles/slabs",
 		"#nookbuild:concrete/slabs",
 		"#nookbuild:dark_prismarine/slabs",
 		"#nookbuild:terracotta/slabs",
