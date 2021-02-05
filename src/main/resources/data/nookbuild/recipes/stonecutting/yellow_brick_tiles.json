@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "nookbuild:yellow_bricks"
+	},
+	"result": "nookbuild:yellow_brick_tiles",
+	"count": 1
+}

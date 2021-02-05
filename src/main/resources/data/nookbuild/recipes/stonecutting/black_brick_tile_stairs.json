@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "nookbuild:black_bricks"
+		},
+		{
+			"item": "nookbuild:black_brick_tiles"
+		}
+	],
+	"result": "nookbuild:black_brick_tile_stairs",
+	"count": 1
+}
