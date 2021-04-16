@@ -47,7 +47,7 @@ public class NookBlocks extends NookPack {
 	public static final MSBlockPack TERRACOTTA_BRICKS = register(new MSBlockPack.Builder("terracotta_bricks", FabricBlockSettings.copyOf(Blocks.TERRACOTTA), DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL));
 	public static final MSCBlockPack STAINED_TERRACOTTA_BRICKS = register(new MSCBlockPack.Builder("terracotta_bricks", FabricBlockSettings.copyOf(Blocks.TERRACOTTA), DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL));
 
-	public static final MSCBlockPack DARK_PRISMARINE_BLOCKS = register(new MSCBlockPack.Builder("dark_prismarine", FabricBlockSettings.copyOf(Blocks.DARK_PRISMARINE), DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL));
+	public static final MSCBlockPack STAINED_DARK_PRISMARINE_BLOCKS = register(new MSCBlockPack.Builder("dark_prismarine", FabricBlockSettings.copyOf(Blocks.DARK_PRISMARINE), DefaultBlockGetter.CUBE, DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL));
 
 	public static final MSCBlockPack CONCRETE_BLOCKS = register(new MSCBlockPack.Builder("concrete", FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE), DefaultBlockGetter.STAIRS, DefaultBlockGetter.SLAB, DefaultBlockGetter.WALL, DefaultBlockGetter.STONE_PRESSURE_PLATE, DefaultBlockGetter.STONE_BUTTON));
 
