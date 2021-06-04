@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "artisanat:red_quartz_paving"
+	},
+	"result": "artisanat:red_quartz_paving_stairs",
+	"count": 1
+}

@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:brick_stairs",
+	"pattern": [
+		"#  ",
+		"## ",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "artisanat:cyan_bricks"
+		}
+	},
+	"result": {
+		"item": "artisanat:cyan_brick_stairs",
+		"count": 4
+	}
+}

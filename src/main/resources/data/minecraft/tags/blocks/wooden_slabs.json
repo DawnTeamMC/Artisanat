@@ -1,13 +1,13 @@
 {
 	"replace": false,
 	"values": [
-		"nookbuild:oak_wood_slab",
-		"nookbuild:spruce_wood_slab",
-		"nookbuild:birch_wood_slab",
-		"nookbuild:jungle_wood_slab",
-		"nookbuild:acacia_wood_slab",
-		"nookbuild:dark_oak_wood_slab",
-		"nookbuild:crimson_hyphae_slab",
-		"nookbuild:warped_hyphae_slab"
+		"artisanat:oak_wood_slab",
+		"artisanat:spruce_wood_slab",
+		"artisanat:birch_wood_slab",
+		"artisanat:jungle_wood_slab",
+		"artisanat:acacia_wood_slab",
+		"artisanat:dark_oak_wood_slab",
+		"artisanat:crimson_hyphae_slab",
+		"artisanat:warped_hyphae_slab"
 	]
 }

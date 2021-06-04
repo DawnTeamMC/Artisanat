@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:wood_slab",
+	"pattern": [
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:birch_wood"
+		}
+	},
+	"result": {
+		"item": "artisanat:birch_wood_slab",
+		"count": 6
+	}
+}

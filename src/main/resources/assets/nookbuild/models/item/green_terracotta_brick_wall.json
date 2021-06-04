@@ -1,6 +1,0 @@
-{
-	"parent": "block/wall_inventory",
-	"textures": {
-		"wall": "nookbuild:block/green_terracotta_bricks"
-	}
-}

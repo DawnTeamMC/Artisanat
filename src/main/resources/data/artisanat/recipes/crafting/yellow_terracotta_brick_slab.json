@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:terracotta_brick_slab",
+	"pattern": [
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "artisanat:yellow_terracotta_bricks"
+		}
+	},
+	"result": {
+		"item": "artisanat:yellow_terracotta_brick_slab",
+		"count": 6
+	}
+}

@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab_top",
-	"textures": {
-		"bottom": "nookbuild:block/purple_terracotta_bricks",
-		"top": "nookbuild:block/purple_terracotta_bricks",
-		"side": "nookbuild:block/purple_terracotta_bricks"
-	}
-}

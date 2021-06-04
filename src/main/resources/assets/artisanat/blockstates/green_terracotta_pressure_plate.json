@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"powered=false": {
+			"model": "artisanat:block/green_terracotta_pressure_plate/unpressed"
+		},
+		"powered=true": {
+			"model": "artisanat:block/green_terracotta_pressure_plate/pressed"
+		}
+	}
+}

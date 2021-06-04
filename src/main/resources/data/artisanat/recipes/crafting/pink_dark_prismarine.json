@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:dark_prismarine",
+	"pattern": [
+		"XXX",
+		"XOX",
+		"XXX"
+	],
+	"key": {
+		"X": {
+			"item": "minecraft:dark_prismarine"
+		},
+		"O": {
+			"item": "minecraft:pink_dye"
+		}
+	},
+	"result": {
+		"item": "artisanat:pink_dark_prismarine",
+		"count": 8
+	}
+}

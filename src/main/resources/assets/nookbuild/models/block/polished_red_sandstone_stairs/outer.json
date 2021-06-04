@@ -1,8 +1,0 @@
-{
-	"parent": "block/outer_stairs",
-	"textures": {
-		"bottom": "nookbuild:block/polished_red_sandstone",
-		"top": "nookbuild:block/polished_red_sandstone",
-		"side": "nookbuild:block/polished_red_sandstone"
-	}
-}

@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"powered=false": {
+			"model": "artisanat:block/black_concrete_pressure_plate/unpressed"
+		},
+		"powered=true": {
+			"model": "artisanat:block/black_concrete_pressure_plate/pressed"
+		}
+	}
+}

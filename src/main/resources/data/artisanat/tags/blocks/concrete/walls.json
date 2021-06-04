@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:white_concrete_wall",
+		"artisanat:light_gray_concrete_wall",
+		"artisanat:gray_concrete_wall",
+		"artisanat:black_concrete_wall",
+		"artisanat:brown_concrete_wall",
+		"artisanat:red_concrete_wall",
+		"artisanat:orange_concrete_wall",
+		"artisanat:yellow_concrete_wall",
+		"artisanat:yellow_concrete_wall",
+		"artisanat:lime_concrete_wall",
+		"artisanat:green_concrete_wall",
+		"artisanat:cyan_concrete_wall",
+		"artisanat:light_blue_concrete_wall",
+		"artisanat:blue_concrete_wall",
+		"artisanat:purple_concrete_wall",
+		"artisanat:magenta_concrete_wall",
+		"artisanat:pink_concrete_wall"
+	]
+}

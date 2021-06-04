@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:bricks",
+	"pattern": [
+		"XXX",
+		"XOX",
+		"XXX"
+	],
+	"key": {
+		"X": {
+			"item": "minecraft:bricks"
+		},
+		"O": {
+			"item": "minecraft:purple_dye"
+		}
+	},
+	"result": {
+		"item": "artisanat:purple_bricks",
+		"count": 8
+	}
+}

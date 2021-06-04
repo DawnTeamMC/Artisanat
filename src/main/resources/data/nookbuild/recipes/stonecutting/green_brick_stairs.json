@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "nookbuild:green_bricks"
-	},
-	"result": "nookbuild:green_brick_stairs",
-	"count": 1
-}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:cyan_terracotta"
+		},
+		{
+			"item": "artisanat:cyan_terracotta_bricks"
+		}
+	],
+	"result": "artisanat:cyan_terracotta_brick_wall",
+	"count": 1
+}

@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/cyan_brick_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/cyan_brick_slab/top"
+		},
+		"type=double": {
+			"model": "artisanat:block/cyan_bricks"
+		}
+	}
+}

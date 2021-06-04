@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "artisanat:white_bricks"
+	},
+	"result": "artisanat:white_brick_tiles",
+	"count": 1
+}

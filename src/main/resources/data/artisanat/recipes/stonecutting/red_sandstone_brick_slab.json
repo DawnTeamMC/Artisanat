@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:red_sandstone"
+		},
+		{
+			"item": "artisanat:red_sandstone_bricks"
+		}
+	],
+	"result": "artisanat:red_sandstone_brick_slab",
+	"count": 2
+}

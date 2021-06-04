@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:concrete_wall",
+	"pattern": [
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:green_concrete"
+		}
+	},
+	"result": {
+		"item": "artisanat:green_concrete_wall",
+		"count": 6
+	}
+}

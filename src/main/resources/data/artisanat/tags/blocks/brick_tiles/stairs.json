@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:brick_tile_stairs",
+		"artisanat:white_brick_tile_stairs",
+		"artisanat:light_gray_brick_tile_stairs",
+		"artisanat:gray_brick_tile_stairs",
+		"artisanat:black_brick_tile_stairs",
+		"artisanat:brown_brick_tile_stairs",
+		"artisanat:red_brick_tile_stairs",
+		"artisanat:orange_brick_tile_stairs",
+		"artisanat:yellow_brick_tile_stairs",
+		"artisanat:lime_brick_tile_stairs",
+		"artisanat:green_brick_tile_stairs",
+		"artisanat:cyan_brick_tile_stairs",
+		"artisanat:light_blue_brick_tile_stairs",
+		"artisanat:blue_brick_tile_stairs",
+		"artisanat:purple_brick_tile_stairs",
+		"artisanat:magenta_brick_tile_stairs",
+		"artisanat:pink_brick_tile_stairs"
+	]
+}

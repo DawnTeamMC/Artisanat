@@ -1,0 +1,23 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:terracotta_wall",
+		"artisanat:white_terracotta_wall",
+		"artisanat:light_gray_terracotta_wall",
+		"artisanat:gray_terracotta_wall",
+		"artisanat:black_terracotta_wall",
+		"artisanat:brown_terracotta_wall",
+		"artisanat:red_terracotta_wall",
+		"artisanat:orange_terracotta_wall",
+		"artisanat:yellow_terracotta_wall",
+		"artisanat:yellow_terracotta_wall",
+		"artisanat:lime_terracotta_wall",
+		"artisanat:green_terracotta_wall",
+		"artisanat:cyan_terracotta_wall",
+		"artisanat:light_blue_terracotta_wall",
+		"artisanat:blue_terracotta_wall",
+		"artisanat:purple_terracotta_wall",
+		"artisanat:magenta_terracotta_wall",
+		"artisanat:pink_terracotta_wall"
+	]
+}

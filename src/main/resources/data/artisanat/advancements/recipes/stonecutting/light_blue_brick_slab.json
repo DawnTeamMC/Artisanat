@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/light_blue_brick_slab"
+		]
+	},
+	"criteria": {
+		"has_light_blue_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "artisanat:light_blue_bricks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/light_blue_brick_slab"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_light_blue_bricks",
+			"has_the_recipe"
+		]
+	]
+}

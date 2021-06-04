@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:terracotta_wall",
+	"pattern": [
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:green_terracotta"
+		}
+	},
+	"result": {
+		"item": "artisanat:green_terracotta_wall",
+		"count": 6
+	}
+}

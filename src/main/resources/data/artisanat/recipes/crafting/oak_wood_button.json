@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:wood_button",
+	"pattern": [
+		"#"
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:oak_wood"
+		}
+	},
+	"result": {
+		"item": "artisanat:oak_wood_button"
+	}
+}

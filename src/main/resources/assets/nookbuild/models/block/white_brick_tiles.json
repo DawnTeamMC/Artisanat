@@ -1,6 +1,0 @@
-{
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "nookbuild:block/white_brick_tiles"
-	}
-}

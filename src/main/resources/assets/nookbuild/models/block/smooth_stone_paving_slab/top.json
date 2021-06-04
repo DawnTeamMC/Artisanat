@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab_top",
-	"textures": {
-		"bottom": "nookbuild:block/smooth_stone_paving",
-		"top": "nookbuild:block/smooth_stone_paving",
-		"side": "nookbuild:block/smooth_stone_paving"
-	}
-}

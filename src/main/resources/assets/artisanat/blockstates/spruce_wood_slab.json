@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/spruce_wood_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/spruce_wood_slab/top"
+		},
+		"type=double": {
+			"model": "minecraft:block/spruce_wood"
+		}
+	}
+}

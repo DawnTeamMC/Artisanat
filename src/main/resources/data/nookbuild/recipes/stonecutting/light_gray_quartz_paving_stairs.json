@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "nookbuild:light_gray_quartz_paving"
-	},
-	"result": "nookbuild:light_gray_quartz_paving_stairs",
-	"count": 1
-}

@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/white_terracotta_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/white_terracotta_slab/top"
+		},
+		"type=double": {
+			"model": "minecraft:block/white_terracotta"
+		}
+	}
+}

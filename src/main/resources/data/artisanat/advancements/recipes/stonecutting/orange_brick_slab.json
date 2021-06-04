@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/orange_brick_slab"
+		]
+	},
+	"criteria": {
+		"has_orange_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "artisanat:orange_bricks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/orange_brick_slab"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_orange_bricks",
+			"has_the_recipe"
+		]
+	]
+}

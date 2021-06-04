@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/green_quartz_paving_stairs"
+		]
+	},
+	"criteria": {
+		"has_green_quartz_paving": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "artisanat:green_quartz_paving"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/green_quartz_paving_stairs"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_green_quartz_paving",
+			"has_the_recipe"
+		]
+	]
+}

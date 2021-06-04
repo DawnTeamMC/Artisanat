@@ -1,0 +1,8 @@
+{
+	"parent": "block/slab_top",
+	"textures": {
+		"bottom": "artisanat:block/polished_sandstone",
+		"top": "artisanat:block/polished_sandstone",
+		"side": "artisanat:block/polished_sandstone"
+	}
+}

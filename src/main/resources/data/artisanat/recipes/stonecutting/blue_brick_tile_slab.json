@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "artisanat:blue_bricks"
+		},
+		{
+			"item": "artisanat:blue_brick_tiles"
+		}
+	],
+	"result": "artisanat:blue_brick_tile_slab",
+	"count": 2
+}

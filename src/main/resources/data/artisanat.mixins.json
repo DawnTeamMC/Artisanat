@@ -1,0 +1,9 @@
+{
+	"required": true,
+	"package": "com.hugman.artisanat.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": ["DefaultedRegistryMixin"],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:mossy_cobblestone"
+		},
+		{
+			"item": "artisanat:mossy_cobblestone_bricks"
+		}
+	],
+	"result": "artisanat:mossy_cobblestone_brick_stairs",
+	"count": 1
+}

@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:crafting/white_bricks"
+		]
+	},
+	"criteria": {
+		"has_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "artisanat:bricks/blocks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:crafting/white_bricks"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_bricks",
+			"has_the_recipe"
+		]
+	]
+}

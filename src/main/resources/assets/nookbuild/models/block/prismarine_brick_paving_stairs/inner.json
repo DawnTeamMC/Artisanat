@@ -1,8 +1,0 @@
-{
-	"parent": "block/inner_stairs",
-	"textures": {
-		"bottom": "nookbuild:block/prismarine_brick_paving",
-		"top": "nookbuild:block/prismarine_brick_paving",
-		"side": "nookbuild:block/prismarine_brick_paving"
-	}
-}

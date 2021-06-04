@@ -1,13 +1,13 @@
 {
 	"replace": false,
 	"values": [
-		"nookbuild:oak_wood_button",
-		"nookbuild:spruce_wood_button",
-		"nookbuild:birch_wood_button",
-		"nookbuild:jungle_wood_button",
-		"nookbuild:acacia_wood_button",
-		"nookbuild:dark_oak_wood_button",
-		"nookbuild:crimson_hyphae_button",
-		"nookbuild:warped_hyphae_button"
+		"artisanat:oak_wood_button",
+		"artisanat:spruce_wood_button",
+		"artisanat:birch_wood_button",
+		"artisanat:jungle_wood_button",
+		"artisanat:acacia_wood_button",
+		"artisanat:dark_oak_wood_button",
+		"artisanat:crimson_hyphae_button",
+		"artisanat:warped_hyphae_button"
 	]
 }

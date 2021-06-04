@@ -14,7 +14,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.hugman.nookbuild.NookBuild"
+			"com.hugman.artisanat.Artisanat"
 		]
 	},
 	"depends": {

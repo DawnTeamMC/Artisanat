@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/orange_concrete_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/orange_concrete_slab/top"
+		},
+		"type=double": {
+			"model": "minecraft:block/orange_concrete"
+		}
+	}
+}

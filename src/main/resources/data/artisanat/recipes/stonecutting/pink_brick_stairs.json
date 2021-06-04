@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "artisanat:pink_bricks"
+	},
+	"result": "artisanat:pink_brick_stairs",
+	"count": 1
+}

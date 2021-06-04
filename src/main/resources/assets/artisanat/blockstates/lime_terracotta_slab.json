@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/lime_terracotta_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/lime_terracotta_slab/top"
+		},
+		"type=double": {
+			"model": "minecraft:block/lime_terracotta"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/pink_brick_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/pink_brick_slab/top"
+		},
+		"type=double": {
+			"model": "artisanat:block/pink_bricks"
+		}
+	}
+}

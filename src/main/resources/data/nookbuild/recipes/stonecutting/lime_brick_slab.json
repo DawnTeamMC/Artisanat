@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "nookbuild:lime_bricks"
-	},
-	"result": "nookbuild:lime_brick_slab",
-	"count": 2
-}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:red_sandstone"
+		},
+		{
+			"item": "artisanat:polished_red_sandstone"
+		}
+	],
+	"result": "artisanat:polished_red_sandstone_slab",
+	"count": 2
+}

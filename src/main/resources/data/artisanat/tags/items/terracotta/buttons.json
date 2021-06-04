@@ -1,0 +1,23 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:terracotta_button",
+		"artisanat:white_terracotta_button",
+		"artisanat:light_gray_terracotta_button",
+		"artisanat:gray_terracotta_button",
+		"artisanat:black_terracotta_button",
+		"artisanat:brown_terracotta_button",
+		"artisanat:red_terracotta_button",
+		"artisanat:orange_terracotta_button",
+		"artisanat:yellow_terracotta_button",
+		"artisanat:yellow_terracotta_button",
+		"artisanat:lime_terracotta_button",
+		"artisanat:green_terracotta_button",
+		"artisanat:cyan_terracotta_button",
+		"artisanat:light_blue_terracotta_button",
+		"artisanat:blue_terracotta_button",
+		"artisanat:purple_terracotta_button",
+		"artisanat:magenta_terracotta_button",
+		"artisanat:pink_terracotta_button"
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:light_blue_terracotta"
+		},
+		{
+			"item": "artisanat:light_blue_terracotta_bricks"
+		}
+	],
+	"result": "artisanat:light_blue_terracotta_brick_slab",
+	"count": 2
+}

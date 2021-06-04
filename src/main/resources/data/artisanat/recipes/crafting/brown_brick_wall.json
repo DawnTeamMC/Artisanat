@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:brick_wall",
+	"pattern": [
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "artisanat:brown_bricks"
+		}
+	},
+	"result": {
+		"item": "artisanat:brown_brick_wall",
+		"count": 6
+	}
+}

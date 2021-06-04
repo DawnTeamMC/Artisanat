@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/red_brick_tile_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/red_brick_tile_slab/top"
+		},
+		"type=double": {
+			"model": "artisanat:block/red_brick_tiles"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/magenta_terracotta_brick_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/magenta_terracotta_brick_slab/top"
+		},
+		"type=double": {
+			"model": "artisanat:block/magenta_terracotta_bricks"
+		}
+	}
+}

@@ -1,8 +1,0 @@
-{
-	"parent": "block/inner_stairs",
-	"textures": {
-		"bottom": "nookbuild:block/mossy_cobblestone_bricks",
-		"top": "nookbuild:block/mossy_cobblestone_bricks",
-		"side": "nookbuild:block/mossy_cobblestone_bricks"
-	}
-}

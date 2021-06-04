@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:white_concrete_stairs",
+		"artisanat:light_gray_concrete_stairs",
+		"artisanat:gray_concrete_stairs",
+		"artisanat:black_concrete_stairs",
+		"artisanat:brown_concrete_stairs",
+		"artisanat:red_concrete_stairs",
+		"artisanat:orange_concrete_stairs",
+		"artisanat:yellow_concrete_stairs",
+		"artisanat:yellow_concrete_stairs",
+		"artisanat:lime_concrete_stairs",
+		"artisanat:green_concrete_stairs",
+		"artisanat:cyan_concrete_stairs",
+		"artisanat:light_blue_concrete_stairs",
+		"artisanat:blue_concrete_stairs",
+		"artisanat:purple_concrete_stairs",
+		"artisanat:magenta_concrete_stairs",
+		"artisanat:pink_concrete_stairs"
+	]
+}

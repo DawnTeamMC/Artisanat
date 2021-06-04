@@ -1,0 +1,8 @@
+{
+	"parent": "block/stairs",
+	"textures": {
+		"bottom": "artisanat:block/orange_brick_tiles",
+		"top": "artisanat:block/orange_brick_tiles",
+		"side": "artisanat:block/orange_brick_tiles"
+	}
+}

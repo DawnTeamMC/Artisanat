@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "artisanat:magenta_bricks"
+		},
+		{
+			"item": "artisanat:magenta_brick_tiles"
+		}
+	],
+	"result": "artisanat:magenta_brick_tile_stairs",
+	"count": 1
+}

@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/magenta_brick_tile_stairs"
+		]
+	},
+	"criteria": {
+		"has_magenta_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "artisanat:magenta_bricks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/magenta_brick_tile_stairs"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_magenta_bricks",
+			"has_the_recipe"
+		]
+	]
+}

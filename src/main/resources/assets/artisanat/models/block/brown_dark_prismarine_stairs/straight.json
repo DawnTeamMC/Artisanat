@@ -1,0 +1,8 @@
+{
+	"parent": "block/stairs",
+	"textures": {
+		"bottom": "artisanat:block/brown_dark_prismarine",
+		"top": "artisanat:block/brown_dark_prismarine",
+		"side": "artisanat:block/brown_dark_prismarine"
+	}
+}

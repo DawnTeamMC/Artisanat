@@ -1,8 +1,0 @@
-{
-	"parent": "block/stairs",
-	"textures": {
-		"bottom": "nookbuild:block/brick_tiles",
-		"top": "nookbuild:block/brick_tiles",
-		"side": "nookbuild:block/brick_tiles"
-	}
-}

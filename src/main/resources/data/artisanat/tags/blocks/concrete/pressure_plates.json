@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:white_concrete_pressure_plate",
+		"artisanat:light_gray_concrete_pressure_plate",
+		"artisanat:gray_concrete_pressure_plate",
+		"artisanat:black_concrete_pressure_plate",
+		"artisanat:brown_concrete_pressure_plate",
+		"artisanat:red_concrete_pressure_plate",
+		"artisanat:orange_concrete_pressure_plate",
+		"artisanat:yellow_concrete_pressure_plate",
+		"artisanat:yellow_concrete_pressure_plate",
+		"artisanat:lime_concrete_pressure_plate",
+		"artisanat:green_concrete_pressure_plate",
+		"artisanat:cyan_concrete_pressure_plate",
+		"artisanat:light_blue_concrete_pressure_plate",
+		"artisanat:blue_concrete_pressure_plate",
+		"artisanat:purple_concrete_pressure_plate",
+		"artisanat:magenta_concrete_pressure_plate",
+		"artisanat:pink_concrete_pressure_plate"
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"minecraft:dark_prismarine_stairs",
+		"artisanat:white_dark_prismarine_stairs",
+		"artisanat:light_gray_dark_prismarine_stairs",
+		"artisanat:gray_dark_prismarine_stairs",
+		"artisanat:black_dark_prismarine_stairs",
+		"artisanat:brown_dark_prismarine_stairs",
+		"artisanat:red_dark_prismarine_stairs",
+		"artisanat:orange_dark_prismarine_stairs",
+		"artisanat:yellow_dark_prismarine_stairs",
+		"artisanat:lime_dark_prismarine_stairs",
+		"artisanat:green_dark_prismarine_stairs",
+		"artisanat:cyan_dark_prismarine_stairs",
+		"artisanat:light_blue_dark_prismarine_stairs",
+		"artisanat:blue_dark_prismarine_stairs",
+		"artisanat:purple_dark_prismarine_stairs",
+		"artisanat:magenta_dark_prismarine_stairs",
+		"artisanat:pink_dark_prismarine_stairs"
+	]
+}

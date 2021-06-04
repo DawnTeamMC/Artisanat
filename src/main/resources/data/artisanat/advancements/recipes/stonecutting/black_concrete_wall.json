@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/black_concrete_wall"
+		]
+	},
+	"criteria": {
+		"has_black_concrete": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:black_concrete"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/black_concrete_wall"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_black_concrete",
+			"has_the_recipe"
+		]
+	]
+}

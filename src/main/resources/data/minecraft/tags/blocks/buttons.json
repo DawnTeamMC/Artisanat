@@ -1,7 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"#nookbuild:concrete/buttons",
-		"#nookbuild:terracotta/buttons"
+		"#artisanat:concrete/buttons",
+		"#artisanat:terracotta/buttons"
 	]
 }

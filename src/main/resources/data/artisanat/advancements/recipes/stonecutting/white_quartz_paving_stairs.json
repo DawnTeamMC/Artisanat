@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/white_quartz_paving_stairs"
+		]
+	},
+	"criteria": {
+		"has_white_quartz_paving": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "artisanat:white_quartz_paving"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/white_quartz_paving_stairs"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_white_quartz_paving",
+			"has_the_recipe"
+		]
+	]
+}

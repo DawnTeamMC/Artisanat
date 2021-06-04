@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "artisanat:dark_prismarine_wall",
+	"pattern": [
+		"###",
+		"###"
+	],
+	"key": {
+		"#": {
+			"item": "artisanat:brown_dark_prismarine"
+		}
+	},
+	"result": {
+		"item": "artisanat:brown_dark_prismarine_wall",
+		"count": 6
+	}
+}

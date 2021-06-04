@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:dark_prismarine_wall",
+		"artisanat:white_dark_prismarine_wall",
+		"artisanat:light_gray_dark_prismarine_wall",
+		"artisanat:gray_dark_prismarine_wall",
+		"artisanat:black_dark_prismarine_wall",
+		"artisanat:brown_dark_prismarine_wall",
+		"artisanat:red_dark_prismarine_wall",
+		"artisanat:orange_dark_prismarine_wall",
+		"artisanat:yellow_dark_prismarine_wall",
+		"artisanat:lime_dark_prismarine_wall",
+		"artisanat:green_dark_prismarine_wall",
+		"artisanat:cyan_dark_prismarine_wall",
+		"artisanat:light_blue_dark_prismarine_wall",
+		"artisanat:blue_dark_prismarine_wall",
+		"artisanat:purple_dark_prismarine_wall",
+		"artisanat:magenta_dark_prismarine_wall",
+		"artisanat:pink_dark_prismarine_wall"
+	]
+}

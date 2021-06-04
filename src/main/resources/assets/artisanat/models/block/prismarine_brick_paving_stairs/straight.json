@@ -1,0 +1,8 @@
+{
+	"parent": "block/stairs",
+	"textures": {
+		"bottom": "artisanat:block/prismarine_brick_paving",
+		"top": "artisanat:block/prismarine_brick_paving",
+		"side": "artisanat:block/prismarine_brick_paving"
+	}
+}

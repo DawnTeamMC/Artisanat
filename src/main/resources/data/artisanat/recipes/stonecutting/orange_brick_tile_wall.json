@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "artisanat:orange_bricks"
+		},
+		{
+			"item": "artisanat:orange_brick_tiles"
+		}
+	],
+	"result": "artisanat:orange_brick_tile_wall",
+	"count": 1
+}

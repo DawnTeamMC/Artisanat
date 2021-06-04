@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "artisanat:green_bricks"
+	},
+	"result": "artisanat:green_brick_wall",
+	"count": 1
+}

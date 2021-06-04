@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/sandstone_brick_wall"
+		]
+	},
+	"criteria": {
+		"has_sandstone": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:sandstone"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/sandstone_brick_wall"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_sandstone",
+			"has_the_recipe"
+		]
+	]
+}

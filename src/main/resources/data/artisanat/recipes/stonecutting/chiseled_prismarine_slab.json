@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "minecraft:prismarine"
+		},
+		{
+			"item": "artisanat:chiseled_prismarine"
+		}
+	],
+	"result": "artisanat:chiseled_prismarine_slab",
+	"count": 2
+}

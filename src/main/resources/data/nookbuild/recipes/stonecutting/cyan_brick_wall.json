@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "nookbuild:cyan_bricks"
-	},
-	"result": "nookbuild:cyan_brick_wall",
-	"count": 1
-}

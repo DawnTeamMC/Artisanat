@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "minecraft:magenta_terracotta"
-	},
-	"result": "nookbuild:magenta_terracotta_slab",
-	"count": 2
-}

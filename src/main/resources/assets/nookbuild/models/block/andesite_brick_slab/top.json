@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab_top",
-	"textures": {
-		"bottom": "nookbuild:block/andesite_bricks",
-		"top": "nookbuild:block/andesite_bricks",
-		"side": "nookbuild:block/andesite_bricks"
-	}
-}

@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/red_brick_tiles"
+		]
+	},
+	"criteria": {
+		"has_red_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "artisanat:red_bricks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/red_brick_tiles"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_red_bricks",
+			"has_the_recipe"
+		]
+	]
+}

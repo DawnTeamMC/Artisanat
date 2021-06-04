@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/purple_brick_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/purple_brick_slab/top"
+		},
+		"type=double": {
+			"model": "artisanat:block/purple_bricks"
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"parent": "minecraft:recipes/root",
+	"rewards": {
+		"recipes": [
+			"artisanat:stonecutting/brown_brick_tile_wall"
+		]
+	},
+	"criteria": {
+		"has_brown_bricks": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "artisanat:brown_bricks"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "artisanat:stonecutting/brown_brick_tile_wall"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_brown_bricks",
+			"has_the_recipe"
+		]
+	]
+}

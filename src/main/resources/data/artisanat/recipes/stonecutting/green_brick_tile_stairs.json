@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": [
+		{
+			"item": "artisanat:green_bricks"
+		},
+		{
+			"item": "artisanat:green_brick_tiles"
+		}
+	],
+	"result": "artisanat:green_brick_tile_stairs",
+	"count": 1
+}

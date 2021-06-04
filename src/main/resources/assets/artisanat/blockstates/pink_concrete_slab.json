@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "artisanat:block/pink_concrete_slab/bottom"
+		},
+		"type=top": {
+			"model": "artisanat:block/pink_concrete_slab/top"
+		},
+		"type=double": {
+			"model": "minecraft:block/pink_concrete"
+		}
+	}
+}

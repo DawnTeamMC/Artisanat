@@ -1,0 +1,8 @@
+{
+	"parent": "block/inner_stairs",
+	"textures": {
+		"bottom": "artisanat:block/cyan_bricks",
+		"top": "artisanat:block/cyan_bricks",
+		"side": "artisanat:block/cyan_bricks"
+	}
+}
