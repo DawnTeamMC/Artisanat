@@ -18,9 +18,11 @@
 		]
 	},
 	"depends": {
-		"minecraft": "*",
+		"minecraft": "1.16.*",
+		"java": ">=8",
 		"fabric": "*",
-		"dawn": "*"
+		"fabricloader": ">=0.11.3",
+		"dawn": ">=1.8"
 	},
 	"custom": {
 		"modmenu": {
