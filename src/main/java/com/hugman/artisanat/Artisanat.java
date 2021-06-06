@@ -1,7 +1,7 @@
 package com.hugman.artisanat;
 
-import com.hugman.dawn.api.util.ModData;
 import com.hugman.artisanat.init.ArtisanatBlocks;
+import com.hugman.dawn.api.object.ModData;
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

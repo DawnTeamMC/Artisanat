@@ -11,7 +11,7 @@
 			"conditions": {
 				"items": [
 					{
-						"item": "minecraft:cyan_concrete"
+						"items": ["minecraft:cyan_concrete"]
 					}
 				]
 			}

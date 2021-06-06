@@ -1,0 +1,22 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:white_quartz_paving",
+		"artisanat:light_gray_quartz_paving",
+		"artisanat:gray_quartz_paving",
+		"artisanat:black_quartz_paving",
+		"artisanat:brown_quartz_paving",
+		"artisanat:red_quartz_paving",
+		"artisanat:orange_quartz_paving",
+		"artisanat:yellow_quartz_paving",
+		"artisanat:yellow_quartz_paving",
+		"artisanat:lime_quartz_paving",
+		"artisanat:green_quartz_paving",
+		"artisanat:cyan_quartz_paving",
+		"artisanat:light_blue_quartz_paving",
+		"artisanat:blue_quartz_paving",
+		"artisanat:purple_quartz_paving",
+		"artisanat:magenta_quartz_paving",
+		"artisanat:pink_quartz_paving"
+	]
+}

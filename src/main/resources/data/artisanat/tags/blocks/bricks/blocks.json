@@ -1,7 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"minecraft:bricks",
 		"artisanat:white_bricks",
 		"artisanat:light_gray_bricks",
 		"artisanat:gray_bricks",

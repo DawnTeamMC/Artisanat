@@ -11,7 +11,7 @@
 			"conditions": {
 				"items": [
 					{
-						"item": "artisanat:lime_quartz_paving"
+						"items": ["artisanat:lime_quartz_paving"]
 					}
 				]
 			}

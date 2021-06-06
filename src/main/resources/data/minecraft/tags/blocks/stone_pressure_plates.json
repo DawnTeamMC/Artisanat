@@ -1,7 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"#artisanat:concrete/pressure_plates",
-		"#artisanat:terracotta/pressure_plates"
+		"#artisanat:terracotta/pressure_plates",
+		"#artisanat:concrete/pressure_plates"
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"#artisanat:concrete/buttons",
-		"#artisanat:terracotta/buttons"
+		"#artisanat:terracotta/buttons",
+		"#artisanat:concrete/buttons"
 	]
 }

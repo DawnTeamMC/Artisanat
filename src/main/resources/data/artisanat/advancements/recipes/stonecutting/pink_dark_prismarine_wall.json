@@ -11,7 +11,7 @@
 			"conditions": {
 				"items": [
 					{
-						"item": "artisanat:pink_dark_prismarine"
+						"items": ["artisanat:pink_dark_prismarine"]
 					}
 				]
 			}

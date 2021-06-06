@@ -11,7 +11,7 @@
 			"conditions": {
 				"items": [
 					{
-						"item": "artisanat:blue_bricks"
+						"items": ["artisanat:blue_bricks"]
 					}
 				]
 			}
