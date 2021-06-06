@@ -1,7 +1,6 @@
 package com.hugman.artisanat.init;
 
 import com.hugman.dawn.api.creator.BlockCreator;
-import com.hugman.dawn.api.creator.bundle.Bundle;
 import com.hugman.dawn.api.creator.bundle.block.MTBlockBundle;
 import com.hugman.dawn.api.creator.bundle.block.MTCBlockBundle;
 import com.hugman.dawn.api.util.DefaultBlockTemplates;
