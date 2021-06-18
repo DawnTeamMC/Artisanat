@@ -17,6 +17,9 @@
 			"com.hugman.artisanat.Artisanat"
 		]
 	},
+	"mixins": [
+		"artisanat.mixins.json"
+	],
 	"depends": {
 		"minecraft": "1.17.*",
 		"java": ">=8",

@@ -1,11 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"#artisanat:bricks/slabs",
-		"#artisanat:brick_tiles/slabs",
-		"#artisanat:concrete/slabs",
-		"#artisanat:dark_prismarine/slabs",
-		"#artisanat:terracotta/slabs",
 		"artisanat:cobblestone_brick_slab",
 		"artisanat:mossy_cobblestone_brick_slab",
 		"artisanat:granite_brick_slab",
@@ -17,6 +12,13 @@
 		"artisanat:polished_red_sandstone_slab",
 		"artisanat:smooth_stone_paving_slab",
 		"artisanat:chiseled_prismarine_slab",
-		"artisanat:prismarine_brick_paving_slab"
+		"artisanat:prismarine_brick_paving_slab",
+		"#artisanat:bricks/slabs",
+		"#artisanat:brick_tiles/slabs",
+		"#artisanat:terracotta/slabs",
+		"#artisanat:terracotta_bricks/slabs",
+		"#artisanat:dark_prismarine/slabs",
+		"#artisanat:concrete/slabs",
+		"#artisanat:quartz_paving/slabs"
 	]
 }
