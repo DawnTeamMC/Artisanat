@@ -1,11 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"#artisanat:bricks/walls",
-		"#artisanat:brick_tiles/walls",
-		"#artisanat:concrete/walls",
-		"#artisanat:dark_prismarine/walls",
-		"#artisanat:terracotta/walls",
 		"artisanat:cobblestone_brick_wall",
 		"artisanat:mossy_cobblestone_brick_wall",
 		"artisanat:granite_brick_wall",
@@ -13,6 +8,12 @@
 		"artisanat:andesite_brick_wall",
 		"artisanat:sandstone_brick_wall",
 		"artisanat:red_sandstone_brick_wall",
-		"artisanat:chiseled_prismarine_wall"
+		"artisanat:chiseled_prismarine_wall",
+		"#artisanat:bricks/walls",
+		"#artisanat:brick_tiles/walls",
+		"#artisanat:terracotta/walls",
+		"#artisanat:terracotta_bricks/walls",
+		"#artisanat:dark_prismarine/walls",
+		"#artisanat:concrete/walls"
 	]
 }

@@ -1,11 +1,6 @@
 {
 	"replace": false,
 	"values": [
-		"#artisanat:bricks/stairs",
-		"#artisanat:brick_tiles/stairs",
-		"#artisanat:concrete/stairs",
-		"#artisanat:dark_prismarine/stairs",
-		"#artisanat:terracotta/stairs",
 		"artisanat:cobblestone_brick_stairs",
 		"artisanat:mossy_cobblestone_brick_stairs",
 		"artisanat:granite_brick_stairs",
@@ -17,6 +12,13 @@
 		"artisanat:polished_red_sandstone_stairs",
 		"artisanat:smooth_stone_paving_stairs",
 		"artisanat:chiseled_prismarine_stairs",
-		"artisanat:prismarine_brick_paving_stairs"
+		"artisanat:prismarine_brick_paving_stairs",
+		"#artisanat:bricks/stairs",
+		"#artisanat:brick_tiles/stairs",
+		"#artisanat:terracotta/stairs",
+		"#artisanat:terracotta_bricks/stairs",
+		"#artisanat:dark_prismarine/stairs",
+		"#artisanat:concrete/stairs",
+		"#artisanat:quartz_paving/stairs"
 	]
 }
