@@ -8,6 +8,7 @@
 		"Hugman"
 	],
 	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/artisanat",
 		"sources": "https://github.com/DawnTeamMC/${github_name}",
 		"issues": "https://github.com/DawnTeamMC/${github_name}/issues"
 	},
