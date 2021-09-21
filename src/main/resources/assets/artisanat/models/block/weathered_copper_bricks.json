@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "artisanat:block/weathered_copper_bricks"
+	}
+}
