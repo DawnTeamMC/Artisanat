@@ -449,6 +449,78 @@
 	"block.artisanat.gray_dark_prismarine_wall": "Gray Dark Prismarine Wall",
 	"block.artisanat.black_dark_prismarine_wall": "Black Dark Prismarine Wall",
 
+	"block.artisanat.plated_coal_block": "Plated Coal Block",
+	"block.artisanat.cut_coal_block": "Cut Coal Block",
+	"block.artisanat.coal_bricks": "Coal Bricks",
+	"block.artisanat.coal_tiles": "Coal Tiles",
+
+	"block.artisanat.unplated_copper_block": "Unplated Copper Block",
+	"block.artisanat.copper_bricks": "Copper Bricks",
+	"block.artisanat.copper_tiles": "Copper Tiles",
+
+	"block.artisanat.unplated_exposed_copper": "Unplated Exposed Copper",
+	"block.artisanat.exposed_copper_bricks": "Exposed Copper Bricks",
+	"block.artisanat.exposed_copper_tiles": "Exposed Copper Tiles",
+
+	"block.artisanat.unplated_weathered_copper": "Unplated Weathered Copper",
+	"block.artisanat.weathered_copper_bricks": "Weathered Copper Bricks",
+	"block.artisanat.weathered_copper_tiles": "Weathered Copper Tiles",
+
+	"block.artisanat.unplated_oxidized_copper": "Unplated Oxidized Copper",
+	"block.artisanat.oxidized_copper_bricks": "Oxidized Copper Bricks",
+	"block.artisanat.oxidized_copper_tiles": "Oxidized Copper Tiles",
+
+	"block.artisanat.waxed_unplated_copper_block": "Waxed Unplated Copper Block",
+	"block.artisanat.waxed_copper_bricks": "Waxed Copper Bricks",
+	"block.artisanat.waxed_copper_tiles": "Waxed Copper Tiles",
+
+	"block.artisanat.waxed_unplated_exposed_copper": "Waxed Unplated Exposed Copper",
+	"block.artisanat.waxed_exposed_copper_bricks": "Waxed Exposed Copper Bricks",
+	"block.artisanat.waxed_exposed_copper_tiles": "Waxed Exposed Copper Tiles",
+
+	"block.artisanat.waxed_unplated_weathered_copper": "Waxed Unplated Weathered Copper",
+	"block.artisanat.waxed_weathered_copper_bricks": "Waxed Weathered Copper Bricks",
+	"block.artisanat.waxed_weathered_copper_tiles": "Waxed Weathered Copper Tiles",
+
+	"block.artisanat.waxed_unplated_oxidized_copper": "Waxed Unplated Oxidized Copper",
+	"block.artisanat.waxed_oxidized_copper_bricks": "Waxed Oxidized Copper Bricks",
+	"block.artisanat.waxed_oxidized_copper_tiles": "Waxed Oxidized Copper Tiles",
+
+	"block.artisanat.plated_iron_block": "Plated Iron Block",
+	"block.artisanat.cut_iron_block": "Cut Iron Block",
+	"block.artisanat.iron_bricks": "Iron Bricks",
+	"block.artisanat.iron_tiles": "Iron Tiles",
+
+	"block.artisanat.plated_gold_block": "Plated Gold Block",
+	"block.artisanat.cut_gold_block": "Cut Gold Block",
+	"block.artisanat.gold_bricks": "Gold Bricks",
+	"block.artisanat.gold_tiles": "Gold Tiles",
+
+	"block.artisanat.plated_lapis_block": "Plated Lapis Lazuli Block",
+	"block.artisanat.cut_lapis_block": "Cut Lapis Lazuli Block",
+	"block.artisanat.lapis_bricks": "Lapis Lazuli Bricks",
+	"block.artisanat.lapis_tiles": "Lapis Lazuli Tiles",
+
+	"block.artisanat.plated_redstone_block": "Plated Redstone Block",
+	"block.artisanat.cut_redstone_block": "Cut Redstone Block",
+	"block.artisanat.redstone_bricks": "Redstone Bricks",
+	"block.artisanat.redstone_tiles": "Redstone Tiles",
+
+	"block.artisanat.plated_emerald_block": "Plated Emerald Block",
+	"block.artisanat.cut_emerald_block": "Cut Emerald Block",
+	"block.artisanat.emerald_bricks": "Emerald Bricks",
+	"block.artisanat.emerald_tiles": "Emerald Tiles",
+
+	"block.artisanat.plated_diamond_block": "Plated Diamond Block",
+	"block.artisanat.cut_diamond_block": "Cut Diamond Block",
+	"block.artisanat.diamond_bricks": "Diamond Bricks",
+	"block.artisanat.diamond_tiles": "Diamond Tiles",
+
+	"block.artisanat.plated_netherite_block": "Plated Netherite Block",
+	"block.artisanat.cut_netherite_block": "Cut Netherite Block",
+	"block.artisanat.netherite_bricks": "Netherite Bricks",
+	"block.artisanat.netherite_tiles": "Netherite Tiles",
+
 	"block.artisanat.blue_concrete_stairs": "Blue Concrete Stairs",
 	"block.artisanat.light_blue_concrete_stairs": "Light Blue Concrete Stairs",
 	"block.artisanat.cyan_concrete_stairs": "Cyan Concrete Stairs",
