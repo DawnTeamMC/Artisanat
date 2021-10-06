@@ -1,5 +1,7 @@
 package com.hugman.artisanat.init;
 
+import com.hugman.artisanat.creator.bundle.block.CopperBlocksBundle;
+import com.hugman.artisanat.creator.bundle.block.MOreBlocksBundle;
 import com.hugman.dawn.api.creator.BlockCreator;
 import com.hugman.dawn.api.creator.bundle.block.MTBlockBundle;
 import com.hugman.dawn.api.creator.bundle.block.MTCBlockBundle;
@@ -40,6 +42,16 @@ public class ArtisanatBlocks extends ArtisanatBundle {
 	public static final MTCBlockBundle STAINED_DARK_PRISMARINE_BLOCKS = bundle(new MTCBlockBundle(new BlockCreator.Builder().name("dark_prismarine").settings(FabricBlockSettings.copyOf(Blocks.DARK_PRISMARINE)), DefaultBlockTemplates.CUBE, DefaultBlockTemplates.STAIRS, DefaultBlockTemplates.SLAB, DefaultBlockTemplates.WALL));
 	public static final MTCBlockBundle CONCRETE_BLOCKS = bundle(new MTCBlockBundle(new BlockCreator.Builder().name("concrete").settings(FabricBlockSettings.copyOf(Blocks.BLUE_CONCRETE)), DefaultBlockTemplates.STAIRS, DefaultBlockTemplates.SLAB, DefaultBlockTemplates.WALL, DefaultBlockTemplates.STONE_PRESSURE_PLATE, DefaultBlockTemplates.STONE_BUTTON));
 	public static final MTCBlockBundle QUARTZ_PAVING_BLOCKS = bundle(new MTCBlockBundle(new BlockCreator.Builder().name("quartz_paving").settings(FabricBlockSettings.copyOf(Blocks.QUARTZ_BLOCK)), DefaultBlockTemplates.CUBE, DefaultBlockTemplates.STAIRS, DefaultBlockTemplates.SLAB));
+
+	public static final MOreBlocksBundle COAL_BLOCKS = bundle(new MOreBlocksBundle("coal", FabricBlockSettings.copyOf(Blocks.COAL_BLOCK)));
+	public static final CopperBlocksBundle COPPER_BLOCKS = bundle(new CopperBlocksBundle());
+	public static final MOreBlocksBundle IRON_BLOCKS = bundle(new MOreBlocksBundle("iron", FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+	public static final MOreBlocksBundle GOLD_BLOCKS = bundle(new MOreBlocksBundle("gold", FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
+	public static final MOreBlocksBundle LAPIS_BLOCKS = bundle(new MOreBlocksBundle("lapis", FabricBlockSettings.copyOf(Blocks.LAPIS_BLOCK)));
+	public static final MOreBlocksBundle REDSTONE_BLOCKS = bundle(new MOreBlocksBundle("redstone", FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)));
+	public static final MOreBlocksBundle EMERALD_BLOCKS = bundle(new MOreBlocksBundle("emerald", FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
+	public static final MOreBlocksBundle DIAMOND_BLOCKS = bundle(new MOreBlocksBundle("diamond", FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
+	public static final MOreBlocksBundle NETHERITE_BLOCKS = bundle(new MOreBlocksBundle("netherite", FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
 
 	public static void init() {
 	}
