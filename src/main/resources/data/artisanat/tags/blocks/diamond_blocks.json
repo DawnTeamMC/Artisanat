@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:plated_diamond_block",
+		"artisanat:cut_diamond_block",
+		"artisanat:diamond_bricks",
+		"artisanat:diamond_tiles"
+	]
+}

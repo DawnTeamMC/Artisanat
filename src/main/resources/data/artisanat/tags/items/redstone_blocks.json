@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:plated_redstone_block",
+		"artisanat:cut_redstone_block",
+		"artisanat:redstone_bricks",
+		"artisanat:redstone_tiles"
+	]
+}

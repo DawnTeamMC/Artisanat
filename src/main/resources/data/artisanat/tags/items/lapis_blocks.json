@@ -1,0 +1,9 @@
+{
+	"replace": false,
+	"values": [
+		"artisanat:plated_lapis_block",
+		"artisanat:cut_lapis_block",
+		"artisanat:lapis_bricks",
+		"artisanat:lapis_tiles"
+	]
+}
