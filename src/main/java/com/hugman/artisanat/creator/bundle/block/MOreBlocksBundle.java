@@ -17,19 +17,19 @@ public class MOreBlocksBundle extends Bundle {
         this.tiles = put(builder.name(oreName + "_tiles").build());
     }
 
-    public BlockCreator getPlatedBlock() {
-        return platedBlock;
+    public Block getPlatedBlock() {
+        return platedBlock.getValue();
     }
 
-    public BlockCreator getCutBlock() {
-        return cutBlock;
+    public Block getCutBlock() {
+        return cutBlock.getValue();
     }
 
     public Block getBricks() {
         return bricks.getValue();
     }
 
-    public BlockCreator getTiles() {
-        return tiles;
+    public Block getTiles() {
+        return tiles.getValue();
     }
 }

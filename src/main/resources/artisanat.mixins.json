@@ -1,9 +1,13 @@
 {
-	"required": true,
-	"package": "com.hugman.artisanat.mixin",
-	"compatibilityLevel": "JAVA_16",
-	"mixins": ["DefaultedRegistryMixin"],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "com.hugman.artisanat.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "AxeMixin",
+    "DefaultedRegistryMixin",
+    "HoneycombMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }
