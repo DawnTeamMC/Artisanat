@@ -9,6 +9,7 @@ import com.hugman.dawn.api.util.DefaultBlockTemplates;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.RedstoneBlock;
 
 public class ArtisanatBlocks extends ArtisanatBundle {
 	public static final Block DARK_PRISMARINE_WALL = add(new BlockCreator.Builder("dark_prismarine", DefaultBlockTemplates.WALL, FabricBlockSettings.copyOf(Blocks.DARK_PRISMARINE)).build());
@@ -48,7 +49,7 @@ public class ArtisanatBlocks extends ArtisanatBundle {
 	public static final MOreBlocksBundle IRON_BLOCKS = bundle(new MOreBlocksBundle("iron", FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 	public static final MOreBlocksBundle GOLD_BLOCKS = bundle(new MOreBlocksBundle("gold", FabricBlockSettings.copyOf(Blocks.GOLD_BLOCK)));
 	public static final MOreBlocksBundle LAPIS_BLOCKS = bundle(new MOreBlocksBundle("lapis", FabricBlockSettings.copyOf(Blocks.LAPIS_BLOCK)));
-	public static final MOreBlocksBundle REDSTONE_BLOCKS = bundle(new MOreBlocksBundle("redstone", FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK)));
+	public static final MOreBlocksBundle REDSTONE_BLOCKS = bundle(new MOreBlocksBundle("redstone", FabricBlockSettings.copyOf(Blocks.REDSTONE_BLOCK), RedstoneBlock::new));
 	public static final MOreBlocksBundle EMERALD_BLOCKS = bundle(new MOreBlocksBundle("emerald", FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
 	public static final MOreBlocksBundle DIAMOND_BLOCKS = bundle(new MOreBlocksBundle("diamond", FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
 	public static final MOreBlocksBundle NETHERITE_BLOCKS = bundle(new MOreBlocksBundle("netherite", FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
