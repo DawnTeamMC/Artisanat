@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "minecraft:gold_block"
+	},
+	"result": "artisanat:gold_tiles",
+	"count": 1
+}

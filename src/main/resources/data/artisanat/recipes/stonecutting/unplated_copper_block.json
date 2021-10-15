@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "minecraft:copper_block"
+	},
+	"result": "artisanat:unplated_copper_block",
+	"count": 1
+}

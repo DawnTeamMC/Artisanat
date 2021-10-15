@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "minecraft:emerald_block"
+	},
+	"result": "artisanat:cut_emerald_block",
+	"count": 1
+}

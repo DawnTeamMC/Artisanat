@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "minecraft:redstone_block"
+	},
+	"result": "artisanat:cut_redstone_block",
+	"count": 1
+}

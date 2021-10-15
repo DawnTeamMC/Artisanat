@@ -1,0 +1,8 @@
+{
+	"type": "minecraft:stonecutting",
+	"ingredient": {
+		"item": "minecraft:waxed_oxidized_copper"
+	},
+	"result": "artisanat:oxidized_copper_tiles",
+	"count": 1
+}
