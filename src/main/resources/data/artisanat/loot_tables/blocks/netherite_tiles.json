@@ -6,7 +6,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "artisanat:netherite_tile"
+					"name": "artisanat:netherite_tiles"
 				}
 			],
 			"conditions": [
