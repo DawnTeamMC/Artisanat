@@ -10,13 +10,13 @@ import net.minecraft.util.math.BlockPos;
 import java.util.Optional;
 import java.util.Random;
 
-public class MappedOxidizableBlock extends Block implements Oxidizable {
+public class MappedOxidableBlock extends Block implements Oxidizable {
 
-    private final OxidizationLevel oxidizationLevel;
+    private final OxidationLevel oxidationLevel;
 
-    public MappedOxidizableBlock(OxidizationLevel oxidizationLevel, Settings settings) {
+    public MappedOxidableBlock(OxidationLevel oxidationLevel, Settings settings) {
         super(settings);
-        this.oxidizationLevel = oxidizationLevel;
+        this.oxidationLevel = oxidationLevel;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class MappedOxidizableBlock extends Block implements Oxidizable {
     }
 
     @Override
-    public OxidizationLevel getDegradationLevel() {
-        return this.oxidizationLevel;
+    public OxidationLevel getDegradationLevel() {
+        return this.oxidationLevel;
     }
 }

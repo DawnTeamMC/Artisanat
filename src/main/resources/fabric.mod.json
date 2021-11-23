@@ -22,11 +22,10 @@
 		"artisanat.mixins.json"
 	],
 	"depends": {
-		"minecraft": "1.17.*",
-		"java": ">=8",
+		"minecraft": "1.18.*",
+		"java": ">=17",
 		"fabric": "*",
-		"fabricloader": ">=0.11.3",
-		"dawn": ">=2.0.1"
+		"fabricloader": ">=0.11.3"
 	},
 	"custom": {
 		"modmenu": {
