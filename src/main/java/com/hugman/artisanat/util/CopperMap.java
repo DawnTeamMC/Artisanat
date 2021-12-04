@@ -1,5 +1,6 @@
 package com.hugman.artisanat.util;
 
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import org.jetbrains.annotations.Nullable;
@@ -15,14 +16,7 @@ public class CopperMap {
     private static final Map<Block, Block> WAXED = new HashMap<>();
     private static final Map<Block, Block> UNWAXED = new HashMap<>();
 
-    public static void put(Block block, @Nullable Block oxidized, Block waxed) {
-        if (oxidized != null) {
-            INCREASES.put(block, oxidized);
-            DECREASES.put(oxidized, block);
-        }
-        WAXED.put(block, waxed);
-        UNWAXED.put(waxed, block);
-    }
+
 
     public static Optional<BlockState> getIncreasedState(BlockState state) {
         return getIncreasedBlock(state.getBlock()).map((block) -> block.getStateWithProperties(state));
@@ -51,9 +45,7 @@ public class CopperMap {
     }
 
     public static Optional<BlockState> getUnwaxedState(BlockState state) {
-        return getUnwaxedBlock(state.getBlock()).map((block) -> {
-            return block.getStateWithProperties(state);
-        });
+        return getUnwaxedBlock(state.getBlock()).map((block) -> block.getStateWithProperties(state));
     }
 
     public static Optional<Block> getUnwaxedBlock(Block block) {

@@ -1,16 +1,17 @@
 package com.hugman.artisanat.creator.bundle.block;
 
-import com.hugman.artisanat.object.block.MappedOxidableBlock;
-import com.hugman.artisanat.util.CopperMap;
 import com.hugman.dawn.api.creator.BlockCreator;
 import com.hugman.dawn.api.creator.bundle.Bundle;
 import com.mojang.datafixers.util.Pair;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Oxidizable;
+import net.minecraft.block.OxidizableBlock;
 import net.minecraft.item.ItemGroup;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,10 +29,17 @@ public class CopperBlocksBundle extends Bundle {
     }
 
     private void fillOxidizationMap(Map<Pair<Oxidizable.OxidationLevel, Boolean>, BlockCreator> map) {
-        CopperMap.put(get(map, Oxidizable.OxidationLevel.UNAFFECTED, false), get(map, Oxidizable.OxidationLevel.EXPOSED, false), get(map, Oxidizable.OxidationLevel.UNAFFECTED, true));
-        CopperMap.put(get(map, Oxidizable.OxidationLevel.EXPOSED, false), get(map, Oxidizable.OxidationLevel.WEATHERED, false), get(map, Oxidizable.OxidationLevel.EXPOSED, true));
-        CopperMap.put(get(map, Oxidizable.OxidationLevel.WEATHERED, false), get(map, Oxidizable.OxidationLevel.OXIDIZED, false), get(map, Oxidizable.OxidationLevel.WEATHERED, true));
-        CopperMap.put(get(map, Oxidizable.OxidationLevel.OXIDIZED, false), null, get(map, Oxidizable.OxidationLevel.OXIDIZED, true));
+        registerOxi(get(map, Oxidizable.OxidationLevel.UNAFFECTED, false), get(map, Oxidizable.OxidationLevel.EXPOSED, false), get(map, Oxidizable.OxidationLevel.UNAFFECTED, true));
+        registerOxi(get(map, Oxidizable.OxidationLevel.EXPOSED, false), get(map, Oxidizable.OxidationLevel.WEATHERED, false), get(map, Oxidizable.OxidationLevel.EXPOSED, true));
+        registerOxi(get(map, Oxidizable.OxidationLevel.WEATHERED, false), get(map, Oxidizable.OxidationLevel.OXIDIZED, false), get(map, Oxidizable.OxidationLevel.WEATHERED, true));
+        registerOxi(get(map, Oxidizable.OxidationLevel.OXIDIZED, false), null, get(map, Oxidizable.OxidationLevel.OXIDIZED, true));
+    }
+
+    public static void registerOxi(Block block, @Nullable Block oxidized, Block waxed) {
+        if (oxidized != null) {
+            OxidizableBlocksRegistry.registerOxidizableBlockPair(block, oxidized);
+        }
+        OxidizableBlocksRegistry.registerWaxableBlockPair(block, waxed);
     }
 
     private void createBlocks(Map<Pair<Oxidizable.OxidationLevel, Boolean>, BlockCreator> map, String prefix, String suffix) {
@@ -44,10 +52,10 @@ public class CopperBlocksBundle extends Bundle {
         if(!prefix.isEmpty()) prefix = prefix + "_";
         else suffix = "_" + suffix;
         if(waxed) prefix = "waxed_" + prefix;
-        createBlock(map, Oxidizable.OxidationLevel.UNAFFECTED, waxed, prefix + "copper" + (suffix.isEmpty() ? "_block" : suffix), (waxed ? Block::new : s -> new MappedOxidableBlock(Oxidizable.OxidationLevel.UNAFFECTED, s)), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK));
-        createBlock(map, Oxidizable.OxidationLevel.EXPOSED, waxed, prefix + "exposed_copper" + suffix, (waxed ? Block::new : s -> new MappedOxidableBlock(Oxidizable.OxidationLevel.EXPOSED, s)), FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER));
-        createBlock(map, Oxidizable.OxidationLevel.WEATHERED, waxed, prefix + "weathered_copper" + suffix, (waxed ? Block::new : s -> new MappedOxidableBlock(Oxidizable.OxidationLevel.WEATHERED, s)), FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER));
-        createBlock(map, Oxidizable.OxidationLevel.OXIDIZED, waxed, prefix + "oxidized_copper" + suffix, (waxed ? Block::new : s -> new MappedOxidableBlock(Oxidizable.OxidationLevel.OXIDIZED, s)), FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER));
+        createBlock(map, Oxidizable.OxidationLevel.UNAFFECTED, waxed, prefix + "copper" + (suffix.isEmpty() ? "_block" : suffix), (waxed ? Block::new : s -> new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, s)), FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK));
+        createBlock(map, Oxidizable.OxidationLevel.EXPOSED, waxed, prefix + "exposed_copper" + suffix, (waxed ? Block::new : s -> new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, s)), FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER));
+        createBlock(map, Oxidizable.OxidationLevel.WEATHERED, waxed, prefix + "weathered_copper" + suffix, (waxed ? Block::new : s -> new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, s)), FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER));
+        createBlock(map, Oxidizable.OxidationLevel.OXIDIZED, waxed, prefix + "oxidized_copper" + suffix, (waxed ? Block::new : s -> new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, s)), FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER));
     }
 
     private void createBlock(Map<Pair<Oxidizable.OxidationLevel, Boolean>, BlockCreator> map, Oxidizable.OxidationLevel OxidationLevel, boolean waxed, String name, Function<AbstractBlock.Settings, ? extends Block> blockProvider, FabricBlockSettings settings) {

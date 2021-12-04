@@ -3,9 +3,7 @@
   "package": "com.hugman.artisanat.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "AxeMixin",
-    "DefaultedRegistryMixin",
-    "HoneycombMixin"
+    "DefaultedRegistryMixin"
   ],
   "injectors": {
     "defaultRequire": 1
