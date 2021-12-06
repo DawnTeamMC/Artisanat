@@ -53,7 +53,4 @@ public class ArtisanatBlocks extends ArtisanatBundle {
 	public static final MOreBlocksBundle EMERALD_BLOCKS = bundle(new MOreBlocksBundle("emerald", FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
 	public static final MOreBlocksBundle DIAMOND_BLOCKS = bundle(new MOreBlocksBundle("diamond", FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK)));
 	public static final MOreBlocksBundle NETHERITE_BLOCKS = bundle(new MOreBlocksBundle("netherite", FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK)));
-
-	public static void init() {
-	}
 }
