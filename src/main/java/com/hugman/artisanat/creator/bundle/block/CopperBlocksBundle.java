@@ -59,7 +59,7 @@ public class CopperBlocksBundle extends Bundle {
     }
 
     private void createBlock(Map<Pair<Oxidizable.OxidationLevel, Boolean>, BlockCreator> map, Oxidizable.OxidationLevel OxidationLevel, boolean waxed, String name, Function<AbstractBlock.Settings, ? extends Block> blockProvider, FabricBlockSettings settings) {
-        map.put(Pair.of(OxidationLevel, waxed), put(new BlockCreator.Builder().name(name).blockProvider(blockProvider).settings(settings).itemGroup(ItemGroup.BUILDING_BLOCKS).build()));
+        map.put(Pair.of(OxidationLevel, waxed), put(new BlockCreator.Builder().name(name).provider(blockProvider).settings(settings).itemGroup(ItemGroup.BUILDING_BLOCKS).build()));
     }
 
     private Block get(Map<Pair<Oxidizable.OxidationLevel, Boolean>, BlockCreator> map, Oxidizable.OxidationLevel OxidationLevel, boolean waxed) {

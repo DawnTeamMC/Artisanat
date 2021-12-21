@@ -15,9 +15,4 @@ public abstract class ArtisanatBundle extends Bundle {
 		Artisanat.MOD_DATA.addCreator(creator);
 		return creator;
 	}
-
-	protected static <V extends Bundle> V bundle(V bundle) {
-		Artisanat.MOD_DATA.addBundle(bundle);
-		return bundle;
-	}
 }

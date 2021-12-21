@@ -16,8 +16,6 @@ public class CopperMap {
     private static final Map<Block, Block> WAXED = new HashMap<>();
     private static final Map<Block, Block> UNWAXED = new HashMap<>();
 
-
-
     public static Optional<BlockState> getIncreasedState(BlockState state) {
         return getIncreasedBlock(state.getBlock()).map((block) -> block.getStateWithProperties(state));
     }

@@ -17,7 +17,7 @@ public class MOreBlocksBundle extends Bundle {
     }
 
     public MOreBlocksBundle(String oreName, FabricBlockSettings settings, Function<AbstractBlock.Settings, ? extends Block> blockProvider) {
-        BlockCreator.Builder builder = new BlockCreator.Builder().blockProvider(blockProvider).settings(settings).itemGroup(ItemGroup.BUILDING_BLOCKS);
+        BlockCreator.Builder builder = new BlockCreator.Builder().provider(blockProvider).settings(settings).itemGroup(ItemGroup.BUILDING_BLOCKS);
         this.platedBlock = put(builder.name("plated_" + oreName + "_block").build());
         this.cutBlock = put(builder.name("cut_" + oreName + "_block").build());
         this.bricks = put(builder.name(oreName + "_bricks").build());

@@ -2,7 +2,7 @@ package com.hugman.artisanat;
 
 import com.google.common.reflect.Reflection;
 import com.hugman.artisanat.compat.init.ArtisanatColumns;
-import com.hugman.artisanat.init.ArtisanatBlocks;
+import com.hugman.artisanat.init.BlockBundle;
 import com.hugman.dawn.api.object.ModData;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -15,7 +15,7 @@ public class Artisanat implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Reflection.initialize(ArtisanatBlocks.class);
+		Reflection.initialize(BlockBundle.class);
 		if(FabricLoader.getInstance().isModLoaded("columns")) {
 			ArtisanatColumns.init();
 		}
