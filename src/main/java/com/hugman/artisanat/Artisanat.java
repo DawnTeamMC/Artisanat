@@ -15,6 +15,7 @@ public class Artisanat implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		MOD_DATA.addOldName("nookbuild");
 		Reflection.initialize(BlockBundle.class);
 		if(FabricLoader.getInstance().isModLoaded("columns")) {
 			ArtisanatColumns.init();
