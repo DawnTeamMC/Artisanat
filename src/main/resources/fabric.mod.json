@@ -18,9 +18,6 @@
 			"com.hugman.artisanat.Artisanat"
 		]
 	},
-	"mixins": [
-		"artisanat.mixins.json"
-	],
 	"depends": {
 		"minecraft": ">=1.18",
 		"fabric": "*",
