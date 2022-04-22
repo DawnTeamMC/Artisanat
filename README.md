@@ -1,4 +1,4 @@
-[![Artisanat](https://raw.githubusercontent.com/DawnTeamMC/DawnTeamMC/master/artisanat/header.png)](https://dawnteammc.github.io/artisanat)
+[![Artisanat](https://dawnteammc.github.io/artisanat/images/header.png)](https://dawnteammc.github.io/artisanat)
 
 # 🧱 Artisanat
 [![Latest release](https://img.shields.io/github/release/DawnTeamMC/Artisanat.svg)](https://github.com/DawnTeamMC/Artisanat/releases/latest)
