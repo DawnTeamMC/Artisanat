@@ -14,7 +14,7 @@ Artisanat is a mod for the latest version of Minecraft that adds a ton of new de
 **You can visit the [official website for Artisanat for more information](https://dawnteammc.github.io/artisanat).**
 
 ## 👾 Features
-Artisanat currently only adds those blocks to the game:
+Artisanat currently adds those blocks to the game:
 
 - Stained bricks
 - More terracotta/concrete blocks (stairs, slabs, walls, buttons, pressure plates, etc.)
