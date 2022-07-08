@@ -19,9 +19,9 @@
 		]
 	},
 	"depends": {
-		"minecraft": ">=1.18",
+		"minecraft": ">=1.19",
 		"fabric": "*",
-		"dawn": ">=3.2.0"
+		"dawn": ">=3.4.0"
 	},
 	"custom": {
 		"modmenu": {
