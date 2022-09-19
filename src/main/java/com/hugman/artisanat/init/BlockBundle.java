@@ -19,6 +19,7 @@ public class BlockBundle extends ArtisanatBundle {
 	public static final WoodBlocksBundle JUNGLE_WOOD_BLOCKS = creator(new WoodBlocksBundle(new BlockCreator.Builder().name("jungle_wood").settings(FabricBlockSettings.copyOf(Blocks.JUNGLE_WOOD))));
 	public static final WoodBlocksBundle ACACIA_WOOD_BLOCKS = creator(new WoodBlocksBundle(new BlockCreator.Builder().name("acacia_wood").settings(FabricBlockSettings.copyOf(Blocks.ACACIA_WOOD))));
 	public static final WoodBlocksBundle DARK_OAK_WOOD_BLOCKS = creator(new WoodBlocksBundle(new BlockCreator.Builder().name("dark_oak_wood").settings(FabricBlockSettings.copyOf(Blocks.DARK_OAK_WOOD))));
+	public static final WoodBlocksBundle MANGROVE_WOOD_BLOCKS = creator(new WoodBlocksBundle(new BlockCreator.Builder().name("mangrove_wood").settings(FabricBlockSettings.copyOf(Blocks.MANGROVE_WOOD))));
 	public static final WoodBlocksBundle CRIMSON_HYPHAE_BLOCKS = creator(new WoodBlocksBundle(new BlockCreator.Builder().name("crimson_hyphae").settings(FabricBlockSettings.copyOf(Blocks.CRIMSON_HYPHAE))));
 	public static final WoodBlocksBundle WARPED_HYPHAE_BLOCKS = creator(new WoodBlocksBundle(new BlockCreator.Builder().name("warped_hyphae").settings(FabricBlockSettings.copyOf(Blocks.WARPED_HYPHAE))));
 
