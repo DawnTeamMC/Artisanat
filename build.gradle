@@ -1,10 +1,8 @@
 plugins {
-    id 'fabric-loom' version '0.12-SNAPSHOT'
+    id 'fabric-loom' version '1.7-SNAPSHOT'
 }
 
 apply from: 'https://dawnteammc.github.io/resources/gradle_scripts/fabric-mod/java-17.gradle'
-apply from: 'https://dawnteammc.github.io/resources/gradle_scripts/fabric-publish.gradle'
-apply from: 'https://dawnteammc.github.io/resources/gradle_scripts/fabric-translate.gradle'
 
 repositories {
     maven { url 'https://jitpack.io' }                  // Required for Dawn API
@@ -17,9 +15,9 @@ repositories {
 }
 
 dependencies {
-    modApi "com.github.DawnTeamMC:DawnAPI:v${dawn_version}"
+    modApi "com.github.DawnTeamMC:DawnAPI:${dawn_version}"
 
-    modImplementation ("curse.maven:columns-385230:${columns_version}"){
+    modImplementation("curse.maven:columns-385230:${columns_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
 

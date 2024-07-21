@@ -9,6 +9,8 @@
 	"block.artisanat.jungle_wood_stairs": "Jungle Wood Stairs",
 	"block.artisanat.acacia_wood_stairs": "Acacia Wood Stairs",
 	"block.artisanat.dark_oak_wood_stairs": "Dark Oak Wood Stairs",
+	"block.artisanat.mangrove_wood_stairs": "Mangrove Wood Stairs",
+	"block.artisanat.cherry_wood_stairs": "Cherry Wood Stairs",
 	"block.artisanat.crimson_hyphae_stairs": "Crimson Hyphae Stairs",
 	"block.artisanat.warped_hyphae_stairs": "Warped Hyphae Stairs",
 
@@ -18,6 +20,8 @@
 	"block.artisanat.jungle_wood_slab": "Jungle Wood Slab",
 	"block.artisanat.acacia_wood_slab": "Acacia Wood Slab",
 	"block.artisanat.dark_oak_wood_slab": "Dark Oak Wood Slab",
+	"block.artisanat.mangrove_wood_slab": "Mangrove Wood Slab",
+	"block.artisanat.cherry_wood_slab": "Cherry Wood Slab",
 	"block.artisanat.crimson_hyphae_slab": "Crimson Hyphae Slab",
 	"block.artisanat.warped_hyphae_slab": "Warped Hyphae Slab",
 
@@ -27,6 +31,8 @@
 	"block.artisanat.jungle_wood_button": "Jungle Wood Button",
 	"block.artisanat.acacia_wood_button": "Acacia Wood Button",
 	"block.artisanat.dark_oak_wood_button": "Dark Oak Wood Button",
+	"block.artisanat.mangrove_wood_button": "Mangrove Wood Button",
+	"block.artisanat.cherry_wood_button": "Cherry Wood Button",
 	"block.artisanat.crimson_hyphae_button": "Crimson Hyphae Button",
 	"block.artisanat.warped_hyphae_button": "Warped Hyphae Button",
 
