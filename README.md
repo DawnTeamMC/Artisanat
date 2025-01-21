@@ -3,7 +3,7 @@
 # 🧱 Artisanat
 [![Latest release](https://img.shields.io/github/release/DawnTeamMC/Artisanat.svg)](https://github.com/DawnTeamMC/Artisanat/releases/latest)
 [![CurseForge downloads](http://cf.way2muchnoise.eu/full_artisanat_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/artisanat)
-[![License (LGPL v3.0)](https://img.shields.io/badge/code%20license-LGPL%20v3.0-green.svg?style=flat-square)](https://www.gnu.org/licenses/lgpl-3.0.en.html)
+[![License (Polyform Shield 1.0.0)](https://img.shields.io/badge/code%20license-Polyform%20Shield%201.0.0-green.svg?style=flat-square)](https://polyformproject.org/licenses/shield/1.0.0/)
 [![GitHub stars](https://img.shields.io/github/stars/DawnTeamMC/Artisanat.svg?style=flat-square)]()
 
 [![Discord user count](https://img.shields.io/discord/504608980799062036.svg?logoColor=FFFFFF&logo=discord&color=7289DA&style=flat-square)](https://discord.gg/8ksTVJu)
