@@ -7,7 +7,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/DawnTeamMC/Artisanat.svg?style=flat-square)]()
 
 [![Discord user count](https://img.shields.io/discord/504608980799062036.svg?logoColor=FFFFFF&logo=discord&color=7289DA&style=flat-square)](https://discord.gg/8ksTVJu)
-[![Twitter followers](https://img.shields.io/twitter/follow/DawnTeamMC.svg?logo=twitter&label=twitter&style=flat-square)](https://twitter.com/DawnTeamMC)
+[![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/DawnTeamMC)](https://twitter.com/DawnTeamMC)
 
 Artisanat is a mod for the latest version of Minecraft that adds a ton of new decorative blocks, such as new bricks, stained dark prismarine, more concrete/terracotta blocks as well as end-game fresh ore blocks.
 
