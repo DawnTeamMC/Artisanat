@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab",
-	"textures": {
-		"bottom": "artisanat:block/orange_dark_prismarine",
-		"top": "artisanat:block/orange_dark_prismarine",
-		"side": "artisanat:block/orange_dark_prismarine"
-	}
-}

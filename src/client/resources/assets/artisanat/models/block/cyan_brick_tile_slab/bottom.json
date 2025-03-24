@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab",
-	"textures": {
-		"bottom": "artisanat:block/cyan_brick_tiles",
-		"top": "artisanat:block/cyan_brick_tiles",
-		"side": "artisanat:block/cyan_brick_tiles"
-	}
-}

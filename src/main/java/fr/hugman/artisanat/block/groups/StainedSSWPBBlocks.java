@@ -1,7 +1,6 @@
 package fr.hugman.artisanat.block.groups;
 
 import com.google.common.collect.ImmutableMap;
-import fr.hugman.artisanat.block.helper.BlockBuilder;
 import fr.hugman.artisanat.util.CustomRegisterable;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -11,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public record StainedSSWPBBlocks(Map<DyeColor, SSWPBBlocks> colorMap) {
-    private static final Map<DyeColor, Block> TERRACOTTA_MAP = ImmutableMap.<DyeColor, Block>builder()
+    public static final Map<DyeColor, Block> TERRACOTTA_MAP = ImmutableMap.<DyeColor, Block>builder()
             .put(DyeColor.WHITE, Blocks.WHITE_TERRACOTTA)
             .put(DyeColor.ORANGE, Blocks.ORANGE_TERRACOTTA)
             .put(DyeColor.MAGENTA, Blocks.MAGENTA_TERRACOTTA)
@@ -29,7 +28,7 @@ public record StainedSSWPBBlocks(Map<DyeColor, SSWPBBlocks> colorMap) {
             .put(DyeColor.RED, Blocks.RED_TERRACOTTA)
             .put(DyeColor.BLACK, Blocks.BLACK_TERRACOTTA)
             .build();
-    private static final Map<DyeColor, Block> CONCRETE_MAP = ImmutableMap.<DyeColor, Block>builder()
+    public static final Map<DyeColor, Block> CONCRETE_MAP = ImmutableMap.<DyeColor, Block>builder()
             .put(DyeColor.WHITE, Blocks.WHITE_CONCRETE)
             .put(DyeColor.ORANGE, Blocks.ORANGE_CONCRETE)
             .put(DyeColor.MAGENTA, Blocks.MAGENTA_CONCRETE)

@@ -1,8 +1,0 @@
-{
-	"parent": "block/stairs",
-	"textures": {
-		"bottom": "artisanat:block/mossy_cobblestone_bricks",
-		"top": "artisanat:block/mossy_cobblestone_bricks",
-		"side": "artisanat:block/mossy_cobblestone_bricks"
-	}
-}

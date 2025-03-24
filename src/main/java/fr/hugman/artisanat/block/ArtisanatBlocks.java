@@ -27,7 +27,7 @@ public class ArtisanatBlocks {
     public static final WoodBlocks CRIMSON_HYPHAE_BLOCKS = register("crimson_hyphae", WoodBlocks.of(Blocks.CRIMSON_HYPHAE, ArtisanatBlockSetTypes.CRIMSON_HYPHAE));
     public static final WoodBlocks WARPED_HYPHAE_BLOCKS = register("warped_hyphae", WoodBlocks.of(Blocks.WARPED_HYPHAE, ArtisanatBlockSetTypes.WARPED_HYPHAE));
 
-    public static final BSSWBlocks COBBLESTONE_BRICKS = register("cobblestone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.MOSSY_COBBLESTONE)));
+    public static final BSSWBlocks COBBLESTONE_BRICKS = register("cobblestone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.COBBLESTONE)));
     public static final BSSWBlocks MOSSY_COBBLESTONE_BRICKS = register("mossy_cobblestone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.MOSSY_COBBLESTONE)));
 
     public static final BSSWBlocks GRANITE_BRICKS = register("granite_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.GRANITE)));
@@ -65,7 +65,7 @@ public class ArtisanatBlocks {
     public static final OreBlocks DIAMOND_BLOCKS = register("diamond", OreBlocks.of(Blocks.DIAMOND_BLOCK));
     public static final OreBlocks NETHERITE_BLOCKS = register("netherite", OreBlocks.of(Blocks.NETHERITE_BLOCK));
 
-    public static final CopperBlocks PLATED_COPPER_BLOCKS = register("", CopperBlocks.of("plated", ""));
+    public static final CopperBlocks UNPLATED_COPPER_BLOCKS = register("", CopperBlocks.of("unplated", ""));
     public static final CopperBlocks COPPER_BRICKS = register("", CopperBlocks.of("", "bricks"));
     public static final CopperBlocks COPPER_TILES = register("", CopperBlocks.of("", "tiles"));
 

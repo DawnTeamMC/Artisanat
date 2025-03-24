@@ -1,6 +1,0 @@
-{
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "artisanat:block/black_brick_tiles"
-	}
-}
