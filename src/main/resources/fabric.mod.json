@@ -1,44 +1,53 @@
 {
 	"schemaVersion": 1,
-	"name": "${mod_name}",
-	"id": "${mod_id}",
+	"name": "Artisanat",
+	"id": "artisanat",
 	"version": "${version}",
-	"icon": "assets/${mod_id}/textures/logo.png",
+	"icon": "assets/artisanat/textures/logo.png",
 	"authors": [
 		"Hugman"
 	],
 	"contact": {
-		"homepage": "https://dawnteammc.github.io/${mod_id}",
-		"sources": "https://github.com/DawnTeamMC/${github_name}",
-		"issues": "https://github.com/DawnTeamMC/${github_name}/issues"
+		"homepage": "https://dawnteammc.github.io/artisanat",
+		"sources": "https://github.com/DawnTeamMC/Artisanat",
+		"issues": "https://github.com/DawnTeamMC/Artisanat/issues"
 	},
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.hugman.artisanat.Artisanat"
+			"fr.hugman.artisanat.Artisanat"
+		],
+		"client": [
+			"fr.hugman.artisanat.client.ArtisanatClient"
 		]
 	},
 	"depends": {
-		"minecraft": ">=1.19",
-		"fabric": "*",
-		"dawn": ">=3.4.0"
+		"minecraft": "^1.21.4",
+		"fabric": "*"
 	},
 	"custom": {
 		"modmenu": {
 			"links": {
 				"modmenu.twitter": "https://twitter.com/DawnTeamMC",
 				"modmenu.discord": "https://discord.gg/8ksTVJu",
-				"modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/${curseforge_slug}",
-				"modmenu.modrinth": "https://modrinth.com/mod/${modrinth_slug}",
-				"modmenu.github_releases": "https://github.com/DawnTeamMC/${github_name}/releases/",
-				"modmenu.crowdin": "https://crowdin.com/project/dawnteam",
-				"modmenu.wiki": "https://github.com/DawnTeamMC/${github_name}/wiki/"
+				"modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/artisanat",
+				"modmenu.modrinth": "https://modrinth.com/mod/artisanat",
+				"modmenu.github_releases": "https://github.com/DawnTeamMC/Artisanat/releases/",
+				"modmenu.crowdin": "https://crowdin.com/project/dawnteam"
 			}
 		},
 		"modupdater": {
 			"strategy": "curseforge",
 			"projectID": 399443
+		},
+		"mc-publish": {
+			"curseforge": 399443,
+			"modrinth": "QDxAP5Cp",
+			"loaders": [
+				"fabric",
+				"quilt"
+			]
 		}
 	},
-	"license": "PolyForm Shield License 1.0.0"
+	"license": "PolyForm Shield 1.0.0"
 }
