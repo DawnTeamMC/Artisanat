@@ -15,6 +15,7 @@ import net.minecraft.registry.RegistryKeys;
 public class ArtisanatBlocks {
     public static final Block DARK_PRISMARINE_WALL = register("dark_prismarine_wall", BlockFactory.wall(Blocks.DARK_PRISMARINE));
 
+    //TODO: add stripped variants
     public static final WoodBlocks OAK_WOOD_BLOCKS = register("oak_wood", WoodBlocks.of(Blocks.OAK_WOOD, ArtisanatBlockSetTypes.OAK_WOOD));
     public static final WoodBlocks SPRUCE_WOOD_BLOCKS = register("spruce_wood", WoodBlocks.of(Blocks.SPRUCE_WOOD, ArtisanatBlockSetTypes.SPRUCE_WOOD));
     public static final WoodBlocks BIRCH_WOOD_BLOCKS = register("birch_wood", WoodBlocks.of(Blocks.BIRCH_WOOD, ArtisanatBlockSetTypes.BIRCH_WOOD));

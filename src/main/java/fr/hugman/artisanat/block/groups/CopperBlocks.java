@@ -20,6 +20,10 @@ public record CopperBlocks(
         return new Builder(prefix, suffix);
     }
 
+    public Block get(Oxidizable.OxidationLevel level, boolean waxed) {
+        return map.get(Pair.of(level, waxed));
+    }
+
     public static class Builder implements CustomRegisterable<CopperBlocks> {
         private final String prefix;
         private final String suffix;

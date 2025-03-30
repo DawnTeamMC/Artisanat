@@ -57,6 +57,7 @@ public class ArtisanatBlockFamilies {
                 .stairs(woodBlocks.stairs())
                 .slab(woodBlocks.slab())
                 .button(woodBlocks.button())
+                .noGenerateModels()
                 .build();
     }
 
@@ -82,6 +83,7 @@ public class ArtisanatBlockFamilies {
                 .wall(sswpb.wall())
                 .pressurePlate(sswpb.pressurePlate())
                 .button(sswpb.button())
+                .noGenerateModels()
                 .build();
     }
 
