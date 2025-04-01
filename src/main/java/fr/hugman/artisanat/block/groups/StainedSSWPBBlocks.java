@@ -6,8 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.DyeColor;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public record StainedSSWPBBlocks(Map<DyeColor, SSWPBBlocks> colorMap) {
     public static final Map<DyeColor, Block> TERRACOTTA_MAP = ImmutableMap.<DyeColor, Block>builder()
@@ -57,6 +56,14 @@ public record StainedSSWPBBlocks(Map<DyeColor, SSWPBBlocks> colorMap) {
 
     public static Builder concrete() {
         return of(CONCRETE_MAP);
+    }
+
+    public Block[] all() {
+        List<Block> blocks = new ArrayList<>();
+        for (SSWPBBlocks sswpbBlocks : colorMap.values()) {
+            blocks.addAll(Arrays.asList(sswpbBlocks.all()));
+        }
+        return blocks.toArray(new Block[0]);
     }
 
     public static class Builder implements CustomRegisterable<StainedSSWPBBlocks> {

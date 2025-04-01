@@ -13,8 +13,6 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 
 public class ArtisanatBlocks {
-    public static final Block DARK_PRISMARINE_WALL = register("dark_prismarine_wall", BlockFactory.wall(Blocks.DARK_PRISMARINE));
-
     //TODO: add stripped variants
     public static final WoodBlocks OAK_WOOD_BLOCKS = register("oak_wood", WoodBlocks.of(Blocks.OAK_WOOD, ArtisanatBlockSetTypes.OAK_WOOD));
     public static final WoodBlocks SPRUCE_WOOD_BLOCKS = register("spruce_wood", WoodBlocks.of(Blocks.SPRUCE_WOOD, ArtisanatBlockSetTypes.SPRUCE_WOOD));
@@ -52,6 +50,7 @@ public class ArtisanatBlocks {
     public static final BSSWBlocks TERRACOTTA_BRICKS = register("terracotta_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.TERRACOTTA)));
     public static final StainedBSSWBlocks STAINED_TERRACOTTA_BRICKS = register("terracotta_bricks", StainedBSSWBlocks.of(Blocks.TERRACOTTA));
 
+    public static final Block DARK_PRISMARINE_WALL = register("dark_prismarine_wall", BlockFactory.wall(Blocks.DARK_PRISMARINE));
     public static final StainedBSSWBlocks STAINED_DARK_PRISMARINE_BLOCKS = register("dark_prismarine", StainedBSSWBlocks.of(Blocks.DARK_PRISMARINE));
 
     public static final StainedSSWPBBlocks CONCRETE_BLOCKS = register("concrete", StainedSSWPBBlocks.concrete());

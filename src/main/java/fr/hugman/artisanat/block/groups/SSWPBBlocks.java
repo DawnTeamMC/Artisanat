@@ -23,6 +23,10 @@ public record SSWPBBlocks(
         return new Builder(baseBlock);
     }
 
+    public Block[] all() {
+        return new Block[]{slab, stairs, wall, pressurePlate, button};
+    }
+
     public static class Builder implements CustomRegisterable<SSWPBBlocks> {
         private final Block baseBlock;
         private BlockSetType setType;

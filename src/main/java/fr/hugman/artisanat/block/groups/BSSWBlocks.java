@@ -24,6 +24,10 @@ public record BSSWBlocks(
         return of(new BlockBuilder(baseBlock));
     }
 
+    public Block[] all() {
+        return new Block[]{block, slab, stairs, wall};
+    }
+
     public static class Builder implements CustomRegisterable<BSSWBlocks> {
         private final BlockBuilder block;
 

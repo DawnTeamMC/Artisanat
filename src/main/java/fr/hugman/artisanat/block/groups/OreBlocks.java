@@ -7,6 +7,8 @@ import fr.hugman.artisanat.util.CustomRegisterable;
 import fr.hugman.artisanat.util.NameUtil;
 import net.minecraft.block.Block;
 
+import java.util.Collection;
+
 /**
  * Contains a block and its slab and stairs variants.
  */

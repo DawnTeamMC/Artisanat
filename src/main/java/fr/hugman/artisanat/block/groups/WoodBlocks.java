@@ -22,6 +22,10 @@ public record WoodBlocks(
         return new Builder(baseBlock, setType);
     }
 
+    public Block[] all() {
+        return new Block[]{slab, stairs, button};
+    }
+
     public static class Builder implements CustomRegisterable<WoodBlocks> {
         private final Block baseBlock;
         private final BlockSetType setType;
