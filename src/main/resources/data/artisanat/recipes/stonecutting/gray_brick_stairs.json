@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "artisanat:gray_bricks"
-	},
-	"result": "artisanat:gray_brick_stairs",
-	"count": 1
-}

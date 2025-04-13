@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "minecraft:granite"
-	},
-	"result": "artisanat:granite_bricks",
-	"count": 1
-}
