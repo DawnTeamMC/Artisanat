@@ -17,6 +17,11 @@ public class ArtisanatDataGenerator implements DataGeneratorEntrypoint {
         // Resource Pack
         pack.addProvider(ArtisanatModelProvider::new);
 
+        // Data Pack
+        // - Tags
+        var blockTagProvider = pack.addProvider(ArtisanatBlockTagProvider::new);
+        pack.addProvider((output, lookup) -> new ArtisanatItemTagProvider(output, lookup, blockTagProvider));
+
         // - Recipes
         pack.addProvider(ArtisanatRecipeGenerator::create);
     }

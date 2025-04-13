@@ -5,8 +5,7 @@ import fr.hugman.artisanat.util.CustomRegisterable;
 import net.minecraft.block.Block;
 import net.minecraft.util.DyeColor;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Contains stained blocks and their slabs, stairs and walls variants.
@@ -18,6 +17,14 @@ public record StainedBSSWBlocks(Map<DyeColor, BSSWBlocks> colorMap) {
 
     public static Builder of(Block baseBlock) {
         return of(new BlockBuilder(baseBlock));
+    }
+
+    public Block[] all() {
+        List<Block> blocks = new ArrayList<>();
+        for (BSSWBlocks bsswBlocks : colorMap.values()) {
+            blocks.addAll(Arrays.asList(bsswBlocks.all()));
+        }
+        return blocks.toArray(new Block[0]);
     }
 
     public static class Builder implements CustomRegisterable<StainedBSSWBlocks> {
