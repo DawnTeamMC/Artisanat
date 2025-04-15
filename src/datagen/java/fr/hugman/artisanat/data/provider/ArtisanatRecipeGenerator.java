@@ -1,5 +1,6 @@
 package fr.hugman.artisanat.data.provider;
 
+import fr.hugman.artisanat.Artisanat;
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.groups.*;
 import fr.hugman.artisanat.data.ArtisanatBlockFamilies;
@@ -10,6 +11,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.item.DyeItem;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
@@ -28,7 +30,11 @@ public class ArtisanatRecipeGenerator extends RecipeGenerator {
     public void generate() {
         ArtisanatBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateRecipes).forEach(family -> this.generateFamily(family, FeatureSet.of(FeatureFlags.VANILLA)));
 
-        // TODO: coloring recipes
+        registerColoring(ArtisanatBlocks.STAINED_BRICK_BLOCKS, Blocks.BRICKS);
+        registerColoring(ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS, ArtisanatBlocks.BRICK_TILE_BLOCKS);
+        registerColoring(ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS, ArtisanatBlocks.TERRACOTTA_BLOCKS);
+        registerColoring(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS, ArtisanatBlocks.TERRACOTTA_BRICKS);
+        registerColoring(ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS, Blocks.DARK_PRISMARINE);
 
         registerStonecutting(ArtisanatBlocks.COBBLESTONE_BRICKS, Blocks.COBBLESTONE);
         registerStonecutting(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS, Blocks.MOSSY_COBBLESTONE);
@@ -70,15 +76,126 @@ public class ArtisanatRecipeGenerator extends RecipeGenerator {
         //TODO: copper blocks
     }
 
+
+    private void registerColoring(StainedBSSWBlocks stainedBsswBlocks, BSSWBlocks baseBlocks) {
+        for (var entry : stainedBsswBlocks.colorMap().entrySet()) {
+            var blocks = entry.getValue();
+            this.createShaped(RecipeCategory.BUILDING_BLOCKS, blocks.block(), 8)
+                    .input('#', baseBlocks.block())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.block()), this.conditionsFromItem(baseBlocks.block()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.block()) + "_from_" + getItemPath(baseBlocks.block())).toString());
+            this.createShaped(RecipeCategory.BUILDING_BLOCKS, blocks.slab(), 8)
+                    .input('#', baseBlocks.slab())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.slab()), this.conditionsFromItem(baseBlocks.slab()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.slab()) + "_from_" + getItemPath(baseBlocks.slab())).toString());
+            this.createShaped(RecipeCategory.BUILDING_BLOCKS, blocks.stairs(), 8)
+                    .input('#', baseBlocks.stairs())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.stairs()), this.conditionsFromItem(baseBlocks.stairs()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.stairs()) + "_from_" + getItemPath(baseBlocks.stairs())).toString());
+            this.createShaped(RecipeCategory.DECORATIONS, blocks.wall(), 8)
+                    .input('#', baseBlocks.wall())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.wall()), this.conditionsFromItem(baseBlocks.wall()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.wall()) + "_from_" + getItemPath(baseBlocks.wall())).toString());
+        }
+    }
+
+    private void registerColoring(StainedSSWPBBlocks stainedBsswBlocks, SSWPBBlocks baseBlocks) {
+        for (var entry : stainedBsswBlocks.colorMap().entrySet()) {
+            var blocks = entry.getValue();
+            this.createShaped(RecipeCategory.BUILDING_BLOCKS, blocks.slab(), 8)
+                    .input('#', baseBlocks.slab())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.slab()), this.conditionsFromItem(baseBlocks.slab()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.slab()) + "_from_" + getItemPath(baseBlocks.slab())).toString());
+            this.createShaped(RecipeCategory.BUILDING_BLOCKS, blocks.stairs(), 8)
+                    .input('#', baseBlocks.stairs())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.stairs()), this.conditionsFromItem(baseBlocks.stairs()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.stairs()) + "_from_" + getItemPath(baseBlocks.stairs())).toString());
+            this.createShaped(RecipeCategory.DECORATIONS, blocks.wall(), 8)
+                    .input('#', baseBlocks.wall())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.wall()), this.conditionsFromItem(baseBlocks.wall()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.wall()) + "_from_" + getItemPath(baseBlocks.wall())).toString());
+            this.createShaped(RecipeCategory.REDSTONE, blocks.pressurePlate(), 8)
+                    .input('#', baseBlocks.pressurePlate())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.pressurePlate()), this.conditionsFromItem(baseBlocks.pressurePlate()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.pressurePlate()) + "_from_" + getItemPath(baseBlocks.pressurePlate())).toString());
+            this.createShaped(RecipeCategory.REDSTONE, blocks.button(), 8)
+                    .input('#', baseBlocks.button())
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlocks.button()), this.conditionsFromItem(baseBlocks.button()))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(blocks.button()) + "_from_" + getItemPath(baseBlocks.button())).toString());
+        }
+    }
+
+
+    private void registerColoring(StainedBSSWBlocks stainedBsswBlocks, Block baseBlock) {
+        for (var entry : stainedBsswBlocks.colorMap().entrySet()) {
+            // TODO: recipes for other shapes
+            var block = entry.getValue().block();
+            this.createShaped(RecipeCategory.BUILDING_BLOCKS, block, 8)
+                    .input('#', baseBlock)
+                    .input('X', DyeItem.byColor(entry.getKey()))
+                    .pattern("###")
+                    .pattern("#X#")
+                    .pattern("###")
+                    //TODO group
+                    .criterion(hasItem(baseBlock), this.conditionsFromItem(baseBlock))
+                    .offerTo(this.exporter, Artisanat.id(getItemPath(block) + "_from_" + getItemPath(baseBlock)).toString());
+        }
+    }
+
     private void registerStonecutting(BSSWBlocks bsswBlocks, Block... blocks) {
         this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.slab(), bsswBlocks.block(), 2);
         this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.stairs(), bsswBlocks.block());
-        this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.wall(), bsswBlocks.block());
+        this.offerStonecuttingRecipe(RecipeCategory.DECORATIONS, bsswBlocks.wall(), bsswBlocks.block());
 
         for (Block block : blocks) {
             this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.slab(), block, 2);
             this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.stairs(), block);
-            this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.wall(), block);
+            this.offerStonecuttingRecipe(RecipeCategory.DECORATIONS, bsswBlocks.wall(), block);
         }
     }
 
@@ -96,7 +213,7 @@ public class ArtisanatRecipeGenerator extends RecipeGenerator {
         for (Block block : blocks) {
             this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, sswpbBlocks.slab(), block, 2);
             this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, sswpbBlocks.stairs(), block);
-            this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, sswpbBlocks.wall(), block);
+            this.offerStonecuttingRecipe(RecipeCategory.DECORATIONS, sswpbBlocks.wall(), block);
         }
     }
 
