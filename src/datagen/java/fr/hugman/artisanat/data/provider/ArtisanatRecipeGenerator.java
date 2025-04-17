@@ -25,6 +25,8 @@ public class ArtisanatRecipeGenerator extends ExtendedRecipeGenerator {
     public void generate() {
         ArtisanatBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateRecipes).forEach(family -> this.generateFamily(family, FeatureSet.of(FeatureFlags.VANILLA)));
 
+        //TODO: add wood blocks recipes
+
         offer2x2Craft(ArtisanatBlocks.TERRACOTTA_BRICKS.block(), Blocks.TERRACOTTA);
         offer2x2MainBlockCraft(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS, StainedSSWPBBlocks.TERRACOTTA_MAP);
         offer2x2MainBlockMixedCraft(ArtisanatBlocks.QUARTZ_PAVING_BLOCKS, Blocks.QUARTZ_BLOCK);
