@@ -14,7 +14,6 @@ import net.minecraft.client.texture.SpriteContents;
 import net.minecraft.client.texture.SpriteDimensions;
 import net.minecraft.client.texture.SpriteOpener;
 import net.minecraft.client.texture.atlas.AtlasSource;
-import net.minecraft.client.texture.atlas.AtlasSourceManager;
 import net.minecraft.client.texture.atlas.AtlasSourceType;
 import net.minecraft.client.texture.atlas.AtlasSprite;
 import net.minecraft.resource.Resource;
@@ -28,7 +27,6 @@ import org.slf4j.Logger;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
-import java.util.List;
 import java.util.function.IntUnaryOperator;
 import java.util.function.Supplier;
 

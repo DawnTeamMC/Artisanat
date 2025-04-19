@@ -29,10 +29,12 @@ public class ArtisanatAtlasProvider extends FabricCodecDataProvider<List<AtlasSo
                 new ArtisanatPalettedPermutationsAtlasSource(
                         Map.of(
                                 Identifier.ofVanilla("block/bricks"), OutputIdentifier.of("artisanat:block/", "_bricks"),
-                                Artisanat.id("block/brick_tiles"), OutputIdentifier.of("artisanat:block/", "_brick_tiles")
+                                Artisanat.id("block/brick_tiles"), OutputIdentifier.of("artisanat:block/", "_brick_tiles"),
+                                Artisanat.id("block/brick_quartz_paving"), OutputIdentifier.of("artisanat:block/", "_quartz_paving"),
+                                Artisanat.id("block/brick_dark_prismarine"), OutputIdentifier.of("artisanat:block/", "_dark_prismarine")
                         ),
-                        Artisanat.id("palettes/bricks"),
-                        dyesPalettes("bricks")
+                        Artisanat.id("palettes/brick"),
+                        dyesPalettes("brick")
                 )
         ));
     }
