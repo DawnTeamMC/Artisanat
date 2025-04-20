@@ -26,6 +26,10 @@ public record OreBlocks(
         return of(new BlockBuilder(baseBlock));
     }
 
+    public Block[] all() {
+        return new Block[]{platedBlock, cutBlock, bricks, tiles};
+    }
+
     public static class Builder implements CustomRegisterable<OreBlocks> {
         private final BlockBuilder block;
 

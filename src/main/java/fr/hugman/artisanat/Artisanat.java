@@ -2,6 +2,7 @@ package fr.hugman.artisanat;
 
 import com.google.common.reflect.Reflection;
 import fr.hugman.artisanat.block.ArtisanatBlocks;
+import fr.hugman.artisanat.itemgroup.ArtisanatItemGroupAdditions;
 import fr.hugman.artisanat.itemgroup.ArtisanatItemGroups;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -17,6 +18,7 @@ public class Artisanat implements ModInitializer {
         Reflection.initialize(ArtisanatBlocks.class);
 
         Reflection.initialize(ArtisanatItemGroups.class);
+        ArtisanatItemGroupAdditions.registerEvents();
     }
 
     public static Identifier id(String path) {

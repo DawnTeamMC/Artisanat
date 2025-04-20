@@ -664,5 +664,7 @@
 	"block.artisanat.white_quartz_paving_slab": "White Quartz Paving Slab",
 	"block.artisanat.light_gray_quartz_paving_slab": "Light Gray Quartz Paving Slab",
 	"block.artisanat.gray_quartz_paving_slab": "Gray Quartz Paving Slab",
-	"block.artisanat.black_quartz_paving_slab": "Black Quartz Paving Slab"
+	"block.artisanat.black_quartz_paving_slab": "Black Quartz Paving Slab",
+
+	"item_group.artisanat.artisanat": "Artisanat"
 }
