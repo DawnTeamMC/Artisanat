@@ -55,6 +55,8 @@ public class ArtisanatBlockLootTableProvider extends FabricBlockLootTableProvide
         addDrop(ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
 
         addDrop(ArtisanatBlocks.CONCRETE_BLOCKS);
+        addDrop(ArtisanatBlocks.CONCRETE_BRICKS);
+
         addDrop(ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
 
         addDrop(ArtisanatBlocks.COAL_BLOCKS);

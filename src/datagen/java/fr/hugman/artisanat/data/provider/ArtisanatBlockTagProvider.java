@@ -54,6 +54,11 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
         fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_PRESSURE_PLATES), SSWPBBlocks::pressurePlate, ArtisanatBlocks.CONCRETE_BLOCKS);
         fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BUTTONS), SSWPBBlocks::button, ArtisanatBlocks.CONCRETE_BLOCKS);
 
+        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BRICKS), BSSWBlocks::block, ArtisanatBlocks.CONCRETE_BRICKS);
+        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BRICK_SLABS), BSSWBlocks::slab, ArtisanatBlocks.CONCRETE_BRICKS);
+        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BRICK_STAIRS), BSSWBlocks::stairs, ArtisanatBlocks.CONCRETE_BRICKS);
+        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BRICK_WALLS), BSSWBlocks::wall, ArtisanatBlocks.CONCRETE_BRICKS);
+
         fill(getOrCreateTagBuilder(ArtisanatBlockTags.QUARTZ_PAVINGS), BSSBlocks::block, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
         fill(getOrCreateTagBuilder(ArtisanatBlockTags.QUARTZ_PAVING_SLABS), BSSBlocks::slab, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
         fill(getOrCreateTagBuilder(ArtisanatBlockTags.QUARTZ_PAVING_STAIRS), BSSBlocks::stairs, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
@@ -90,6 +95,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .addTag(ArtisanatBlockTags.TERRACOTTA_BRICK_SLABS)
                 .addTag(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_SLABS)
                 .addTag(ArtisanatBlockTags.CONCRETE_SLABS)
+                .addTag(ArtisanatBlockTags.CONCRETE_BRICK_SLABS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVING_SLABS)
         ;
         getOrCreateTagBuilder(BlockTags.STAIRS)
@@ -113,6 +119,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .addTag(ArtisanatBlockTags.TERRACOTTA_BRICK_STAIRS)
                 .addTag(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_STAIRS)
                 .addTag(ArtisanatBlockTags.CONCRETE_STAIRS)
+                .addTag(ArtisanatBlockTags.CONCRETE_BRICK_STAIRS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVING_STAIRS)
         ;
         getOrCreateTagBuilder(BlockTags.WALLS)
@@ -133,6 +140,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .add(ArtisanatBlocks.DARK_PRISMARINE_WALL)
                 .addTag(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_WALLS)
                 .addTag(ArtisanatBlockTags.CONCRETE_WALLS)
+                .addTag(ArtisanatBlockTags.CONCRETE_BRICK_WALLS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVINGS)
         ;
         getOrCreateTagBuilder(BlockTags.STONE_PRESSURE_PLATES)
@@ -235,6 +243,10 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .addTag(ArtisanatBlockTags.CONCRETE_SLABS)
                 .addTag(ArtisanatBlockTags.CONCRETE_STAIRS)
                 .addTag(ArtisanatBlockTags.CONCRETE_PRESSURE_PLATES)
+                .addTag(ArtisanatBlockTags.CONCRETE_BRICKS)
+                .addTag(ArtisanatBlockTags.CONCRETE_BRICK_SLABS)
+                .addTag(ArtisanatBlockTags.CONCRETE_BRICK_STAIRS)
+                .addTag(ArtisanatBlockTags.CONCRETE_BRICK_WALLS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVINGS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVING_SLABS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVING_STAIRS)

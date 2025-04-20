@@ -47,6 +47,10 @@ public class ArtisanatItemTagProvider extends FabricTagProvider.ItemTagProvider 
         copy(ArtisanatBlockTags.CONCRETE_WALLS, ArtisanatItemTags.CONCRETE_WALLS);
         copy(ArtisanatBlockTags.CONCRETE_PRESSURE_PLATES, ArtisanatItemTags.CONCRETE_PRESSURE_PLATES);
         copy(ArtisanatBlockTags.CONCRETE_BUTTONS, ArtisanatItemTags.CONCRETE_BUTTONS);
+        copy(ArtisanatBlockTags.CONCRETE_BRICKS, ArtisanatItemTags.CONCRETE_BRICKS);
+        copy(ArtisanatBlockTags.CONCRETE_BRICK_SLABS, ArtisanatItemTags.CONCRETE_BRICK_SLABS);
+        copy(ArtisanatBlockTags.CONCRETE_BRICK_STAIRS, ArtisanatItemTags.CONCRETE_BRICK_STAIRS);
+        copy(ArtisanatBlockTags.CONCRETE_BRICK_WALLS, ArtisanatItemTags.CONCRETE_BRICK_WALLS);
         copy(ArtisanatBlockTags.QUARTZ_PAVINGS, ArtisanatItemTags.QUARTZ_PAVINGS);
         copy(ArtisanatBlockTags.QUARTZ_PAVING_SLABS, ArtisanatItemTags.QUARTZ_PAVING_SLABS);
         copy(ArtisanatBlockTags.QUARTZ_PAVING_STAIRS, ArtisanatItemTags.QUARTZ_PAVING_STAIRS);

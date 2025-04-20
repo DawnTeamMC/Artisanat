@@ -128,6 +128,10 @@ public abstract class ExtendedRecipeGenerator extends RecipeGenerator {
         stainedSswpb.colorMap().forEach((dyeColor, sswpBlocks) -> offferStonecutting(sswpBlocks, colorMap.get(dyeColor)));
     }
 
+    public void offferStonecutting(StainedBSSWBlocks stainedBSSWBlocks, Map<DyeColor, Block> colorMap) {
+        stainedBSSWBlocks.colorMap().forEach((dyeColor, bsswBlocks) -> offferStonecutting(bsswBlocks, colorMap.get(dyeColor)));
+    }
+
     public void offferStonecutting(StainedBSSWBlocks stainedBSSWBlocks) {
         stainedBSSWBlocks.colorMap().forEach((dyeColor, sswpBlocks) -> offferStonecutting(sswpBlocks));
     }
