@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab",
-	"textures": {
-		"bottom": "artisanat:block/smooth_stone_paving",
-		"top": "artisanat:block/smooth_stone_paving",
-		"side": "artisanat:block/smooth_stone_paving"
-	}
-}

@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab_top",
-	"textures": {
-		"bottom": "artisanat:block/magenta_terracotta_bricks",
-		"top": "artisanat:block/magenta_terracotta_bricks",
-		"side": "artisanat:block/magenta_terracotta_bricks"
-	}
-}

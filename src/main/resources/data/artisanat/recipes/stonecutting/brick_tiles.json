@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "minecraft:bricks"
-	},
-	"result": "artisanat:brick_tiles",
-	"count": 1
-}

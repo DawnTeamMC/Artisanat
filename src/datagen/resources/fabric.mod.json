@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "name": "Artisanat Data Generator",
+  "id": "artisanat-datagen",
+  "version": "1.0.0",
+  "authors": [
+    "Hugman"
+  ],
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "fr.hugman.artisanat.data.ArtisanatDataGenerator"
+    ]
+  }
+}

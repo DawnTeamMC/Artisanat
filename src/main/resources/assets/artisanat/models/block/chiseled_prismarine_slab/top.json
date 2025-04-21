@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab_top",
-	"textures": {
-		"bottom": "artisanat:block/chiseled_prismarine",
-		"top": "artisanat:block/chiseled_prismarine",
-		"side": "artisanat:block/chiseled_prismarine"
-	}
-}

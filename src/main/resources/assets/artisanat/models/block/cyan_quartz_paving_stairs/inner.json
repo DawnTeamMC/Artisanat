@@ -1,8 +1,0 @@
-{
-	"parent": "block/inner_stairs",
-	"textures": {
-		"bottom": "artisanat:block/cyan_quartz_paving",
-		"top": "artisanat:block/cyan_quartz_paving",
-		"side": "artisanat:block/cyan_quartz_paving"
-	}
-}

@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab_top",
-	"textures": {
-		"bottom": "artisanat:block/yellow_quartz_paving",
-		"top": "artisanat:block/yellow_quartz_paving",
-		"side": "artisanat:block/yellow_quartz_paving"
-	}
-}
