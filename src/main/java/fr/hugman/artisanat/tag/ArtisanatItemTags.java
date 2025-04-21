@@ -39,6 +39,11 @@ public class ArtisanatItemTags {
     public static final TagKey<Item> CONCRETE_PRESSURE_PLATES = of("concrete_pressure_plates");
     public static final TagKey<Item> CONCRETE_BUTTONS = of("concrete_buttons");
 
+    public static final TagKey<Item> CONCRETE_BRICKS = of("concrete_bricks");
+    public static final TagKey<Item> CONCRETE_BRICK_SLABS = of("concrete_brick_slabs");
+    public static final TagKey<Item> CONCRETE_BRICK_STAIRS = of("concrete_brick_stairs");
+    public static final TagKey<Item> CONCRETE_BRICK_WALLS = of("concrete_brick_walls");
+
     public static final TagKey<Item> QUARTZ_PAVINGS = of("quartz_pavings");
     public static final TagKey<Item> QUARTZ_PAVING_SLABS = of("quartz_paving_slabs");
     public static final TagKey<Item> QUARTZ_PAVING_STAIRS = of("quartz_paving_stairs");

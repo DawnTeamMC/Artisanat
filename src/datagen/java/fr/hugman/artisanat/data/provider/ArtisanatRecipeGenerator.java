@@ -5,6 +5,7 @@ import fr.hugman.artisanat.block.groups.*;
 import fr.hugman.artisanat.data.ArtisanatBlockFamilies;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -13,7 +14,9 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.resource.featuretoggle.FeatureSet;
+import net.minecraft.util.DyeColor;
 
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class ArtisanatRecipeGenerator extends ExtendedRecipeGenerator {
@@ -30,6 +33,7 @@ public class ArtisanatRecipeGenerator extends ExtendedRecipeGenerator {
         offer2x2Craft(ArtisanatBlocks.TERRACOTTA_BRICKS.block(), Blocks.TERRACOTTA);
         offer2x2MainBlockCraft(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS, StainedSSWPBBlocks.TERRACOTTA_MAP);
         offer2x2MainBlockMixedCraft(ArtisanatBlocks.QUARTZ_PAVING_BLOCKS, Blocks.QUARTZ_BLOCK);
+        offer2x2MainBlockCraft(ArtisanatBlocks.CONCRETE_BRICKS, StainedSSWPBBlocks.CONCRETE_MAP);
 
         offerColoring(ArtisanatBlocks.STAINED_BRICK_BLOCKS, Blocks.BRICKS);
         offerColoring(ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS, ArtisanatBlocks.BRICK_TILE_BLOCKS);
@@ -58,13 +62,14 @@ public class ArtisanatRecipeGenerator extends ExtendedRecipeGenerator {
         offferStonecutting(ArtisanatBlocks.TERRACOTTA_BLOCKS, Blocks.TERRACOTTA);
         offferStonecutting(ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS, StainedSSWPBBlocks.TERRACOTTA_MAP);
         offferStonecutting(ArtisanatBlocks.TERRACOTTA_BRICKS, Blocks.TERRACOTTA);
-        offferStonecutting(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
+        offferStonecutting(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS, StainedSSWPBBlocks.TERRACOTTA_MAP);
 
         offerWall(ArtisanatBlocks.DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE);
         offerStonecuttingRecipe(RecipeCategory.DECORATIONS, ArtisanatBlocks.DARK_PRISMARINE_WALL, Blocks.DARK_PRISMARINE);
         offferStonecutting(ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
 
         offferStonecutting(ArtisanatBlocks.CONCRETE_BLOCKS, StainedSSWPBBlocks.CONCRETE_MAP);
+        offferStonecutting(ArtisanatBlocks.CONCRETE_BRICKS, StainedSSWPBBlocks.CONCRETE_MAP);
         offferStonecutting(ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
 
         offferStonecutting(ArtisanatBlocks.COAL_BLOCKS, Blocks.COAL_BLOCK);

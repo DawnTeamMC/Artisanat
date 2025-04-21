@@ -54,6 +54,8 @@ public class ArtisanatBlocks {
     public static final StainedBSSWBlocks STAINED_DARK_PRISMARINE_BLOCKS = register("dark_prismarine", StainedBSSWBlocks.of(Blocks.DARK_PRISMARINE));
 
     public static final StainedSSWPBBlocks CONCRETE_BLOCKS = register("concrete", StainedSSWPBBlocks.concrete());
+    public static final StainedBSSWBlocks CONCRETE_BRICKS = register("concrete_bricks", StainedBSSWBlocks.of(Blocks.WHITE_CONCRETE));
+
     public static final StainedBSSBlocks QUARTZ_PAVING_BLOCKS = register("quartz_paving", StainedBSSBlocks.of(Blocks.QUARTZ_BLOCK));
 
     public static final OreBlocks COAL_BLOCKS = register("coal", OreBlocks.of(Blocks.COAL_BLOCK));

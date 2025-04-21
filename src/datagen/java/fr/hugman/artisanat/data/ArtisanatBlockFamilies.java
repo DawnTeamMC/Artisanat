@@ -49,6 +49,7 @@ public class ArtisanatBlockFamilies {
         register(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
         register(ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
         register(ArtisanatBlocks.CONCRETE_BLOCKS, StainedSSWPBBlocks.CONCRETE_MAP);
+        register(ArtisanatBlocks.CONCRETE_BRICKS);
         register(ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
     }
 

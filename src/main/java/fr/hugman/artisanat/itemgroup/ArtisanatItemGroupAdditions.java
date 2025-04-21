@@ -63,6 +63,7 @@ public class ArtisanatItemGroupAdditions {
             add(entries, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS, StainedSSWPBBlocks.TERRACOTTA_MAP);
             add(entries, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS, Blocks.PINK_CONCRETE_POWDER);
 
+            add(entries, ArtisanatBlocks.CONCRETE_BRICKS, Blocks.PINK_CONCRETE);
             add(entries, ArtisanatBlocks.CONCRETE_BLOCKS, StainedSSWPBBlocks.CONCRETE_MAP);
 
             add(entries, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS, Blocks.PINK_CONCRETE_POWDER);
