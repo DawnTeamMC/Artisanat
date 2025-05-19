@@ -1,6 +1,6 @@
 <p align="center">
 
-[![Artisanat](https://raw.githubusercontent.com/DawnTeamMC/Artisanat/refs/heads/dev/images/logo.svg)](https://dawnteammc.github.io/artisanat)
+[![Artisanat](https://raw.githubusercontent.com/DawnTeamMC/Artisanat/refs/heads/main/images/logo.svg)](https://dawnteammc.github.io/artisanat)
 
 <div align="center">
   A mod for the latest version of Minecraft that adds new biomes, animals, monsters, structures, and more to the game.
@@ -28,6 +28,16 @@
 </div>
 
 </p>
+
+---
+
+<p align="center">
+
+![Colorful Blocks, in every shape](https://raw.githubusercontent.com/DawnTeamMC/Artisanat/refs/heads/main/images/highlight_1.png)
+
+</p>
+
+---
 
 ## 👾 About
 
