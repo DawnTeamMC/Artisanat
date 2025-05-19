@@ -37,6 +37,7 @@
 ---
 
 ## 👾 About
+
 Artisanat currently adds those blocks to the game:
 
 - Stained bricks
@@ -53,16 +54,17 @@ Artisanat currently adds those blocks to the game:
 - Cut and plated ore blocks, ore bricks, ore tiles (coal, iron, copper, etc...)
 
 ## 📦 Download
+
 We use [CurseForge](https://www.curseforge.com/minecraft/mc-mods/artisanat) and [Modrinth](https://modrinth.com/mod/artisanat) to publish **stable builds** of Artisanat for Minecraft.
 
 You can download the latest stable builds from both pages without signing up for an account, although [downloading on CurseForge](https://www.curseforge.com/minecraft/mc-mods/artisanat) is currently preferred.
 
 ### Required mods
 
-⚠ Artisanat **requires** Fabric API to be
-installed: [GitHub](https://github.com/FabricMC/fabric) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-api) / [Modrinth](https://modrinth.com/mod/fabric-api)
+⚠ Artisanat **requires** Fabric API to be installed: [GitHub](https://github.com/FabricMC/fabric) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-api) / [Modrinth](https://modrinth.com/mod/fabric-api)
 
 ## ❤️ Support
+
 [![Patreon supporters](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.vercel.app%2Fapi%3Fusername%3DHugman%26type%3Dpatrons&style=flat-square)](https://patreon.com/Hugman)
 
 You can support Artisanat on the [Patreon page of the founder, main developer and maintainer of the Dawn Team mods (Hugman)](https://patreon.com/Hugman).
@@ -75,16 +77,11 @@ By supporting Hugman, you can get access to the following:
 - Get early access to new mods from the Dawn Team mods
 
 **We do not want to lock any in-game feature of the Dawn Team mods behind a paywall, because we believe that any Minecraft mod should forever remain free to download and fully exploit/use.**  
-Supporting via Patreon is a more of way to help Hugman to continue to improve the mods and show the gratitude you might have towards Hugman's work.
-Some money you donate may be used to pay for new features, such as music or art, but not all of it.
+Supporting via Patreon is a more of way to help Hugman to continue to improve the mods and show the gratitude you might have towards Hugman's work. Some money you donate may be used to pay for new features, such as music or art, but not all of it.
 
 ## 📜 License
 
-Except where otherwise stated (
-see [third-party license notices](https://github.com/DawnTeamMC/Artisanat/blob/main/thirdparty/NOTICE.txt)), the content
-of this repository is provided under
-the [Polyform Shield 1.0.0](https://github.com/DawnTeamMC/Promenade/blob/main/LICENSE.md) license
-by [Hugman](https://github.com/Hugman76).
+Except where otherwise stated (see [third-party license notices](https://github.com/DawnTeamMC/Artisanat/blob/main/thirdparty/NOTICE.txt)), the content of this repository is provided under the [Polyform Shield 1.0.0](https://github.com/DawnTeamMC/Promenade/blob/main/LICENSE.md) license by [Hugman](https://github.com/Hugman76).
 
 ## 🎮 My Other Mods
 
