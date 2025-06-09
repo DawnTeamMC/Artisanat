@@ -14,6 +14,14 @@ import net.minecraft.util.DyeColor;
 import java.util.Map;
 
 public class ArtisanatItemGroupAdditions {
+    // The order is reversed for iterative purposes
+    public static DyeColor[] COLOR_ORDER = {
+            DyeColor.PINK, DyeColor.MAGENTA, DyeColor.PURPLE, DyeColor.BLUE,
+            DyeColor.LIGHT_BLUE, DyeColor.CYAN, DyeColor.GREEN, DyeColor.LIME,
+            DyeColor.YELLOW, DyeColor.ORANGE, DyeColor.RED, DyeColor.BROWN,
+            DyeColor.BLACK, DyeColor.GRAY, DyeColor.LIGHT_GRAY, DyeColor.WHITE
+    };
+
     public static void registerEvents() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             add(entries, ArtisanatBlocks.OAK_WOOD_BLOCKS, Blocks.OAK_WOOD);
@@ -84,13 +92,21 @@ public class ArtisanatItemGroupAdditions {
     }
 
     private static void add(FabricItemGroupEntries entries, StainedBSSBlocks stainedBSSBlocks, ItemConvertible baseBlock) {
-        //TODO: fix sorting colors
-        stainedBSSBlocks.colorMap().forEach((dyeColor, bss) -> add(entries, bss, baseBlock));
+        for (DyeColor dyeColor : COLOR_ORDER) {
+            BSSBlocks bss = stainedBSSBlocks.colorMap().get(dyeColor);
+            if (bss != null) {
+                add(entries, bss, baseBlock);
+            }
+        }
     }
 
     private static void add(FabricItemGroupEntries entries, StainedBSSWBlocks stainedBSSWBlocks, ItemConvertible baseBlock) {
-        //TODO: fix sorting colors
-        stainedBSSWBlocks.colorMap().forEach((dyeColor, bssw) -> add(entries, bssw, baseBlock));
+        for (DyeColor dyeColor : COLOR_ORDER) {
+            BSSWBlocks bssw = stainedBSSWBlocks.colorMap().get(dyeColor);
+            if (bssw != null) {
+                add(entries, bssw, baseBlock);
+            }
+        }
     }
 
     private static void add(FabricItemGroupEntries entries, SSWPBBlocks sswpb, ItemConvertible baseBlock) {
