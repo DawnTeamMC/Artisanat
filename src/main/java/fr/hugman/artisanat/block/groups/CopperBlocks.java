@@ -3,14 +3,15 @@ package fr.hugman.artisanat.block.groups;
 import com.mojang.datafixers.util.Pair;
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.helper.BlockBuilder;
-import fr.hugman.artisanat.block.helper.BlockFactory;
 import fr.hugman.artisanat.util.CustomRegisterable;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Oxidizable;
+import net.minecraft.block.OxidizableBlock;
 
 import java.util.HashMap;
 import java.util.Map;
 
-//TODO: register to the oxidizable registry
 public record CopperBlocks(
         Map<Pair<Oxidizable.OxidationLevel, Boolean>, Block> map
 ) {
@@ -54,8 +55,8 @@ public record CopperBlocks(
                 case Oxidizable.OxidationLevel.OXIDIZED -> Blocks.OXIDIZED_COPPER;
             });
 
-            if (waxed) {
-                builder.factory(s -> new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, s));
+            if (!waxed) {
+                builder.factory(s -> new OxidizableBlock(level, s));
             }
 
             return builder.register(ArtisanatBlocks.keyOf(name));

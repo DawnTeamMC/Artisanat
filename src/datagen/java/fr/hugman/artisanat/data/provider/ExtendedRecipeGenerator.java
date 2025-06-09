@@ -3,6 +3,8 @@ package fr.hugman.artisanat.data.provider;
 import fr.hugman.artisanat.Artisanat;
 import fr.hugman.artisanat.block.groups.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.DyeItem;
@@ -145,5 +147,23 @@ public abstract class ExtendedRecipeGenerator extends RecipeGenerator {
         this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, oreBlocks.cutBlock(), block);
         this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, oreBlocks.bricks(), block);
         this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, oreBlocks.tiles(), block);
+    }
+
+    public static Block getCopperBlock(Oxidizable.OxidationLevel level, boolean waxed) {
+        if (!waxed) {
+            return switch (level) {
+                case UNAFFECTED -> Blocks.COPPER_BLOCK;
+                case EXPOSED -> Blocks.EXPOSED_COPPER;
+                case WEATHERED -> Blocks.WEATHERED_COPPER;
+                case OXIDIZED -> Blocks.OXIDIZED_COPPER;
+            };
+        } else {
+            return switch (level) {
+                case UNAFFECTED -> Blocks.WAXED_COPPER_BLOCK;
+                case EXPOSED -> Blocks.WAXED_EXPOSED_COPPER;
+                case WEATHERED -> Blocks.WAXED_WEATHERED_COPPER;
+                case OXIDIZED -> Blocks.WAXED_OXIDIZED_COPPER;
+            };
+        }
     }
 }

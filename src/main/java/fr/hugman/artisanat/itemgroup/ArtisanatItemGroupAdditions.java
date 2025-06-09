@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.Oxidizable;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.util.DyeColor;
@@ -50,8 +51,7 @@ public class ArtisanatItemGroupAdditions {
             add(entries, ArtisanatBlocks.EMERALD_BLOCKS, Blocks.EMERALD_BLOCK);
             add(entries, ArtisanatBlocks.DIAMOND_BLOCKS, Blocks.DIAMOND_BLOCK);
             add(entries, ArtisanatBlocks.NETHERITE_BLOCKS, Blocks.NETHERITE_BLOCK);
-            //TODO: copper blocks
-
+            addCopperBlocks(entries);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> {
             add(entries, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS, Blocks.PINK_CARPET);
@@ -103,5 +103,35 @@ public class ArtisanatItemGroupAdditions {
 
     private static void add(FabricItemGroupEntries entries, OreBlocks oreBlocks, ItemConvertible baseBlock) {
         entries.addAfter(baseBlock, oreBlocks.all());
+    }
+
+    private static void addCopperBlocks(FabricItemGroupEntries entries) {
+        Oxidizable.OxidationLevel[] levels = Oxidizable.OxidationLevel.values();
+
+        // Unplated
+        Block[] baseBlocks = {
+                Blocks.COPPER_BLOCK, Blocks.EXPOSED_COPPER, Blocks.WEATHERED_COPPER, Blocks.OXIDIZED_COPPER,
+                Blocks.WAXED_COPPER_BLOCK, Blocks.WAXED_EXPOSED_COPPER, Blocks.WAXED_WEATHERED_COPPER, Blocks.WAXED_OXIDIZED_COPPER
+        };
+        for (int i = 0; i < levels.length; i++) {
+            entries.addAfter(baseBlocks[i], ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], false));
+            entries.addAfter(baseBlocks[i + 4], ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], true));
+        }
+
+        // Bricks & Tiles
+        Block[] chiseledBlocks = {
+                Blocks.CHISELED_COPPER, Blocks.EXPOSED_CHISELED_COPPER, Blocks.WEATHERED_CHISELED_COPPER, Blocks.OXIDIZED_CHISELED_COPPER,
+                Blocks.WAXED_CHISELED_COPPER, Blocks.WAXED_EXPOSED_CHISELED_COPPER, Blocks.WAXED_WEATHERED_CHISELED_COPPER, Blocks.WAXED_OXIDIZED_CHISELED_COPPER
+        };
+        for (int i = 0; i < levels.length; i++) {
+            entries.addAfter(chiseledBlocks[i],
+                    ArtisanatBlocks.COPPER_BRICKS.get(levels[i], false),
+                    ArtisanatBlocks.COPPER_TILES.get(levels[i], false)
+            );
+            entries.addAfter(chiseledBlocks[i + 4],
+                    ArtisanatBlocks.COPPER_BRICKS.get(levels[i], true),
+                    ArtisanatBlocks.COPPER_TILES.get(levels[i], true)
+            );
+        }
     }
 }
