@@ -81,7 +81,7 @@ Supporting via Patreon is a more of way to help Hugman to continue to improve th
 
 ## 📜 License
 
-Except where otherwise stated (see [third-party license notices](https://github.com/DawnTeamMC/Artisanat/blob/main/thirdparty/NOTICE.txt)), the content of this repository is provided under the [Polyform Shield 1.0.0](https://github.com/DawnTeamMC/Promenade/blob/main/LICENSE.md) license by [Hugman](https://github.com/Hugman76).
+Except where otherwise stated (see [third-party license notices](https://github.com/DawnTeamMC/Artisanat/blob/main/thirdparty/NOTICE.txt)), the content of this repository is provided under the [Polyform Shield 1.0.0](https://github.com/DawnTeamMC/Artisanat/blob/main/LICENSE.md) license by [Hugman](https://github.com/Hugman76).
 
 ## 🎮 My Other Mods
 
