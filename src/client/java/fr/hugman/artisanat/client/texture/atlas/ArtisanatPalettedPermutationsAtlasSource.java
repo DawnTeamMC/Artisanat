@@ -26,7 +26,9 @@ import org.slf4j.Logger;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
 import java.util.function.IntUnaryOperator;
 import java.util.function.Supplier;
 
@@ -54,12 +56,12 @@ public class ArtisanatPalettedPermutationsAtlasSource implements AtlasSource {
     @Override
     public void load(ResourceManager resourceManager, AtlasSource.SpriteRegions regions) {
         Supplier<int[]> supplier = Suppliers.memoize(() -> open(resourceManager, this.paletteKey));
-        Map<String, Supplier<IntUnaryOperator>> map = new HashMap();
+        Map<String, Supplier<IntUnaryOperator>> map = new HashMap<>();
         this.permutations.forEach((key, texture) -> map.put(key, Suppliers.memoize(() -> toMapper(supplier.get(), open(resourceManager, texture)))));
 
         for (var textureOutput : this.textures.entrySet()) {
             var identifier = textureOutput.getKey();
-            Identifier identifier2 = RESOURCE_FINDER.toResourcePath(identifier);
+            Identifier identifier2 = AtlasSource.RESOURCE_FINDER.toResourcePath(identifier);
             Optional<Resource> optional = resourceManager.getResource(identifier2);
             if (optional.isEmpty()) {
                 LOGGER.warn("Unable to find texture {}", identifier2);
@@ -144,8 +146,11 @@ public class ArtisanatPalettedPermutationsAtlasSource implements AtlasSource {
     }
 
     @Environment(EnvType.CLIENT)
-    record PalettedSpriteRegion(AtlasSprite baseImage, Supplier<IntUnaryOperator> palette, Identifier permutationLocation)
-            implements AtlasSource.SpriteRegion {
+    record PalettedSpriteRegion(
+            AtlasSprite baseImage,
+            Supplier<IntUnaryOperator> palette,
+            Identifier permutationLocation
+    ) implements AtlasSource.SpriteRegion {
         @Nullable
         public SpriteContents apply(SpriteOpener spriteOpener) {
             Object var3;
@@ -161,7 +166,7 @@ public class ArtisanatPalettedPermutationsAtlasSource implements AtlasSource {
                 this.baseImage.close();
             }
 
-            return (SpriteContents)var3;
+            return (SpriteContents) var3;
         }
 
         @Override

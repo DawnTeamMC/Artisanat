@@ -25,10 +25,10 @@ public record OutputIdentifier(Optional<String> prefix, Optional<String> suffix)
     }
 
     public Identifier apply(String path) {
-        if(prefix.isPresent()) {
+        if (prefix.isPresent()) {
             path = prefix.get() + path;
         }
-        if(suffix.isPresent()) {
+        if (suffix.isPresent()) {
             path = path + suffix.get();
         }
         return Identifier.of(path);

@@ -16,8 +16,8 @@ public record CopperBlocks(
         Map<Pair<Oxidizable.OxidationLevel, Boolean>, Block> map
 ) {
     public static Builder of(String prefix, String suffix) {
-        if(!prefix.isEmpty()) prefix = prefix + "_";
-        if(!suffix.isEmpty()) suffix = "_" + suffix;
+        if (!prefix.isEmpty()) prefix = prefix + "_";
+        if (!suffix.isEmpty()) suffix = "_" + suffix;
         return new Builder(prefix, suffix);
     }
 

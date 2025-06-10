@@ -1,7 +1,6 @@
 package fr.hugman.artisanat.tag;
 
 import fr.hugman.artisanat.Artisanat;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;

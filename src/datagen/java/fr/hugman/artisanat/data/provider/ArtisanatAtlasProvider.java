@@ -35,14 +35,14 @@ public class ArtisanatAtlasProvider extends FabricCodecDataProvider<List<AtlasSo
                         Artisanat.id("palettes/brick"),
                         dyesPalettes("brick")
                 ),
-        new ArtisanatPalettedPermutationsAtlasSource(
-                Map.of(
-                        Artisanat.id("block/quartz_paving"), OutputIdentifier.of("artisanat:block/", "_quartz_paving"),
-                        Artisanat.id("block/concrete_bricks"), OutputIdentifier.of("artisanat:block/", "_concrete_bricks")
-                ),
-                Artisanat.id("palettes/concrete"),
-                dyesPalettes("concrete")
-        )
+                new ArtisanatPalettedPermutationsAtlasSource(
+                        Map.of(
+                                Artisanat.id("block/quartz_paving"), OutputIdentifier.of("artisanat:block/", "_quartz_paving"),
+                                Artisanat.id("block/concrete_bricks"), OutputIdentifier.of("artisanat:block/", "_concrete_bricks")
+                        ),
+                        Artisanat.id("palettes/concrete"),
+                        dyesPalettes("concrete")
+                )
         ));
     }
 

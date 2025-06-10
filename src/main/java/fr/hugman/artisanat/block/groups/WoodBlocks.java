@@ -16,7 +16,7 @@ public record WoodBlocks(
 ) {
     /**
      * @param baseBlock block that MUST be registered
-     * @param setType the wood block set type
+     * @param setType   the wood block set type
      */
     public static Builder of(Block baseBlock, BlockSetType setType) {
         return new Builder(baseBlock, setType);

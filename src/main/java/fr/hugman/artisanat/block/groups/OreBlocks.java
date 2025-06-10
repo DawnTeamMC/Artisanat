@@ -2,12 +2,8 @@ package fr.hugman.artisanat.block.groups;
 
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.helper.BlockBuilder;
-import fr.hugman.artisanat.block.helper.BlockFactory;
 import fr.hugman.artisanat.util.CustomRegisterable;
-import fr.hugman.artisanat.util.NameUtil;
 import net.minecraft.block.Block;
-
-import java.util.Collection;
 
 /**
  * Contains a block and its slab and stairs variants.
