@@ -3,7 +3,7 @@
 [![Artisanat](https://raw.githubusercontent.com/DawnTeamMC/Artisanat/refs/heads/main/images/logo.svg)](https://dawnteammc.github.io/artisanat)
 
 <div align="center">
-  A mod for the latest version of Minecraft that adds new biomes, animals, monsters, structures, and more to the game.
+  A mod for the latest version of Minecraft that adds a ton of new decorative blocks, such as new bricks, stairs and slabs, colorful variants and more.
 
   <br/>
   <br/>
