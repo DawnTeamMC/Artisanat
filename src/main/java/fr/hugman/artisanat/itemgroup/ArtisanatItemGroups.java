@@ -13,7 +13,7 @@ import net.minecraft.util.DyeColor;
 public class ArtisanatItemGroups {
     public static final ItemGroup ARTISANAT = of(ArtisanatItemGroupKeys.ARTISANAT, FabricItemGroup.builder()
             .displayName(Text.translatable("item_group.artisanat.artisanat"))
-            .icon(() -> new ItemStack(ArtisanatBlocks.STAINED_BRICK_BLOCKS.get(DyeColor.YELLOW)))
+            .icon(() -> new ItemStack(ArtisanatBlocks.STAINED_BRICK_BLOCKS.get(DyeColor.LIGHT_BLUE)))
             .entries(ArtisanatItemGroup::fill)
             .build());
 
