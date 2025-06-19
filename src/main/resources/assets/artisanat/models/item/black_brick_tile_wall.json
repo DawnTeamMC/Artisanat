@@ -1,6 +1,0 @@
-{
-	"parent": "block/wall_inventory",
-	"textures": {
-		"wall": "artisanat:block/black_brick_tiles"
-	}
-}

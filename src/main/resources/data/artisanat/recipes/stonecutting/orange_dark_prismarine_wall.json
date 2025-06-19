@@ -1,8 +1,0 @@
-{
-	"type": "minecraft:stonecutting",
-	"ingredient": {
-		"item": "artisanat:orange_dark_prismarine"
-	},
-	"result": "artisanat:orange_dark_prismarine_wall",
-	"count": 1
-}

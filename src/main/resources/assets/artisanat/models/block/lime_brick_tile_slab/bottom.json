@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab",
-	"textures": {
-		"bottom": "artisanat:block/lime_brick_tiles",
-		"top": "artisanat:block/lime_brick_tiles",
-		"side": "artisanat:block/lime_brick_tiles"
-	}
-}

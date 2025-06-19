@@ -1,8 +1,0 @@
-{
-	"parent": "block/slab",
-	"textures": {
-		"bottom": "artisanat:block/light_blue_bricks",
-		"top": "artisanat:block/light_blue_bricks",
-		"side": "artisanat:block/light_blue_bricks"
-	}
-}

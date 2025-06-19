@@ -1,8 +1,0 @@
-{
-	"parent": "block/outer_stairs",
-	"textures": {
-		"bottom": "artisanat:block/cobblestone_bricks",
-		"top": "artisanat:block/cobblestone_bricks",
-		"side": "artisanat:block/cobblestone_bricks"
-	}
-}

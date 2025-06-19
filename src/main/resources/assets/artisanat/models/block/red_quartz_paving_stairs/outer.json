@@ -1,8 +1,0 @@
-{
-	"parent": "block/outer_stairs",
-	"textures": {
-		"bottom": "artisanat:block/red_quartz_paving",
-		"top": "artisanat:block/red_quartz_paving",
-		"side": "artisanat:block/red_quartz_paving"
-	}
-}

@@ -1,8 +1,0 @@
-{
-	"parent": "block/outer_stairs",
-	"textures": {
-		"bottom": "artisanat:block/light_blue_terracotta_bricks",
-		"top": "artisanat:block/light_blue_terracotta_bricks",
-		"side": "artisanat:block/light_blue_terracotta_bricks"
-	}
-}

@@ -1,8 +1,0 @@
-{
-	"parent": "block/stairs",
-	"textures": {
-		"bottom": "artisanat:block/diorite_bricks",
-		"top": "artisanat:block/diorite_bricks",
-		"side": "artisanat:block/diorite_bricks"
-	}
-}

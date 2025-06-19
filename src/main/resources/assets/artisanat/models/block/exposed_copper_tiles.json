@@ -1,6 +1,0 @@
-{
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "artisanat:block/exposed_copper_tiles"
-	}
-}
