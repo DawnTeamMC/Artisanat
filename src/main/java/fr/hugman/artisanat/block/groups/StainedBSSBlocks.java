@@ -37,7 +37,7 @@ public record StainedBSSBlocks(Map<DyeColor, BSSBlocks> colorMap) {
         public StainedBSSBlocks register(String path) {
             var colorMap = new HashMap<DyeColor, BSSBlocks>();
             for (DyeColor color : DyeColor.values()) {
-                String blockPath = color.getName() + "_" + path;
+                String blockPath = color.getId() + "_" + path;
                 colorMap.put(color, BSSBlocks.of(block).register(blockPath));
             }
             return new StainedBSSBlocks(colorMap);

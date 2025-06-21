@@ -49,7 +49,7 @@ public class ArtisanatAtlasProvider extends FabricCodecDataProvider<List<AtlasSo
     public static Map<String, Identifier> dyesPalettes(String path) {
         var map = new HashMap<String, Identifier>();
         for (DyeColor color : DyeColor.values()) {
-            map.put(color.getName(), Artisanat.id("palettes/" + path + "/" + color.getName()));
+            map.put(color.getId(), Artisanat.id("palettes/" + path + "/" + color.getId()));
         }
         return map;
     }

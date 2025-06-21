@@ -14,7 +14,6 @@ import net.minecraft.client.texture.SpriteContents;
 import net.minecraft.client.texture.SpriteDimensions;
 import net.minecraft.client.texture.SpriteOpener;
 import net.minecraft.client.texture.atlas.AtlasSource;
-import net.minecraft.client.texture.atlas.AtlasSourceType;
 import net.minecraft.client.texture.atlas.AtlasSprite;
 import net.minecraft.resource.Resource;
 import net.minecraft.resource.ResourceManager;
@@ -141,8 +140,8 @@ public class ArtisanatPalettedPermutationsAtlasSource implements AtlasSource {
     }
 
     @Override
-    public AtlasSourceType getType() {
-        return ArtisanatAtlasSourceTypes.PALETTED_PERMUTATIONS;
+    public MapCodec<? extends AtlasSource> getCodec() {
+        return CODEC;
     }
 
     @Environment(EnvType.CLIENT)
