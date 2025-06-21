@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.10+'
+    id 'fabric-loom' version "${loom_version}"
     id 'org.moddedmc.wiki.toolkit' version '0.2.7'
 }
 
@@ -19,7 +19,7 @@ dependencies {
     compileOnly "com.google.code.findbugs:jsr305:3.0.2"
 
     // Version list: https://maven.sinytra.org/org/sinytra/item-asset-export-fabric
-    modRuntimeOnly "org.sinytra:item-asset-export-fabric:1.1.0+1.21.4"
+    // modRuntimeOnly "org.sinytra:item-asset-export-fabric:1.1.0+1.21.4" //FIXME: This version is not compatible with 1.21.5
 }
 
 loom {

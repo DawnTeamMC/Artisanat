@@ -14,6 +14,8 @@ import net.minecraft.util.Identifier;
 
 import java.util.Map;
 
+import static net.minecraft.client.data.BlockStateModelGenerator.createWeightedVariant;
+
 public class ArtisanatModelProvider extends FabricModelProvider {
     public ArtisanatModelProvider(FabricDataOutput output) {
         super(output);
@@ -86,9 +88,9 @@ public class ArtisanatModelProvider extends FabricModelProvider {
     private void registerSlab(BlockStateModelGenerator gen, Block slabBlock, TextureMap textures, Identifier fullModelId) {
         var bottomSlabModelId = Models.SLAB.upload(slabBlock, textures, gen.modelCollector);
         gen.blockStateCollector.accept(BlockStateModelGenerator.createSlabBlockState(slabBlock,
-                bottomSlabModelId,
-                Models.SLAB_TOP.upload(slabBlock, textures, gen.modelCollector),
-                fullModelId
+                createWeightedVariant(bottomSlabModelId),
+                createWeightedVariant(Models.SLAB_TOP.upload(slabBlock, textures, gen.modelCollector)),
+                createWeightedVariant(fullModelId)
         ));
         gen.registerParentedItemModel(slabBlock, bottomSlabModelId);
     }
@@ -96,18 +98,18 @@ public class ArtisanatModelProvider extends FabricModelProvider {
     private void registerStairs(BlockStateModelGenerator gen, Block stairsBlock, TextureMap textures) {
         var stairsModelId = Models.STAIRS.upload(stairsBlock, textures, gen.modelCollector);
         gen.blockStateCollector.accept(BlockStateModelGenerator.createStairsBlockState(stairsBlock,
-                Models.INNER_STAIRS.upload(stairsBlock, textures, gen.modelCollector),
-                stairsModelId,
-                Models.OUTER_STAIRS.upload(stairsBlock, textures, gen.modelCollector)
+                createWeightedVariant(Models.INNER_STAIRS.upload(stairsBlock, textures, gen.modelCollector)),
+                createWeightedVariant(stairsModelId),
+                createWeightedVariant(Models.OUTER_STAIRS.upload(stairsBlock, textures, gen.modelCollector))
         ));
         gen.registerParentedItemModel(stairsBlock, stairsModelId);
     }
 
     private void registerWall(BlockStateModelGenerator gen, Block wallBlock, TextureMap textures) {
         gen.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(wallBlock,
-                Models.TEMPLATE_WALL_POST.upload(wallBlock, textures, gen.modelCollector),
-                Models.TEMPLATE_WALL_SIDE.upload(wallBlock, textures, gen.modelCollector),
-                Models.TEMPLATE_WALL_SIDE_TALL.upload(wallBlock, textures, gen.modelCollector)));
+                createWeightedVariant(Models.TEMPLATE_WALL_POST.upload(wallBlock, textures, gen.modelCollector)),
+                createWeightedVariant(Models.TEMPLATE_WALL_SIDE.upload(wallBlock, textures, gen.modelCollector)),
+                createWeightedVariant(Models.TEMPLATE_WALL_SIDE_TALL.upload(wallBlock, textures, gen.modelCollector))));
         gen.registerParentedItemModel(wallBlock, Models.WALL_INVENTORY.upload(wallBlock, textures, gen.modelCollector));
     }
 
@@ -115,13 +117,13 @@ public class ArtisanatModelProvider extends FabricModelProvider {
         Identifier identifier = Models.PRESSURE_PLATE_UP.upload(pressurePlateBlock, textures, gen.modelCollector);
         Identifier identifier2 = Models.PRESSURE_PLATE_DOWN.upload(pressurePlateBlock, textures, gen.modelCollector);
         gen.blockStateCollector
-                .accept(BlockStateModelGenerator.createPressurePlateBlockState(pressurePlateBlock, identifier, identifier2));
+                .accept(BlockStateModelGenerator.createPressurePlateBlockState(pressurePlateBlock, createWeightedVariant(identifier), createWeightedVariant(identifier2)));
     }
 
     private void registerButton(BlockStateModelGenerator gen, Block buttonBlock, TextureMap textures) {
         Identifier identifier = Models.BUTTON.upload(buttonBlock, textures, gen.modelCollector);
         Identifier identifier2 = Models.BUTTON_PRESSED.upload(buttonBlock, textures, gen.modelCollector);
-        gen.blockStateCollector.accept(BlockStateModelGenerator.createButtonBlockState(buttonBlock, identifier, identifier2));
+        gen.blockStateCollector.accept(BlockStateModelGenerator.createButtonBlockState(buttonBlock, createWeightedVariant(identifier), createWeightedVariant(identifier2)));
         Identifier identifier3 = Models.BUTTON_INVENTORY.upload(buttonBlock, textures, gen.modelCollector);
         gen.registerParentedItemModel(buttonBlock, identifier3);
     }
@@ -141,7 +143,7 @@ public class ArtisanatModelProvider extends FabricModelProvider {
             } else {
                 var unwaxedBlock = copperBlocks.get(oxidationLevelBooleanPair.getFirst(), false);
 
-                gen.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, ModelIds.getBlockModelId(unwaxedBlock)));
+                gen.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, createWeightedVariant(ModelIds.getBlockModelId(unwaxedBlock))));
                 gen.itemModelOutput.acceptAlias(unwaxedBlock.asItem(), block.asItem());
             }
         });

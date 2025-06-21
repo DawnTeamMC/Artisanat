@@ -76,7 +76,7 @@ public record StainedSSWPBBlocks(Map<DyeColor, SSWPBBlocks> colorMap) {
         public StainedSSWPBBlocks register(String path) {
             var colorMap = new HashMap<DyeColor, SSWPBBlocks>();
             for (DyeColor color : DyeColor.values()) {
-                String blockPath = color.getName() + "_" + path;
+                String blockPath = color.getId() + "_" + path;
                 colorMap.put(color, SSWPBBlocks.of(this.baseBlockColorMap.get(color)).register(blockPath));
             }
             return new StainedSSWPBBlocks(colorMap);
