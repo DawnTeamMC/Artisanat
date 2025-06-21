@@ -74,7 +74,7 @@ public class ArtisanatItemTagProvider extends FabricTagProvider.ItemTagProvider 
         copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
         copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
 
-        getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD).add(
+        valueLookupBuilder(ItemTags.NON_FLAMMABLE_WOOD).add(
                 ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.stairs().asItem(),
                 ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.slab().asItem(),
                 ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.button().asItem(),
@@ -83,6 +83,6 @@ public class ArtisanatItemTagProvider extends FabricTagProvider.ItemTagProvider 
                 ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.button().asItem()
         );
 
-        getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED).addTag(ArtisanatItemTags.GOLD_BLOCKS);
+        valueLookupBuilder(ItemTags.PIGLIN_LOVED).addTag(ArtisanatItemTags.GOLD_BLOCKS);
     }
 }

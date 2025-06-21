@@ -6,6 +6,7 @@ import fr.hugman.artisanat.tag.ArtisanatBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
+import net.minecraft.data.tag.ProvidedTagBuilder;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
@@ -22,46 +23,46 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         // Artisanat
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.STAINED_BRICK_BLOCKS), BSSWBlocks::block, ArtisanatBlocks.STAINED_BRICK_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.STAINED_BRICK_SLABS), BSSWBlocks::slab, ArtisanatBlocks.STAINED_BRICK_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.STAINED_BRICK_STAIRS), BSSWBlocks::stairs, ArtisanatBlocks.STAINED_BRICK_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.STAINED_BRICK_WALLS), BSSWBlocks::wall, ArtisanatBlocks.STAINED_BRICK_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.STAINED_BRICK_BLOCKS), BSSWBlocks::block, ArtisanatBlocks.STAINED_BRICK_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.STAINED_BRICK_SLABS), BSSWBlocks::slab, ArtisanatBlocks.STAINED_BRICK_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.STAINED_BRICK_STAIRS), BSSWBlocks::stairs, ArtisanatBlocks.STAINED_BRICK_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.STAINED_BRICK_WALLS), BSSWBlocks::wall, ArtisanatBlocks.STAINED_BRICK_BLOCKS);
 
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.BRICK_TILES).add(ArtisanatBlocks.BRICK_TILE_BLOCKS.block()), BSSWBlocks::block, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.BRICK_TILE_SLABS).add(ArtisanatBlocks.BRICK_TILE_BLOCKS.slab()), BSSWBlocks::slab, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.BRICK_TILE_STAIRS).add(ArtisanatBlocks.BRICK_TILE_BLOCKS.stairs()), BSSWBlocks::stairs, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.BRICK_TILE_WALLS).add(ArtisanatBlocks.BRICK_TILE_BLOCKS.wall()), BSSWBlocks::wall, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.BRICK_TILES).add(ArtisanatBlocks.BRICK_TILE_BLOCKS.block()), BSSWBlocks::block, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.BRICK_TILE_SLABS).add(ArtisanatBlocks.BRICK_TILE_BLOCKS.slab()), BSSWBlocks::slab, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.BRICK_TILE_STAIRS).add(ArtisanatBlocks.BRICK_TILE_BLOCKS.stairs()), BSSWBlocks::stairs, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.BRICK_TILE_WALLS).add(ArtisanatBlocks.BRICK_TILE_BLOCKS.wall()), BSSWBlocks::wall, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
 
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_SLABS).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.slab()), SSWPBBlocks::slab, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_STAIRS).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.stairs()), SSWPBBlocks::stairs, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_WALLS).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.wall()), SSWPBBlocks::wall, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_PRESSURE_PLATES).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.pressurePlate()), SSWPBBlocks::pressurePlate, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_BUTTONS).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.button()), SSWPBBlocks::button, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_SLABS).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.slab()), SSWPBBlocks::slab, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_STAIRS).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.stairs()), SSWPBBlocks::stairs, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_WALLS).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.wall()), SSWPBBlocks::wall, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_PRESSURE_PLATES).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.pressurePlate()), SSWPBBlocks::pressurePlate, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_BUTTONS).add(ArtisanatBlocks.TERRACOTTA_BLOCKS.button()), SSWPBBlocks::button, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
 
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_BRICKS).add(ArtisanatBlocks.TERRACOTTA_BRICKS.block()), BSSWBlocks::block, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_BRICK_SLABS).add(ArtisanatBlocks.TERRACOTTA_BRICKS.slab()), BSSWBlocks::slab, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_BRICK_STAIRS).add(ArtisanatBlocks.TERRACOTTA_BRICKS.stairs()), BSSWBlocks::stairs, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.TERRACOTTA_BRICK_WALLS).add(ArtisanatBlocks.TERRACOTTA_BRICKS.wall()), BSSWBlocks::wall, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_BRICKS).add(ArtisanatBlocks.TERRACOTTA_BRICKS.block()), BSSWBlocks::block, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_BRICK_SLABS).add(ArtisanatBlocks.TERRACOTTA_BRICKS.slab()), BSSWBlocks::slab, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_BRICK_STAIRS).add(ArtisanatBlocks.TERRACOTTA_BRICKS.stairs()), BSSWBlocks::stairs, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.TERRACOTTA_BRICK_WALLS).add(ArtisanatBlocks.TERRACOTTA_BRICKS.wall()), BSSWBlocks::wall, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
 
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_BLOCKS), BSSWBlocks::block, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_SLABS), BSSWBlocks::slab, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_STAIRS), BSSWBlocks::stairs, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_WALLS), BSSWBlocks::wall, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_BLOCKS), BSSWBlocks::block, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_SLABS), BSSWBlocks::slab, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_STAIRS), BSSWBlocks::stairs, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.STAINED_DARK_PRISMARINE_WALLS), BSSWBlocks::wall, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
 
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_SLABS), SSWPBBlocks::slab, ArtisanatBlocks.CONCRETE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_STAIRS), SSWPBBlocks::stairs, ArtisanatBlocks.CONCRETE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_WALLS), SSWPBBlocks::wall, ArtisanatBlocks.CONCRETE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_PRESSURE_PLATES), SSWPBBlocks::pressurePlate, ArtisanatBlocks.CONCRETE_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BUTTONS), SSWPBBlocks::button, ArtisanatBlocks.CONCRETE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_SLABS), SSWPBBlocks::slab, ArtisanatBlocks.CONCRETE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_STAIRS), SSWPBBlocks::stairs, ArtisanatBlocks.CONCRETE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_WALLS), SSWPBBlocks::wall, ArtisanatBlocks.CONCRETE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_PRESSURE_PLATES), SSWPBBlocks::pressurePlate, ArtisanatBlocks.CONCRETE_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_BUTTONS), SSWPBBlocks::button, ArtisanatBlocks.CONCRETE_BLOCKS);
 
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BRICKS), BSSWBlocks::block, ArtisanatBlocks.CONCRETE_BRICKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BRICK_SLABS), BSSWBlocks::slab, ArtisanatBlocks.CONCRETE_BRICKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BRICK_STAIRS), BSSWBlocks::stairs, ArtisanatBlocks.CONCRETE_BRICKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.CONCRETE_BRICK_WALLS), BSSWBlocks::wall, ArtisanatBlocks.CONCRETE_BRICKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_BRICKS), BSSWBlocks::block, ArtisanatBlocks.CONCRETE_BRICKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_BRICK_SLABS), BSSWBlocks::slab, ArtisanatBlocks.CONCRETE_BRICKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_BRICK_STAIRS), BSSWBlocks::stairs, ArtisanatBlocks.CONCRETE_BRICKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.CONCRETE_BRICK_WALLS), BSSWBlocks::wall, ArtisanatBlocks.CONCRETE_BRICKS);
 
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.QUARTZ_PAVINGS), BSSBlocks::block, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.QUARTZ_PAVING_SLABS), BSSBlocks::slab, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
-        fill(getOrCreateTagBuilder(ArtisanatBlockTags.QUARTZ_PAVING_STAIRS), BSSBlocks::stairs, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.QUARTZ_PAVINGS), BSSBlocks::block, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.QUARTZ_PAVING_SLABS), BSSBlocks::slab, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
+        fill(valueLookupBuilder(ArtisanatBlockTags.QUARTZ_PAVING_STAIRS), BSSBlocks::stairs, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
 
         createOreTags(ArtisanatBlockTags.COAL_BLOCKS, ArtisanatBlocks.COAL_BLOCKS);
         createOreTags(ArtisanatBlockTags.IRON_BLOCKS, ArtisanatBlocks.IRON_BLOCKS);
@@ -74,7 +75,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
         createOreTags(ArtisanatBlockTags.NETHERITE_BLOCKS, ArtisanatBlocks.NETHERITE_BLOCKS);
 
         // Vanilla
-        getOrCreateTagBuilder(BlockTags.SLABS)
+        valueLookupBuilder(BlockTags.SLABS)
                 .add(
                         ArtisanatBlocks.COBBLESTONE_BRICKS.slab(),
                         ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.slab(),
@@ -98,7 +99,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .addTag(ArtisanatBlockTags.CONCRETE_BRICK_SLABS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVING_SLABS)
         ;
-        getOrCreateTagBuilder(BlockTags.STAIRS)
+        valueLookupBuilder(BlockTags.STAIRS)
                 .add(
                         ArtisanatBlocks.COBBLESTONE_BRICKS.stairs(),
                         ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.stairs(),
@@ -122,7 +123,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .addTag(ArtisanatBlockTags.CONCRETE_BRICK_STAIRS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVING_STAIRS)
         ;
-        getOrCreateTagBuilder(BlockTags.WALLS)
+        valueLookupBuilder(BlockTags.WALLS)
                 .add(
                         ArtisanatBlocks.COBBLESTONE_BRICKS.wall(),
                         ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.wall(),
@@ -143,16 +144,16 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .addTag(ArtisanatBlockTags.CONCRETE_BRICK_WALLS)
                 .addTag(ArtisanatBlockTags.QUARTZ_PAVINGS)
         ;
-        getOrCreateTagBuilder(BlockTags.STONE_PRESSURE_PLATES)
+        valueLookupBuilder(BlockTags.STONE_PRESSURE_PLATES)
                 .addTag(ArtisanatBlockTags.TERRACOTTA_PRESSURE_PLATES)
                 .addTag(ArtisanatBlockTags.CONCRETE_PRESSURE_PLATES)
         ;
-        getOrCreateTagBuilder(BlockTags.BUTTONS)
+        valueLookupBuilder(BlockTags.BUTTONS)
                 .addTag(ArtisanatBlockTags.TERRACOTTA_BUTTONS)
                 .addTag(ArtisanatBlockTags.CONCRETE_BUTTONS)
         ;
 
-        getOrCreateTagBuilder(BlockTags.WOODEN_SLABS).add(
+        valueLookupBuilder(BlockTags.WOODEN_SLABS).add(
                 ArtisanatBlocks.OAK_WOOD_BLOCKS.slab(),
                 ArtisanatBlocks.SPRUCE_WOOD_BLOCKS.slab(),
                 ArtisanatBlocks.BIRCH_WOOD_BLOCKS.slab(),
@@ -165,7 +166,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.slab(),
                 ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.slab()
         );
-        getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS).add(
+        valueLookupBuilder(BlockTags.WOODEN_STAIRS).add(
                 ArtisanatBlocks.OAK_WOOD_BLOCKS.stairs(),
                 ArtisanatBlocks.SPRUCE_WOOD_BLOCKS.stairs(),
                 ArtisanatBlocks.BIRCH_WOOD_BLOCKS.stairs(),
@@ -178,7 +179,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.stairs(),
                 ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.stairs()
         );
-        getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS).add(
+        valueLookupBuilder(BlockTags.WOODEN_BUTTONS).add(
                 ArtisanatBlocks.OAK_WOOD_BLOCKS.button(),
                 ArtisanatBlocks.SPRUCE_WOOD_BLOCKS.button(),
                 ArtisanatBlocks.BIRCH_WOOD_BLOCKS.button(),
@@ -192,23 +193,23 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.button()
         );
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .addTag(ArtisanatBlockTags.IRON_BLOCKS)
                 .addTag(ArtisanatBlockTags.COPPER_BLOCKS)
                 .addTag(ArtisanatBlockTags.LAPIS_BLOCKS);
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .addTag(ArtisanatBlockTags.GOLD_BLOCKS)
                 .addTag(ArtisanatBlockTags.EMERALD_BLOCKS)
                 .addTag(ArtisanatBlockTags.DIAMOND_BLOCKS);
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL).addTag(ArtisanatBlockTags.NETHERITE_BLOCKS);
-        getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
+        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL).addTag(ArtisanatBlockTags.NETHERITE_BLOCKS);
+        valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .addTag(ArtisanatBlockTags.IRON_BLOCKS)
                 .addTag(ArtisanatBlockTags.GOLD_BLOCKS)
                 .addTag(ArtisanatBlockTags.EMERALD_BLOCKS)
                 .addTag(ArtisanatBlockTags.DIAMOND_BLOCKS)
                 .addTag(ArtisanatBlockTags.NETHERITE_BLOCKS);
 
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ArtisanatBlocks.COBBLESTONE_BRICKS.all())
                 .add(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.all())
                 .add(ArtisanatBlocks.GRANITE_BRICKS.all())
@@ -262,7 +263,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
         ;
     }
 
-    private void fill(FabricTagProvider<Block>.FabricTagBuilder tagBuilder, Function<SSWPBBlocks, Block> consumer, StainedSSWPBBlocks... stainedSswpbs) {
+    private void fill(ProvidedTagBuilder<Block, Block> tagBuilder, Function<SSWPBBlocks, Block> consumer, StainedSSWPBBlocks... stainedSswpbs) {
         for (var stainedSswpb : stainedSswpbs) {
             for (var block : stainedSswpb.colorMap().values()) {
                 tagBuilder.add(consumer.apply(block));
@@ -270,7 +271,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
         }
     }
 
-    private void fill(FabricTagProvider<Block>.FabricTagBuilder tagBuilder, Function<BSSWBlocks, Block> consumer, StainedBSSWBlocks... stainedBssws) {
+    private void fill(ProvidedTagBuilder<Block, Block> tagBuilder, Function<BSSWBlocks, Block> consumer, StainedBSSWBlocks... stainedBssws) {
         for (var stainedBssw : stainedBssws) {
             for (var block : stainedBssw.colorMap().values()) {
                 tagBuilder.add(consumer.apply(block));
@@ -278,7 +279,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
         }
     }
 
-    private void fill(FabricTagProvider<Block>.FabricTagBuilder tagBuilder, Function<BSSBlocks, Block> consumer, StainedBSSBlocks... stainedBsss) {
+    private void fill(ProvidedTagBuilder<Block, Block> tagBuilder, Function<BSSBlocks, Block> consumer, StainedBSSBlocks... stainedBsss) {
         for (var stainedBss : stainedBsss) {
             for (var block : stainedBss.colorMap().values()) {
                 tagBuilder.add(consumer.apply(block));
@@ -287,7 +288,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
     }
 
     private void createOreTags(TagKey<Block> tag, OreBlocks oreBlocks) {
-        getOrCreateTagBuilder(tag).add(
+        valueLookupBuilder(tag).add(
                 oreBlocks.platedBlock(),
                 oreBlocks.cutBlock(),
                 oreBlocks.bricks(),
@@ -297,7 +298,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
 
 
     private void createOreTags(TagKey<Block> tag, CopperBlocks... copperBlocks) {
-        var tagBuilder = getOrCreateTagBuilder(tag);
+        var tagBuilder = valueLookupBuilder(tag);
         for (CopperBlocks copperBlock : copperBlocks) {
             tagBuilder.add(copperBlock.map().values().toArray(new Block[0]));
         }

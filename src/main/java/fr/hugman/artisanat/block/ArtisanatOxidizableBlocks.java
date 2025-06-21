@@ -1,6 +1,5 @@
 package fr.hugman.artisanat.block;
 
-import fr.hugman.artisanat.Artisanat;
 import fr.hugman.artisanat.block.groups.CopperBlocks;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.block.Oxidizable;
@@ -19,8 +18,6 @@ public class ArtisanatOxidizableBlocks {
 
         for (var level : Oxidizable.OxidationLevel.values()) {
             OxidizableBlocksRegistry.registerWaxableBlockPair(blocks.get(level, false), blocks.get(level, true));
-            Artisanat.LOGGER.info(blocks.get(level, false).getClass().getSimpleName() + ": " + blocks.get(level, false));
         }
-
     }
 }
