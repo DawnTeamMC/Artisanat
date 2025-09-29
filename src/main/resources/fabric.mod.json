@@ -22,7 +22,7 @@
 		]
 	},
 	"depends": {
-		"minecraft": "1.21.6",
+      "minecraft": "^1.21.6",
 		"fabric": "*"
 	},
 	"custom": {
