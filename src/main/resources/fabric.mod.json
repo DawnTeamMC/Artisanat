@@ -1,54 +1,54 @@
 {
-	"schemaVersion": 1,
-	"name": "Artisanat",
-	"id": "artisanat",
-	"version": "${version}",
-	"icon": "assets/artisanat/textures/logo.png",
-	"authors": [
-		"Hugman"
-	],
-	"contact": {
-		"homepage": "https://dawnteammc.github.io/artisanat",
-		"sources": "https://github.com/DawnTeamMC/Artisanat",
-		"issues": "https://github.com/DawnTeamMC/Artisanat/issues"
-	},
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"fr.hugman.artisanat.Artisanat"
-		],
-		"client": [
-			"fr.hugman.artisanat.client.ArtisanatClient"
-		]
-	},
-	"depends": {
-      "minecraft": "^1.21.6",
-		"fabric": "*"
-	},
-	"custom": {
-		"modmenu": {
-			"links": {
-				"modmenu.twitter": "https://twitter.com/DawnTeamMC",
-				"modmenu.discord": "https://discord.gg/8ksTVJu",
-				"modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/artisanat",
-				"modmenu.modrinth": "https://modrinth.com/mod/artisanat",
-				"modmenu.github_releases": "https://github.com/DawnTeamMC/Artisanat/releases/",
-				"modmenu.crowdin": "https://crowdin.com/project/dawnteam",
-				"modmenu.wiki": "https://dawnteammc.github.io/artisanat/wiki"
-			}
-		},
-		"modupdater": {
-			"strategy": "curseforge",
-			"projectID": 399443
-		},
-		"mc-publish": {
-			"curseforge": 399443,
-			"modrinth": "QDxAP5Cp",
-			"loaders": [
-				"fabric",
-				"quilt"
-			]
-		}
-	},
-	"license": "PolyForm Shield 1.0.0"
+  "schemaVersion": 1,
+  "name": "Artisanat",
+  "id": "artisanat",
+  "version": "${version}",
+  "icon": "assets/artisanat/textures/logo.png",
+  "authors": [
+    "Hugman"
+  ],
+  "contact": {
+    "homepage": "https://dawnteammc.github.io/artisanat",
+    "sources": "https://github.com/DawnTeamMC/Artisanat",
+    "issues": "https://github.com/DawnTeamMC/Artisanat/issues"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "fr.hugman.artisanat.Artisanat"
+    ],
+    "client": [
+      "fr.hugman.artisanat.client.ArtisanatClient"
+    ]
+  },
+  "depends": {
+    "minecraft": "^1.21.9",
+    "fabric": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.twitter": "https://twitter.com/DawnTeamMC",
+        "modmenu.discord": "https://discord.gg/8ksTVJu",
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/artisanat",
+        "modmenu.modrinth": "https://modrinth.com/mod/artisanat",
+        "modmenu.github_releases": "https://github.com/DawnTeamMC/Artisanat/releases/",
+        "modmenu.crowdin": "https://crowdin.com/project/dawnteam",
+        "modmenu.wiki": "https://dawnteammc.github.io/artisanat/wiki"
+      }
+    },
+    "modupdater": {
+      "strategy": "curseforge",
+      "projectID": 399443
+    },
+    "mc-publish": {
+      "curseforge": 399443,
+      "modrinth": "QDxAP5Cp",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ]
+    }
+  },
+  "license": "PolyForm Shield 1.0.0"
 }
