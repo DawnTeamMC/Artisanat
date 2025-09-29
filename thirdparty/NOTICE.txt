@@ -11,9 +11,3 @@ The complete text for each software license can be found in the directory "third
   * License: Apache 2.0 (SPDX: Apache-2.0)
   * Original Source:
     * https://github.com/FabricMC/fabric
-
-* Columns mod
-  * Copyright (c) 2020 haykam821
-  * License: MIT (SPDX: MIT)
-  * Original Source:
-    * https://github.com/haykam821/Columns
