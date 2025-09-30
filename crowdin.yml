@@ -3,8 +3,8 @@ api_token_env: "CROWDIN_PERSONAL_TOKEN"
 preserve_hierarchy: true
 
 files:
-  - source: "src/client/resources/assets/artisanat/lang/en_us.json"
-    translation: "src/client/resources/assets/artisanat/lang/%locale_with_underscore%.json"
+  - source: "src/main/generated/assets/artisanat/lang/en_us.json"
+    translation: "src/main/generated/assets/artisanat/lang/%locale_with_underscore%.json"
     dest: "artisanat.json"
   - source: "docs/**/*.*"
     ignore:
