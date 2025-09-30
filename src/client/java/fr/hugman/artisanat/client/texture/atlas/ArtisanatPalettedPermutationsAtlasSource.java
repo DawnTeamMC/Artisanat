@@ -17,7 +17,6 @@ import net.minecraft.client.texture.atlas.AtlasSource;
 import net.minecraft.client.texture.atlas.AtlasSprite;
 import net.minecraft.resource.Resource;
 import net.minecraft.resource.ResourceManager;
-import net.minecraft.resource.metadata.ResourceMetadata;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.ColorHelper;
 import org.jetbrains.annotations.Nullable;
@@ -148,7 +147,7 @@ public record ArtisanatPalettedPermutationsAtlasSource(
 			try {
 				NativeImage nativeImage = this.baseImage.read().applyToCopy(this.palette.get());
 				return new SpriteContents(
-						this.permutationLocation, new SpriteDimensions(nativeImage.getWidth(), nativeImage.getHeight()), nativeImage, ResourceMetadata.NONE
+						this.permutationLocation, new SpriteDimensions(nativeImage.getWidth(), nativeImage.getHeight()), nativeImage
 				);
 			} catch (IllegalArgumentException | IOException var7) {
 				ArtisanatPalettedPermutationsAtlasSource.LOGGER.error("unable to apply palette to {}", this.permutationLocation, var7);
