@@ -77,6 +77,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
         // Vanilla
         valueLookupBuilder(BlockTags.SLABS)
                 .add(
+						ArtisanatBlocks.POLISHED_STONE.slab(),
                         ArtisanatBlocks.COBBLESTONE_BRICKS.slab(),
                         ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.slab(),
                         ArtisanatBlocks.GRANITE_BRICKS.slab(),
@@ -101,12 +102,13 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
         ;
         valueLookupBuilder(BlockTags.STAIRS)
                 .add(
-                        ArtisanatBlocks.COBBLESTONE_BRICKS.stairs(),
-                        ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.stairs(),
-                        ArtisanatBlocks.GRANITE_BRICKS.stairs(),
-                        ArtisanatBlocks.DIORITE_BRICKS.stairs(),
-                        ArtisanatBlocks.ANDESITE_BRICKS.stairs(),
-                        ArtisanatBlocks.SANDSTONE_BRICKS.stairs(),
+						ArtisanatBlocks.POLISHED_STONE.stairs(),
+						ArtisanatBlocks.COBBLESTONE_BRICKS.stairs(),
+						ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.stairs(),
+						ArtisanatBlocks.GRANITE_BRICKS.stairs(),
+						ArtisanatBlocks.DIORITE_BRICKS.stairs(),
+						ArtisanatBlocks.ANDESITE_BRICKS.stairs(),
+						ArtisanatBlocks.SANDSTONE_BRICKS.stairs(),
                         ArtisanatBlocks.POLISHED_SANDSTONE.stairs(),
                         ArtisanatBlocks.RED_SANDSTONE_BRICKS.stairs(),
                         ArtisanatBlocks.POLISHED_RED_SANDSTONE.stairs(),
@@ -210,12 +212,13 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .addTag(ArtisanatBlockTags.NETHERITE_BLOCKS);
 
         valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ArtisanatBlocks.COBBLESTONE_BRICKS.all())
-                .add(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.all())
-                .add(ArtisanatBlocks.GRANITE_BRICKS.all())
-                .add(ArtisanatBlocks.DIORITE_BRICKS.all())
-                .add(ArtisanatBlocks.ANDESITE_BRICKS.all())
-                .add(ArtisanatBlocks.SANDSTONE_BRICKS.all())
+				.add(ArtisanatBlocks.POLISHED_STONE.all())
+				.add(ArtisanatBlocks.COBBLESTONE_BRICKS.all())
+				.add(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS.all())
+				.add(ArtisanatBlocks.GRANITE_BRICKS.all())
+				.add(ArtisanatBlocks.DIORITE_BRICKS.all())
+				.add(ArtisanatBlocks.ANDESITE_BRICKS.all())
+				.add(ArtisanatBlocks.SANDSTONE_BRICKS.all())
                 .add(ArtisanatBlocks.POLISHED_SANDSTONE.all())
                 .add(ArtisanatBlocks.RED_SANDSTONE_BRICKS.all())
                 .add(ArtisanatBlocks.POLISHED_RED_SANDSTONE.all())

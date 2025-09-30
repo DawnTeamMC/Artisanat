@@ -27,6 +27,7 @@ public class ArtisanatBlockFamilies {
         register(ArtisanatBlocks.MANGROVE_WOOD_BLOCKS, Blocks.MANGROVE_WOOD);
         register(ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS, Blocks.CRIMSON_HYPHAE);
         register(ArtisanatBlocks.WARPED_HYPHAE_BLOCKS, Blocks.WARPED_HYPHAE);
+		register(ArtisanatBlocks.POLISHED_STONE);
         register(ArtisanatBlocks.COBBLESTONE_BRICKS);
         register(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS);
         register(ArtisanatBlocks.GRANITE_BRICKS);
