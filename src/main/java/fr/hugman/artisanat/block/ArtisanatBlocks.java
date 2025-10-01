@@ -26,6 +26,8 @@ public class ArtisanatBlocks {
     public static final WoodBlocks CRIMSON_HYPHAE_BLOCKS = register("crimson_hyphae", WoodBlocks.of(Blocks.CRIMSON_HYPHAE, ArtisanatBlockSetTypes.CRIMSON_HYPHAE));
     public static final WoodBlocks WARPED_HYPHAE_BLOCKS = register("warped_hyphae", WoodBlocks.of(Blocks.WARPED_HYPHAE, ArtisanatBlockSetTypes.WARPED_HYPHAE));
 
+	public static final BSSBlocks POLISHED_STONE = register("polished_stone", BSSBlocks.of(new BlockBuilder(Blocks.STONE_BRICKS)));
+
     public static final BSSWBlocks COBBLESTONE_BRICKS = register("cobblestone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.COBBLESTONE)));
     public static final BSSWBlocks MOSSY_COBBLESTONE_BRICKS = register("mossy_cobblestone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.MOSSY_COBBLESTONE)));
 
