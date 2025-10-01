@@ -33,6 +33,8 @@ public class ArtisanatBlocks {
     public static final BSSWBlocks DIORITE_BRICKS = register("diorite_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.DIORITE)));
     public static final BSSWBlocks ANDESITE_BRICKS = register("andesite_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.ANDESITE)));
 
+    public static final BSSWBlocks SNOW_BRICKS = register("snow_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.SNOW_BLOCK)));
+
     public static final BSSWBlocks SANDSTONE_BRICKS = register("sandstone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.SANDSTONE)));
     public static final BSSBlocks POLISHED_SANDSTONE = register("polished_sandstone", BSSBlocks.of(new BlockBuilder(Blocks.SANDSTONE)));
     public static final BSSWBlocks RED_SANDSTONE_BRICKS = register("red_sandstone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.RED_SANDSTONE)));

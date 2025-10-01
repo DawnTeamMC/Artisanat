@@ -32,6 +32,7 @@ public class ArtisanatRecipeGenerator extends ExtendedRecipeGenerator {
         offer2x2MainBlockCraft(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS, StainedSSWPBBlocks.TERRACOTTA_MAP);
         offer2x2MainBlockMixedCraft(ArtisanatBlocks.QUARTZ_PAVING_BLOCKS, Blocks.QUARTZ_BLOCK);
         offer2x2MainBlockCraft(ArtisanatBlocks.CONCRETE_BRICKS, StainedSSWPBBlocks.CONCRETE_MAP);
+		offer2x2Craft(ArtisanatBlocks.SNOW_BRICKS.block(), Blocks.SNOW_BLOCK);
 
         offerColoring(ArtisanatBlocks.STAINED_BRICK_BLOCKS, Blocks.BRICKS);
         offerColoring(ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS, ArtisanatBlocks.BRICK_TILE_BLOCKS);
