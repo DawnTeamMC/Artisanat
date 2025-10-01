@@ -82,6 +82,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                         ArtisanatBlocks.GRANITE_BRICKS.slab(),
                         ArtisanatBlocks.DIORITE_BRICKS.slab(),
                         ArtisanatBlocks.ANDESITE_BRICKS.slab(),
+                        ArtisanatBlocks.SNOW_BRICKS.slab(),
                         ArtisanatBlocks.SANDSTONE_BRICKS.slab(),
                         ArtisanatBlocks.POLISHED_SANDSTONE.slab(),
                         ArtisanatBlocks.RED_SANDSTONE_BRICKS.slab(),
@@ -106,6 +107,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                         ArtisanatBlocks.GRANITE_BRICKS.stairs(),
                         ArtisanatBlocks.DIORITE_BRICKS.stairs(),
                         ArtisanatBlocks.ANDESITE_BRICKS.stairs(),
+                        ArtisanatBlocks.SNOW_BRICKS.stairs(),
                         ArtisanatBlocks.SANDSTONE_BRICKS.stairs(),
                         ArtisanatBlocks.POLISHED_SANDSTONE.stairs(),
                         ArtisanatBlocks.RED_SANDSTONE_BRICKS.stairs(),
@@ -130,6 +132,7 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                         ArtisanatBlocks.GRANITE_BRICKS.wall(),
                         ArtisanatBlocks.DIORITE_BRICKS.wall(),
                         ArtisanatBlocks.ANDESITE_BRICKS.wall(),
+                        ArtisanatBlocks.SNOW_BRICKS.wall(),
                         ArtisanatBlocks.SANDSTONE_BRICKS.wall(),
                         ArtisanatBlocks.RED_SANDSTONE_BRICKS.wall(),
                         ArtisanatBlocks.CHISELED_PRISMARINE.wall()
@@ -261,6 +264,9 @@ public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvide
                 .addTag(ArtisanatBlockTags.DIAMOND_BLOCKS)
                 .addTag(ArtisanatBlockTags.NETHERITE_BLOCKS)
         ;
+		valueLookupBuilder(BlockTags.SHOVEL_MINEABLE)
+				.add(ArtisanatBlocks.SNOW_BRICKS.all())
+		;
     }
 
     private void fill(ProvidedTagBuilder<Block, Block> tagBuilder, Function<SSWPBBlocks, Block> consumer, StainedSSWPBBlocks... stainedSswpbs) {

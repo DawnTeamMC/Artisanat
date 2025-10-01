@@ -4,6 +4,9 @@ import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.groups.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Items;
+import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -33,6 +36,11 @@ public class ArtisanatBlockLootTableProvider extends FabricBlockLootTableProvide
         addDrop(ArtisanatBlocks.GRANITE_BRICKS);
         addDrop(ArtisanatBlocks.DIORITE_BRICKS);
         addDrop(ArtisanatBlocks.ANDESITE_BRICKS);
+
+		addDrop(ArtisanatBlocks.SNOW_BRICKS.block(), (block) -> this.drops(block, Items.SNOWBALL, ConstantLootNumberProvider.create(4.0F)));
+		addDrop(ArtisanatBlocks.SNOW_BRICKS.slab(), (block) -> this.drops(block, Items.SNOWBALL, ConstantLootNumberProvider.create(2.0F)));
+		addDrop(ArtisanatBlocks.SNOW_BRICKS.stairs(), (block) -> this.drops(block, Items.SNOWBALL, ConstantLootNumberProvider.create(6.0F)));
+		addDrop(ArtisanatBlocks.SNOW_BRICKS.wall(), (block) -> this.drops(block, Items.SNOWBALL, ConstantLootNumberProvider.create(4.0F)));
 
         addDrop(ArtisanatBlocks.SANDSTONE_BRICKS);
         addDrop(ArtisanatBlocks.POLISHED_SANDSTONE);

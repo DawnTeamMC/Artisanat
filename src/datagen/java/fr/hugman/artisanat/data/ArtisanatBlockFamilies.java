@@ -32,6 +32,7 @@ public class ArtisanatBlockFamilies {
         register(ArtisanatBlocks.GRANITE_BRICKS);
         register(ArtisanatBlocks.DIORITE_BRICKS);
         register(ArtisanatBlocks.ANDESITE_BRICKS);
+        register(ArtisanatBlocks.SNOW_BRICKS);
         register(ArtisanatBlocks.SANDSTONE_BRICKS);
         register(ArtisanatBlocks.POLISHED_SANDSTONE);
         register(ArtisanatBlocks.RED_SANDSTONE_BRICKS);

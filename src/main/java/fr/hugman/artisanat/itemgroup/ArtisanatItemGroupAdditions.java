@@ -41,6 +41,7 @@ public class ArtisanatItemGroupAdditions {
             add(entries, ArtisanatBlocks.GRANITE_BRICKS, Blocks.GRANITE_WALL);
             add(entries, ArtisanatBlocks.DIORITE_BRICKS, Blocks.DIORITE_WALL);
             add(entries, ArtisanatBlocks.ANDESITE_BRICKS, Blocks.ANDESITE_WALL);
+            add(entries, ArtisanatBlocks.SNOW_BRICKS, Blocks.CUT_RED_SANDSTONE_SLAB);
             add(entries, ArtisanatBlocks.SANDSTONE_BRICKS, Blocks.SANDSTONE_WALL);
             add(entries, ArtisanatBlocks.POLISHED_SANDSTONE, Blocks.SMOOTH_SANDSTONE_SLAB);
             add(entries, ArtisanatBlocks.RED_SANDSTONE_BRICKS, Blocks.RED_SANDSTONE_WALL);
