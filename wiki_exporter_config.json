@@ -1,0 +1,21 @@
+{
+  "output_path": "wiki_exporter",
+  "enabled": [
+    "metadata",
+    "render"
+  ],
+  "modules": {
+    "metadata": {
+      "namespaces": [
+        "artisanat"
+      ]
+    },
+    "render": {
+      "namespaces": [
+        "artisanat"
+      ],
+      "resolution": 128,
+      "png": true
+    }
+  }
+}

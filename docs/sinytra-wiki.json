@@ -1,7 +1,8 @@
 {
   "id": "artisanat",
   "platforms": {
-    "modrinth": "artisanat"
+    "modrinth": "artisanat",
+    "curseforge": "artisanat"
   },
   "slug": "artisanat"
 }
