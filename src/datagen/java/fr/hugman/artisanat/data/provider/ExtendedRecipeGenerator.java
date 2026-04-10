@@ -102,6 +102,7 @@ public abstract class ExtendedRecipeGenerator extends RecipeGenerator {
         this.offerStonecuttingRecipe(RecipeCategory.DECORATIONS, bsswBlocks.wall(), bsswBlocks.block());
 
         for (Block block : blocks) {
+			this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.block(), block, 2);
             this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.slab(), block, 2);
             this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.stairs(), block);
             this.offerStonecuttingRecipe(RecipeCategory.DECORATIONS, bsswBlocks.wall(), block);
@@ -113,6 +114,7 @@ public abstract class ExtendedRecipeGenerator extends RecipeGenerator {
         this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.stairs(), bsswBlocks.block());
 
         for (Block block : blocks) {
+			this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.block(), block, 2);
             this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.slab(), block, 2);
             this.offerStonecuttingRecipe(RecipeCategory.BUILDING_BLOCKS, bsswBlocks.stairs(), block);
         }
