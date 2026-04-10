@@ -27,6 +27,8 @@ public class ArtisanatBlockLootTableProvider extends FabricBlockLootTableProvide
         addDrop(ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS);
         addDrop(ArtisanatBlocks.WARPED_HYPHAE_BLOCKS);
 
+		addDrop(ArtisanatBlocks.POLISHED_STONE);
+
         addDrop(ArtisanatBlocks.COBBLESTONE_BRICKS);
         addDrop(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS);
 

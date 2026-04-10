@@ -36,6 +36,7 @@ public class ArtisanatItemGroupAdditions {
             add(entries, ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS, Blocks.CRIMSON_HYPHAE);
             add(entries, ArtisanatBlocks.WARPED_HYPHAE_BLOCKS, Blocks.WARPED_HYPHAE);
 
+			add(entries, ArtisanatBlocks.POLISHED_STONE, Blocks.SMOOTH_STONE_SLAB);
             add(entries, ArtisanatBlocks.COBBLESTONE_BRICKS, Blocks.COBBLESTONE_WALL);
             add(entries, ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS, Blocks.MOSSY_COBBLESTONE_WALL);
             add(entries, ArtisanatBlocks.GRANITE_BRICKS, Blocks.GRANITE_WALL);

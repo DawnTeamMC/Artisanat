@@ -39,6 +39,8 @@ public class ArtisanatRecipeGenerator extends ExtendedRecipeGenerator {
         offerColoring(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS, ArtisanatBlocks.TERRACOTTA_BRICKS);
         offerColoring(ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS, Blocks.DARK_PRISMARINE);
 
+		offferStonecutting(ArtisanatBlocks.POLISHED_STONE, Blocks.STONE);
+
         offferStonecutting(ArtisanatBlocks.COBBLESTONE_BRICKS, Blocks.COBBLESTONE);
         offferStonecutting(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS, Blocks.MOSSY_COBBLESTONE);
         offferStonecutting(ArtisanatBlocks.GRANITE_BRICKS, Blocks.GRANITE);
