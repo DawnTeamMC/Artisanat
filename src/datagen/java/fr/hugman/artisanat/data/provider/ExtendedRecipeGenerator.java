@@ -32,7 +32,7 @@ public abstract class ExtendedRecipeGenerator extends RecipeGenerator {
     }
 
     public void offer2x2Craft(ItemConvertible output, ItemConvertible input) {
-        this.createShaped(RecipeCategory.BUILDING_BLOCKS, output)
+        this.createShaped(RecipeCategory.BUILDING_BLOCKS, output, 4)
                 .input('#', input)
                 .pattern("##")
                 .pattern("##")
