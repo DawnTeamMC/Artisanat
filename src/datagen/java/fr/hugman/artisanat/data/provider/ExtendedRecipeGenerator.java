@@ -87,7 +87,7 @@ public abstract class ExtendedRecipeGenerator extends RecipeProvider {
                 .pattern("###")
                 .pattern("#X#")
                 .pattern("###")
-                //TODO group
+                .group("stained_" + getItemName(input))
                 .unlockedBy(getHasName(input), this.has(input))
                 .save(this.output, Artisanat.id(getItemName(output) + "_from_" + getItemName(input)).toString());
     }
