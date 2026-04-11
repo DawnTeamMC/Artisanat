@@ -12,12 +12,12 @@ public class ArtisanatOxidizableBlocks {
     }
 
     private static void register(CopperBlocks blocks) {
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(blocks.get(WeatheringCopper.WeatherState.UNAFFECTED, false), blocks.get(WeatheringCopper.WeatherState.EXPOSED, false));
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(blocks.get(WeatheringCopper.WeatherState.EXPOSED, false), blocks.get(WeatheringCopper.WeatherState.WEATHERED, false));
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(blocks.get(WeatheringCopper.WeatherState.WEATHERED, false), blocks.get(WeatheringCopper.WeatherState.OXIDIZED, false));
+        OxidizableBlocksRegistry.registerNextStage(blocks.get(WeatheringCopper.WeatherState.UNAFFECTED, false), blocks.get(WeatheringCopper.WeatherState.EXPOSED, false));
+        OxidizableBlocksRegistry.registerNextStage(blocks.get(WeatheringCopper.WeatherState.EXPOSED, false), blocks.get(WeatheringCopper.WeatherState.WEATHERED, false));
+        OxidizableBlocksRegistry.registerNextStage(blocks.get(WeatheringCopper.WeatherState.WEATHERED, false), blocks.get(WeatheringCopper.WeatherState.OXIDIZED, false));
 
         for (var level : WeatheringCopper.WeatherState.values()) {
-            OxidizableBlocksRegistry.registerWaxableBlockPair(blocks.get(level, false), blocks.get(level, true));
+            OxidizableBlocksRegistry.registerWaxable(blocks.get(level, false), blocks.get(level, true));
         }
     }
 }

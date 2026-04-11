@@ -3,9 +3,6 @@ registries:
   fabric-maven:
     type: maven-repository
     url: https://maven.fabricmc.net/
-  terraformers-maven:
-    type: maven-repository
-    url: https://maven.terraformersmc.com/releases/
 
 updates:
   - package-ecosystem: "github-actions"
@@ -21,4 +18,3 @@ updates:
       interval: "weekly"
     registries:
       - fabric-maven
-      - terraformers-maven

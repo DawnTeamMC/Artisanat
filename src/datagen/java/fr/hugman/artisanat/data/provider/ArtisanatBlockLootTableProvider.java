@@ -2,17 +2,17 @@ package fr.hugman.artisanat.data.provider;
 
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.collection.*;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ArtisanatBlockLootTableProvider extends FabricBlockLootTableProvider {
-    public ArtisanatBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
-        super(dataOutput, registryLookup);
+public class ArtisanatBlockLootTableProvider extends FabricBlockLootSubProvider {
+    public ArtisanatBlockLootTableProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookup) {
+        super(output, registryLookup);
     }
 
     @Override
@@ -80,8 +80,6 @@ public class ArtisanatBlockLootTableProvider extends FabricBlockLootTableProvide
         add(ArtisanatBlocks.UNPLATED_COPPER_BLOCKS);
         add(ArtisanatBlocks.COPPER_BRICKS);
         add(ArtisanatBlocks.COPPER_TILES);
-
-        this.map.forEach((id, lootTable) -> lootTable.setRandomSequence(id.identifier()));
     }
 
     public void add(WoodBlocks blocks) {

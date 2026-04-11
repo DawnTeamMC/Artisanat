@@ -4,7 +4,7 @@ import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.collection.*;
 import fr.hugman.artisanat.data.ArtisanatBlockFamilies;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelLocationUtils;
@@ -16,12 +16,13 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+
 import java.util.Map;
 
 import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
 
 public class ArtisanatModelProvider extends FabricModelProvider {
-    public ArtisanatModelProvider(FabricDataOutput output) {
+    public ArtisanatModelProvider(FabricPackOutput output) {
         super(output);
     }
 

@@ -1,7 +1,7 @@
 package fr.hugman.artisanat.data.provider;
 
 import fr.hugman.artisanat.Artisanat;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -19,8 +19,8 @@ public class ArtisanatEnglishLangProvider extends FabricLanguageProvider {
 			"of", "the", "and", "a", "an", "in", "on", "for", "to", "at", "by", "from", "with"
 	);
 
-	public ArtisanatEnglishLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
-		super(dataOutput, "en_us", registryLookup);
+	public ArtisanatEnglishLangProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registryLookup) {
+		super(output, "en_us", registryLookup);
 	}
 
 	@Override

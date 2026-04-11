@@ -1,9 +1,9 @@
 package fr.hugman.artisanat.data.provider;
 
 import fr.hugman.artisanat.Artisanat;
-import fr.hugman.artisanat.client.texture.atlas.ArtisanatPalettedPermutationsAtlasSource;
+import fr.hugman.artisanat.client.texture.atlas.ArtisanatPalettedPermutationsSpriteSource;
 import fr.hugman.artisanat.client.texture.atlas.OutputIdentifier;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider;
 import net.minecraft.client.renderer.texture.atlas.SpriteSource;
 import net.minecraft.client.renderer.texture.atlas.SpriteSources;
@@ -18,14 +18,14 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 public class ArtisanatAtlasProvider extends FabricCodecDataProvider<List<SpriteSource>> {
-    public ArtisanatAtlasProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registriesFuture) {
-        super(dataOutput, registriesFuture, PackOutput.Target.RESOURCE_PACK, "atlases", SpriteSources.FILE_CODEC);
+    public ArtisanatAtlasProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(output, registriesFuture, PackOutput.Target.RESOURCE_PACK, "atlases", SpriteSources.FILE_CODEC);
     }
 
     @Override
     protected void configure(BiConsumer<Identifier, List<SpriteSource>> provider, HolderLookup.Provider lookup) {
         provider.accept(Identifier.withDefaultNamespace("blocks"), List.of(
-                new ArtisanatPalettedPermutationsAtlasSource(
+                new ArtisanatPalettedPermutationsSpriteSource(
                         Map.of(
                                 Identifier.withDefaultNamespace("block/bricks"), OutputIdentifier.of("artisanat:block/", "_bricks"),
                                 Artisanat.id("block/brick_tiles"), OutputIdentifier.of("artisanat:block/", "_brick_tiles"),
@@ -34,7 +34,7 @@ public class ArtisanatAtlasProvider extends FabricCodecDataProvider<List<SpriteS
                         Artisanat.id("palettes/brick"),
                         dyesPalettes("brick")
                 ),
-                new ArtisanatPalettedPermutationsAtlasSource(
+                new ArtisanatPalettedPermutationsSpriteSource(
                         Map.of(
                                 Artisanat.id("block/quartz_paving"), OutputIdentifier.of("artisanat:block/", "_quartz_paving"),
                                 Artisanat.id("block/concrete_bricks"), OutputIdentifier.of("artisanat:block/", "_concrete_bricks")

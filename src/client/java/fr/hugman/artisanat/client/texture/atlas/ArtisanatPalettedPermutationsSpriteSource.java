@@ -31,17 +31,17 @@ import java.util.function.IntUnaryOperator;
 import java.util.function.Supplier;
 
 @Environment(EnvType.CLIENT)
-public record ArtisanatPalettedPermutationsAtlasSource(
+public record ArtisanatPalettedPermutationsSpriteSource(
 		Map<Identifier, OutputIdentifier> textures,
 		Identifier paletteKey,
 		Map<String, Identifier> permutations
 ) implements SpriteSource {
 	static final Logger LOGGER = LogUtils.getLogger();
-	public static final MapCodec<ArtisanatPalettedPermutationsAtlasSource> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
+	public static final MapCodec<ArtisanatPalettedPermutationsSpriteSource> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
 			Codec.unboundedMap(Identifier.CODEC, OutputIdentifier.CODEC).fieldOf("textures").forGetter(source -> source.textures),
 			Identifier.CODEC.fieldOf("palette_key").forGetter(source -> source.paletteKey),
 			Codec.unboundedMap(Codec.STRING, Identifier.CODEC).fieldOf("permutations").forGetter(source -> source.permutations)
-	).apply(instance, ArtisanatPalettedPermutationsAtlasSource::new));
+	).apply(instance, ArtisanatPalettedPermutationsSpriteSource::new));
 
 	@Override
 	public void run(ResourceManager resourceManager, Output regions) {
@@ -151,7 +151,7 @@ public record ArtisanatPalettedPermutationsAtlasSource(
 						this.permutationLocation, new FrameSize(nativeImage.getWidth(), nativeImage.getHeight()), nativeImage
 				);
 			} catch (IllegalArgumentException | IOException var7) {
-				ArtisanatPalettedPermutationsAtlasSource.LOGGER.error("unable to apply palette to {}", this.permutationLocation, var7);
+				ArtisanatPalettedPermutationsSpriteSource.LOGGER.error("unable to apply palette to {}", this.permutationLocation, var7);
 				var3 = null;
 			} finally {
 				this.baseImage.release();

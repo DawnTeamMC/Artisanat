@@ -3,8 +3,8 @@ package fr.hugman.artisanat.data.provider;
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.collection.*;
 import fr.hugman.artisanat.tag.ArtisanatBlockTags;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.tags.TagAppender;
 import net.minecraft.tags.BlockTags;
@@ -14,8 +14,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 
-public class ArtisanatBlockTagProvider extends FabricTagProvider.BlockTagProvider {
-    public ArtisanatBlockTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+public class ArtisanatBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
+    public ArtisanatBlockTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 

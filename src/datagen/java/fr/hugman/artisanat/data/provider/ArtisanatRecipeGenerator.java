@@ -3,10 +3,9 @@ package fr.hugman.artisanat.data.provider;
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.collection.StainedSSWPBBlocks;
 import fr.hugman.artisanat.data.ArtisanatBlockFamilies;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.BlockFamily;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -23,7 +22,7 @@ public class ArtisanatRecipeGenerator extends ExtendedRecipeGenerator {
 
     @Override
     public void buildRecipes() {
-        ArtisanatBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateRecipe).forEach(family -> this.generateRecipes(family, FeatureFlagSet.of(FeatureFlags.VANILLA)));
+        ArtisanatBlockFamilies.getFamilies().forEach(family -> this.generateRecipes(family, FeatureFlagSet.of(FeatureFlags.VANILLA)));
 
         //TODO: add wood blocks recipes
 
@@ -91,8 +90,8 @@ public class ArtisanatRecipeGenerator extends ExtendedRecipeGenerator {
         }
     }
 
-    public static FabricRecipeProvider create(FabricDataOutput fabricDataOutput, CompletableFuture<HolderLookup.Provider> completableFuture) {
-        return new FabricRecipeProvider(fabricDataOutput, completableFuture) {
+    public static FabricRecipeProvider create(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
+        return new FabricRecipeProvider(output, completableFuture) {
             @Override
             protected RecipeProvider createRecipeProvider(HolderLookup.Provider wrapperLookup, RecipeOutput recipeExporter) {
                 return new ArtisanatRecipeGenerator(wrapperLookup, recipeExporter);
