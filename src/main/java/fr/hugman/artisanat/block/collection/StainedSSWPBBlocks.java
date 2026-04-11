@@ -1,10 +1,10 @@
-package fr.hugman.artisanat.block.groups;
+package fr.hugman.artisanat.block.collection;
 
 import com.google.common.collect.ImmutableMap;
 import fr.hugman.artisanat.util.CustomRegisterable;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.util.DyeColor;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.*;
 
@@ -76,7 +76,7 @@ public record StainedSSWPBBlocks(Map<DyeColor, SSWPBBlocks> colorMap) {
         public StainedSSWPBBlocks register(String path) {
             var colorMap = new HashMap<DyeColor, SSWPBBlocks>();
             for (DyeColor color : DyeColor.values()) {
-                String blockPath = color.getId() + "_" + path;
+                String blockPath = color.getName() + "_" + path;
                 colorMap.put(color, SSWPBBlocks.of(this.baseBlockColorMap.get(color)).register(blockPath));
             }
             return new StainedSSWPBBlocks(colorMap);

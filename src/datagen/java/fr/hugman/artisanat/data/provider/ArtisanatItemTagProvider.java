@@ -3,23 +3,22 @@ package fr.hugman.artisanat.data.provider;
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.tag.ArtisanatBlockTags;
 import fr.hugman.artisanat.tag.ArtisanatItemTags;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.ItemTags;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
 
-
-public class ArtisanatItemTagProvider extends FabricTagProvider.ItemTagProvider {
-    public ArtisanatItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture, @Nullable BlockTagProvider blockTagProvider) {
-        super(output, completableFuture, blockTagProvider);
+public class ArtisanatItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
+    public ArtisanatItemTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture, @Nullable BlockTagsProvider blockTags) {
+        super(output, completableFuture, blockTags);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+    protected void addTags(HolderLookup.Provider wrapperLookup) {
         // Artisanat
         copy(ArtisanatBlockTags.STAINED_BRICK_BLOCKS, ArtisanatItemTags.STAINED_BRICK_BLOCKS);
         copy(ArtisanatBlockTags.STAINED_BRICK_SLABS, ArtisanatItemTags.STAINED_BRICK_SLABS);

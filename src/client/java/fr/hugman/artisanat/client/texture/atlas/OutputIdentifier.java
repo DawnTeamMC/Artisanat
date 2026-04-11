@@ -2,7 +2,7 @@ package fr.hugman.artisanat.client.texture.atlas;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.Identifier;
 
 import java.util.Optional;
 
@@ -31,6 +31,6 @@ public record OutputIdentifier(Optional<String> prefix, Optional<String> suffix)
         if (suffix.isPresent()) {
             path = path + suffix.get();
         }
-        return Identifier.of(path);
+        return Identifier.parse(path);
     }
 }

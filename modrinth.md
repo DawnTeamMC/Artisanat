@@ -38,7 +38,7 @@
 
 ## 👾 About
 
-Artisanat currently adds those blocks to the game:
+Artisanat currently adds 682 blocks to the game, including:
 
 - Stained bricks
 - More terracotta/concrete blocks (stairs, slabs, walls, buttons, pressure plates, etc.)
@@ -47,11 +47,14 @@ Artisanat currently adds those blocks to the game:
 - Cobblestone bricks
 - Granite, diorite and andesite bricks
 - Sandstone bricks and polished sandstone
+- Snow brick
 - Smooth stone paving
 - Chiseled prismarine
 - Prismarine brick paving
 - Quartz paving
-- Cut and plated ore blocks, ore bricks, ore tiles (coal, iron, copper, etc...)
+- Stylized ore blocks
+
+[Visit the wiki](https://dawnteammc.github.io/artisanat) for a complete list of the blocks added by Artisanat.
 
 ## 📦 Download
 

@@ -1,17 +1,20 @@
 package fr.hugman.artisanat.block.helper;
 
-import net.minecraft.block.*;
-import net.minecraft.block.enums.NoteBlockInstrument;
-import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Function;
 
 public final class BlockFactory {
-    public static BlockBuilder of(Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+    public static BlockBuilder of(Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties settings) {
         return new BlockBuilder(factory, settings);
     }
 
-    public static BlockBuilder of(AbstractBlock.Settings settings) {
+    public static BlockBuilder of(BlockBehaviour.Properties settings) {
         return new BlockBuilder(settings);
     }
 
@@ -24,58 +27,58 @@ public final class BlockFactory {
     }
 
     public static BlockBuilder stairs(Block baseBlock) {
-        return copy(baseBlock).factory(s -> new StairsBlock(baseBlock.getDefaultState(), s));
+        return copy(baseBlock).factory(s -> new StairBlock(baseBlock.defaultBlockState(), s));
     }
 
     public static BlockBuilder wall(Block baseBlock) {
-        return copy(baseBlock).factory(WallBlock::new).settings(AbstractBlock.Settings.copyShallow(baseBlock).solid());
+        return copy(baseBlock).factory(WallBlock::new).settings(BlockBehaviour.Properties.ofLegacyCopy(baseBlock).forceSolidOn());
     }
 
     public static BlockBuilder fence(Block baseBlock) {
-        return copy(baseBlock).factory(FenceBlock::new).settings(AbstractBlock.Settings.copyShallow(baseBlock));
+        return copy(baseBlock).factory(FenceBlock::new).settings(BlockBehaviour.Properties.ofLegacyCopy(baseBlock));
     }
 
     public static BlockBuilder fenceGate(Block baseBlock, WoodType woodType) {
-        return copy(baseBlock).factory(s -> new FenceGateBlock(woodType, s)).settings(AbstractBlock.Settings.copyShallow(baseBlock).solid());
+        return copy(baseBlock).factory(s -> new FenceGateBlock(woodType, s)).settings(BlockBehaviour.Properties.ofLegacyCopy(baseBlock).forceSolidOn());
     }
 
     public static BlockBuilder trapdoor(Block baseBlock, BlockSetType setType) {
-        return copy(baseBlock).factory(s -> new TrapdoorBlock(setType, s)).settings(AbstractBlock.Settings.copyShallow(baseBlock)
+        return copy(baseBlock).factory(s -> new TrapDoorBlock(setType, s)).settings(BlockBehaviour.Properties.ofLegacyCopy(baseBlock)
                 .strength(3.0f)
-                .nonOpaque()
-                .allowsSpawning(Blocks::never));
+                .noOcclusion()
+                .isValidSpawn(Blocks::never));
     }
 
     public static BlockBuilder door(Block baseBlock, BlockSetType setType) {
-        return copy(baseBlock).factory(s -> new DoorBlock(setType, s)).settings(AbstractBlock.Settings.copyShallow(baseBlock)
+        return copy(baseBlock).factory(s -> new DoorBlock(setType, s)).settings(BlockBehaviour.Properties.ofLegacyCopy(baseBlock)
                 .strength(3.0f)
-                .nonOpaque()
-                .pistonBehavior(PistonBehavior.DESTROY));
+                .noOcclusion()
+                .pushReaction(PushReaction.DESTROY));
     }
 
     public static BlockBuilder woodenButton(Block baseBlock, BlockSetType setType) {
-        return copy(baseBlock).factory(s -> new ButtonBlock(setType, 30, s)).settings(AbstractBlock.Settings.create()
+        return copy(baseBlock).factory(s -> new ButtonBlock(setType, 30, s)).settings(BlockBehaviour.Properties.of()
                 .strength(0.5f)
                 .noCollision()
-                .pistonBehavior(PistonBehavior.DESTROY)
-                .sounds(baseBlock.getDefaultState().getSoundGroup()));
+                .pushReaction(PushReaction.DESTROY)
+                .sound(baseBlock.defaultBlockState().getSoundType()));
     }
 
     public static BlockBuilder stoneButton(Block baseBlock, BlockSetType setType) {
-        return copy(baseBlock).factory(s -> new ButtonBlock(setType, 30, s)).settings(AbstractBlock.Settings.create()
+        return copy(baseBlock).factory(s -> new ButtonBlock(setType, 30, s)).settings(BlockBehaviour.Properties.of()
                 .strength(0.5f)
                 .noCollision()
-                .pistonBehavior(PistonBehavior.DESTROY)
-                .sounds(baseBlock.getDefaultState().getSoundGroup()));
+                .pushReaction(PushReaction.DESTROY)
+                .sound(baseBlock.defaultBlockState().getSoundType()));
     }
 
     public static BlockBuilder pressurePlate(Block baseBlock, BlockSetType setType) {
-        return copy(baseBlock).factory(s -> new PressurePlateBlock(setType, s)).settings(AbstractBlock.Settings.copyShallow(baseBlock)
-                .solid()
+        return copy(baseBlock).factory(s -> new PressurePlateBlock(setType, s)).settings(BlockBehaviour.Properties.ofLegacyCopy(baseBlock)
+                .forceSolidOn()
                 .instrument(NoteBlockInstrument.BASEDRUM)
                 .strength(0.5f)
-                .pistonBehavior(PistonBehavior.DESTROY)
-                .requiresTool()
+                .pushReaction(PushReaction.DESTROY)
+                .requiresCorrectToolForDrops()
                 .noCollision());
     }
 }

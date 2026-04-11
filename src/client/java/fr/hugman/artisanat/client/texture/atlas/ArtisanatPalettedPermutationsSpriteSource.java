@@ -1,6 +1,7 @@
 package fr.hugman.artisanat.client.texture.atlas;
 
 import com.google.common.base.Suppliers;
+import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
@@ -9,16 +10,15 @@ import it.unimi.dsi.fastutil.ints.Int2IntMap;
 import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.texture.NativeImage;
-import net.minecraft.client.texture.SpriteContents;
-import net.minecraft.client.texture.SpriteDimensions;
-import net.minecraft.client.texture.SpriteOpener;
-import net.minecraft.client.texture.atlas.AtlasSource;
-import net.minecraft.client.texture.atlas.AtlasSprite;
-import net.minecraft.resource.Resource;
-import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.ColorHelper;
+import net.minecraft.client.renderer.texture.SpriteContents;
+import net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader;
+import net.minecraft.client.renderer.texture.atlas.SpriteSource;
+import net.minecraft.client.renderer.texture.atlas.sources.LazyLoadedImage;
+import net.minecraft.client.resources.metadata.animation.FrameSize;
+import net.minecraft.resources.Identifier;
+import net.minecraft.server.packs.resources.Resource;
+import net.minecraft.server.packs.resources.ResourceManager;
+import net.minecraft.util.ARGB;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 
@@ -31,32 +31,32 @@ import java.util.function.IntUnaryOperator;
 import java.util.function.Supplier;
 
 @Environment(EnvType.CLIENT)
-public record ArtisanatPalettedPermutationsAtlasSource(
+public record ArtisanatPalettedPermutationsSpriteSource(
 		Map<Identifier, OutputIdentifier> textures,
 		Identifier paletteKey,
 		Map<String, Identifier> permutations
-) implements AtlasSource {
+) implements SpriteSource {
 	static final Logger LOGGER = LogUtils.getLogger();
-	public static final MapCodec<ArtisanatPalettedPermutationsAtlasSource> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
+	public static final MapCodec<ArtisanatPalettedPermutationsSpriteSource> CODEC = RecordCodecBuilder.mapCodec(instance -> instance.group(
 			Codec.unboundedMap(Identifier.CODEC, OutputIdentifier.CODEC).fieldOf("textures").forGetter(source -> source.textures),
 			Identifier.CODEC.fieldOf("palette_key").forGetter(source -> source.paletteKey),
 			Codec.unboundedMap(Codec.STRING, Identifier.CODEC).fieldOf("permutations").forGetter(source -> source.permutations)
-	).apply(instance, ArtisanatPalettedPermutationsAtlasSource::new));
+	).apply(instance, ArtisanatPalettedPermutationsSpriteSource::new));
 
 	@Override
-	public void load(ResourceManager resourceManager, SpriteRegions regions) {
+	public void run(ResourceManager resourceManager, Output regions) {
 		Supplier<int[]> supplier = Suppliers.memoize(() -> open(resourceManager, this.paletteKey));
 		Map<String, Supplier<IntUnaryOperator>> map = new HashMap<>();
 		this.permutations.forEach((key, texture) -> map.put(key, Suppliers.memoize(() -> toMapper(supplier.get(), open(resourceManager, texture)))));
 
 		for (var textureOutput : this.textures.entrySet()) {
 			var identifier = textureOutput.getKey();
-			Identifier identifier2 = AtlasSource.RESOURCE_FINDER.toResourcePath(identifier);
+			Identifier identifier2 = SpriteSource.TEXTURE_ID_CONVERTER.idToFile(identifier);
 			Optional<Resource> optional = resourceManager.getResource(identifier2);
 			if (optional.isEmpty()) {
 				LOGGER.warn("Unable to find texture {}", identifier2);
 			} else {
-				AtlasSprite atlasSprite = new AtlasSprite(identifier2, optional.get(), map.size());
+				LazyLoadedImage atlasSprite = new LazyLoadedImage(identifier2, optional.get(), map.size());
 
 				for (Map.Entry<String, Supplier<IntUnaryOperator>> entry : map.entrySet()) {
 					Identifier identifier3 = textureOutput.getValue().apply(entry.getKey());
@@ -75,37 +75,37 @@ public record ArtisanatPalettedPermutationsAtlasSource(
 
 			for (int i = 0; i < from.length; i++) {
 				int j = from[i];
-				if (ColorHelper.getAlpha(j) != 0) {
-					int2IntMap.put(ColorHelper.zeroAlpha(j), to[i]);
+				if (ARGB.alpha(j) != 0) {
+					int2IntMap.put(ARGB.transparent(j), to[i]);
 				}
 			}
 
 			return color -> {
-				int ix = ColorHelper.getAlpha(color);
+				int ix = ARGB.alpha(color);
 				if (ix == 0) {
 					return color;
 				} else {
-					int jx = ColorHelper.zeroAlpha(color);
-					int k = int2IntMap.getOrDefault(jx, ColorHelper.fullAlpha(jx));
-					int l = ColorHelper.getAlpha(k);
-					return ColorHelper.withAlpha(ix * l / 255, k);
+					int jx = ARGB.transparent(color);
+					int k = int2IntMap.getOrDefault(jx, ARGB.opaque(jx));
+					int l = ARGB.alpha(k);
+					return ARGB.color(ix * l / 255, k);
 				}
 			};
 		}
 	}
 
 	private static int[] open(ResourceManager resourceManager, Identifier texture) {
-		Optional<Resource> optional = resourceManager.getResource(RESOURCE_FINDER.toResourcePath(texture));
+		Optional<Resource> optional = resourceManager.getResource(TEXTURE_ID_CONVERTER.idToFile(texture));
 		if (optional.isEmpty()) {
 			LOGGER.error("Failed to load palette image {}", texture);
 			throw new IllegalArgumentException();
 		} else {
 			try {
-				InputStream inputStream = optional.get().getInputStream();
+				InputStream inputStream = optional.get().open();
 
 				int[] var5;
 				try (NativeImage nativeImage = NativeImage.read(inputStream)) {
-					var5 = nativeImage.copyPixelsArgb();
+					var5 = nativeImage.getPixels();
 				} catch (Throwable var10) {
 					if (inputStream != null) {
 						try {
@@ -131,37 +131,38 @@ public record ArtisanatPalettedPermutationsAtlasSource(
 	}
 
 	@Override
-	public MapCodec<? extends AtlasSource> getCodec() {
+	public MapCodec<? extends SpriteSource> codec() {
 		return CODEC;
 	}
 
 	@Environment(EnvType.CLIENT)
 	record PalettedSpriteRegion(
-			AtlasSprite baseImage,
+			LazyLoadedImage baseImage,
 			Supplier<IntUnaryOperator> palette,
 			Identifier permutationLocation
-	) implements SpriteRegion {
+	) implements DiscardableLoader {
 		@Nullable
-		public SpriteContents apply(SpriteOpener spriteOpener) {
+		@Override
+		public SpriteContents get(SpriteResourceLoader spriteOpener) {
 			Object var3;
 			try {
-				NativeImage nativeImage = this.baseImage.read().applyToCopy(this.palette.get());
+				NativeImage nativeImage = this.baseImage.get().mappedCopy(this.palette.get());
 				return new SpriteContents(
-						this.permutationLocation, new SpriteDimensions(nativeImage.getWidth(), nativeImage.getHeight()), nativeImage
+						this.permutationLocation, new FrameSize(nativeImage.getWidth(), nativeImage.getHeight()), nativeImage
 				);
 			} catch (IllegalArgumentException | IOException var7) {
-				ArtisanatPalettedPermutationsAtlasSource.LOGGER.error("unable to apply palette to {}", this.permutationLocation, var7);
+				ArtisanatPalettedPermutationsSpriteSource.LOGGER.error("unable to apply palette to {}", this.permutationLocation, var7);
 				var3 = null;
 			} finally {
-				this.baseImage.close();
+				this.baseImage.release();
 			}
 
 			return (SpriteContents) var3;
 		}
 
 		@Override
-		public void close() {
-			this.baseImage.close();
+		public void discard() {
+			this.baseImage.release();
 		}
 	}
 }

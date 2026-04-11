@@ -1,10 +1,10 @@
-package fr.hugman.artisanat.block.groups;
+package fr.hugman.artisanat.block.collection;
 
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.helper.BlockFactory;
 import fr.hugman.artisanat.util.CustomRegisterable;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockSetType;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 
 /**
  * Contains a slab, stairs, wall, pressure plate and button variants for a registered block.

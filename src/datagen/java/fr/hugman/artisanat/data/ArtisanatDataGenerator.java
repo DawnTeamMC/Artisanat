@@ -16,6 +16,7 @@ public class ArtisanatDataGenerator implements DataGeneratorEntrypoint {
         // Resource Pack
         pack.addProvider(ArtisanatModelProvider::new);
         pack.addProvider(ArtisanatAtlasProvider::new);
+		pack.addProvider(ArtisanatEnglishLangProvider::new);
 
         // Data Pack
         // - Loot tables

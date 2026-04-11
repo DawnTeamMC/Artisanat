@@ -2,12 +2,12 @@ package fr.hugman.artisanat.data;
 
 import com.google.common.collect.Maps;
 import fr.hugman.artisanat.block.ArtisanatBlocks;
-import fr.hugman.artisanat.block.groups.*;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.data.family.BlockFamily;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.DyeColor;
+import fr.hugman.artisanat.block.collection.*;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.data.BlockFamily;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.Map;
 import java.util.stream.Stream;
@@ -27,11 +27,13 @@ public class ArtisanatBlockFamilies {
         register(ArtisanatBlocks.MANGROVE_WOOD_BLOCKS, Blocks.MANGROVE_WOOD);
         register(ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS, Blocks.CRIMSON_HYPHAE);
         register(ArtisanatBlocks.WARPED_HYPHAE_BLOCKS, Blocks.WARPED_HYPHAE);
+		register(ArtisanatBlocks.POLISHED_STONE);
         register(ArtisanatBlocks.COBBLESTONE_BRICKS);
         register(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS);
         register(ArtisanatBlocks.GRANITE_BRICKS);
         register(ArtisanatBlocks.DIORITE_BRICKS);
         register(ArtisanatBlocks.ANDESITE_BRICKS);
+        register(ArtisanatBlocks.SNOW_BRICKS);
         register(ArtisanatBlocks.SANDSTONE_BRICKS);
         register(ArtisanatBlocks.POLISHED_SANDSTONE);
         register(ArtisanatBlocks.RED_SANDSTONE_BRICKS);
@@ -58,8 +60,8 @@ public class ArtisanatBlockFamilies {
                 .stairs(woodBlocks.stairs())
                 .slab(woodBlocks.slab())
                 .button(woodBlocks.button())
-                .noGenerateModels()
-                .build();
+                .dontGenerateModel()
+                .getFamily();
     }
 
     public static void register(BSSWBlocks bssw) {
@@ -67,14 +69,14 @@ public class ArtisanatBlockFamilies {
                 .stairs(bssw.stairs())
                 .slab(bssw.slab())
                 .wall(bssw.wall())
-                .build();
+                .getFamily();
     }
 
     public static void register(BSSBlocks bss) {
         register(bss.block())
                 .stairs(bss.stairs())
                 .slab(bss.slab())
-                .build();
+                .getFamily();
     }
 
     public static void register(SSWPBBlocks sswpb, Block baseBlock) {
@@ -84,8 +86,8 @@ public class ArtisanatBlockFamilies {
                 .wall(sswpb.wall())
                 .pressurePlate(sswpb.pressurePlate())
                 .button(sswpb.button())
-                .noGenerateModels()
-                .build();
+                .dontGenerateModel()
+                .getFamily();
     }
 
     public static void register(StainedBSSWBlocks stainedBssw) {
@@ -102,9 +104,9 @@ public class ArtisanatBlockFamilies {
 
     public static BlockFamily.Builder register(Block baseBlock) {
         BlockFamily.Builder builder = new BlockFamily.Builder(baseBlock);
-        BlockFamily blockFamily = BASE_BLOCKS_TO_FAMILIES.put(baseBlock, builder.build());
+        BlockFamily blockFamily = BASE_BLOCKS_TO_FAMILIES.put(baseBlock, builder.getFamily());
         if (blockFamily != null) {
-            throw new IllegalStateException("Duplicate family definition for " + Registries.BLOCK.getId(baseBlock));
+            throw new IllegalStateException("Duplicate family definition for " + BuiltInRegistries.BLOCK.getKey(baseBlock));
         } else {
             return builder;
         }

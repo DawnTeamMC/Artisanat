@@ -1,16 +1,16 @@
 package fr.hugman.artisanat.block;
 
 import fr.hugman.artisanat.Artisanat;
-import fr.hugman.artisanat.block.groups.*;
+import fr.hugman.artisanat.block.collection.*;
 import fr.hugman.artisanat.block.helper.BlockBuilder;
 import fr.hugman.artisanat.block.helper.BlockFactory;
 import fr.hugman.artisanat.block.type.ArtisanatBlockSetTypes;
 import fr.hugman.artisanat.util.CustomRegisterable;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.RedstoneBlock;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.PoweredBlock;
 
 public class ArtisanatBlocks {
     //TODO: add stripped variants
@@ -26,12 +26,16 @@ public class ArtisanatBlocks {
     public static final WoodBlocks CRIMSON_HYPHAE_BLOCKS = register("crimson_hyphae", WoodBlocks.of(Blocks.CRIMSON_HYPHAE, ArtisanatBlockSetTypes.CRIMSON_HYPHAE));
     public static final WoodBlocks WARPED_HYPHAE_BLOCKS = register("warped_hyphae", WoodBlocks.of(Blocks.WARPED_HYPHAE, ArtisanatBlockSetTypes.WARPED_HYPHAE));
 
+	public static final BSSBlocks POLISHED_STONE = register("polished_stone", BSSBlocks.of(new BlockBuilder(Blocks.STONE_BRICKS)));
+
     public static final BSSWBlocks COBBLESTONE_BRICKS = register("cobblestone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.COBBLESTONE)));
     public static final BSSWBlocks MOSSY_COBBLESTONE_BRICKS = register("mossy_cobblestone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.MOSSY_COBBLESTONE)));
 
     public static final BSSWBlocks GRANITE_BRICKS = register("granite_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.GRANITE)));
     public static final BSSWBlocks DIORITE_BRICKS = register("diorite_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.DIORITE)));
     public static final BSSWBlocks ANDESITE_BRICKS = register("andesite_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.ANDESITE)));
+
+    public static final BSSWBlocks SNOW_BRICKS = register("snow_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.SNOW_BLOCK)));
 
     public static final BSSWBlocks SANDSTONE_BRICKS = register("sandstone_bricks", BSSWBlocks.of(new BlockBuilder(Blocks.SANDSTONE)));
     public static final BSSBlocks POLISHED_SANDSTONE = register("polished_sandstone", BSSBlocks.of(new BlockBuilder(Blocks.SANDSTONE)));
@@ -62,7 +66,7 @@ public class ArtisanatBlocks {
     public static final OreBlocks IRON_BLOCKS = register("iron", OreBlocks.of(Blocks.IRON_BLOCK));
     public static final OreBlocks GOLD_BLOCKS = register("gold", OreBlocks.of(Blocks.GOLD_BLOCK));
     public static final OreBlocks LAPIS_BLOCKS = register("lapis", OreBlocks.of(Blocks.LAPIS_BLOCK));
-    public static final OreBlocks REDSTONE_BLOCKS = register("redstone", OreBlocks.of(new BlockBuilder(Blocks.REDSTONE_BLOCK).factory(RedstoneBlock::new)));
+    public static final OreBlocks REDSTONE_BLOCKS = register("redstone", OreBlocks.of(new BlockBuilder(Blocks.REDSTONE_BLOCK).factory(PoweredBlock::new)));
     public static final OreBlocks EMERALD_BLOCKS = register("emerald", OreBlocks.of(Blocks.EMERALD_BLOCK));
     public static final OreBlocks DIAMOND_BLOCKS = register("diamond", OreBlocks.of(Blocks.DIAMOND_BLOCK));
     public static final OreBlocks NETHERITE_BLOCKS = register("netherite", OreBlocks.of(Blocks.NETHERITE_BLOCK));
@@ -71,11 +75,11 @@ public class ArtisanatBlocks {
     public static final CopperBlocks COPPER_BRICKS = register("", CopperBlocks.of("", "bricks"));
     public static final CopperBlocks COPPER_TILES = register("", CopperBlocks.of("", "tiles"));
 
-    public static RegistryKey<Block> keyOf(String id) {
-        return RegistryKey.of(RegistryKeys.BLOCK, Artisanat.id(id));
+    public static ResourceKey<Block> keyOf(String id) {
+        return ResourceKey.create(Registries.BLOCK, Artisanat.id(id));
     }
 
-    private static Block register(RegistryKey<Block> key, BlockBuilder builder) {
+    private static Block register(ResourceKey<Block> key, BlockBuilder builder) {
         return builder.register(key);
     }
 

@@ -2,7 +2,7 @@ package fr.hugman.artisanat.block.type;
 
 import fr.hugman.artisanat.Artisanat;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
-import net.minecraft.block.BlockSetType;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 
 public class ArtisanatBlockSetTypes {
     public static final BlockSetType OAK_WOOD = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(Artisanat.id("oak_wood"));

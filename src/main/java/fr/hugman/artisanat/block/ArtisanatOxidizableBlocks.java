@@ -1,8 +1,8 @@
 package fr.hugman.artisanat.block;
 
-import fr.hugman.artisanat.block.groups.CopperBlocks;
+import fr.hugman.artisanat.block.collection.CopperBlocks;
 import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
-import net.minecraft.block.Oxidizable;
+import net.minecraft.world.level.block.WeatheringCopper;
 
 public class ArtisanatOxidizableBlocks {
     public static void register() {
@@ -12,12 +12,12 @@ public class ArtisanatOxidizableBlocks {
     }
 
     private static void register(CopperBlocks blocks) {
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(blocks.get(Oxidizable.OxidationLevel.UNAFFECTED, false), blocks.get(Oxidizable.OxidationLevel.EXPOSED, false));
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(blocks.get(Oxidizable.OxidationLevel.EXPOSED, false), blocks.get(Oxidizable.OxidationLevel.WEATHERED, false));
-        OxidizableBlocksRegistry.registerOxidizableBlockPair(blocks.get(Oxidizable.OxidationLevel.WEATHERED, false), blocks.get(Oxidizable.OxidationLevel.OXIDIZED, false));
+        OxidizableBlocksRegistry.registerNextStage(blocks.get(WeatheringCopper.WeatherState.UNAFFECTED, false), blocks.get(WeatheringCopper.WeatherState.EXPOSED, false));
+        OxidizableBlocksRegistry.registerNextStage(blocks.get(WeatheringCopper.WeatherState.EXPOSED, false), blocks.get(WeatheringCopper.WeatherState.WEATHERED, false));
+        OxidizableBlocksRegistry.registerNextStage(blocks.get(WeatheringCopper.WeatherState.WEATHERED, false), blocks.get(WeatheringCopper.WeatherState.OXIDIZED, false));
 
-        for (var level : Oxidizable.OxidationLevel.values()) {
-            OxidizableBlocksRegistry.registerWaxableBlockPair(blocks.get(level, false), blocks.get(level, true));
+        for (var level : WeatheringCopper.WeatherState.values()) {
+            OxidizableBlocksRegistry.registerWaxable(blocks.get(level, false), blocks.get(level, true));
         }
     }
 }

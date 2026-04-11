@@ -1,19 +1,18 @@
-package fr.hugman.artisanat.itemgroup;
+package fr.hugman.artisanat.item.creative_tab;
 
 import fr.hugman.artisanat.block.ArtisanatBlocks;
-import fr.hugman.artisanat.block.groups.*;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.Oxidizable;
-import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.util.DyeColor;
-
+import fr.hugman.artisanat.block.collection.*;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTabOutput;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.WeatheringCopper;
 import java.util.Map;
 
-public class ArtisanatItemGroupAdditions {
+public class ArtisanatCreativeModeTabAdditions {
     // The order is reversed for iterative purposes
     public static DyeColor[] COLOR_ORDER = {
             DyeColor.PINK, DyeColor.MAGENTA, DyeColor.PURPLE, DyeColor.BLUE,
@@ -23,7 +22,7 @@ public class ArtisanatItemGroupAdditions {
     };
 
     public static void registerEvents() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register(entries -> {
             add(entries, ArtisanatBlocks.OAK_WOOD_BLOCKS, Blocks.OAK_WOOD);
             add(entries, ArtisanatBlocks.SPRUCE_WOOD_BLOCKS, Blocks.SPRUCE_WOOD);
             add(entries, ArtisanatBlocks.BIRCH_WOOD_BLOCKS, Blocks.BIRCH_WOOD);
@@ -36,11 +35,13 @@ public class ArtisanatItemGroupAdditions {
             add(entries, ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS, Blocks.CRIMSON_HYPHAE);
             add(entries, ArtisanatBlocks.WARPED_HYPHAE_BLOCKS, Blocks.WARPED_HYPHAE);
 
+			add(entries, ArtisanatBlocks.POLISHED_STONE, Blocks.SMOOTH_STONE_SLAB);
             add(entries, ArtisanatBlocks.COBBLESTONE_BRICKS, Blocks.COBBLESTONE_WALL);
             add(entries, ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS, Blocks.MOSSY_COBBLESTONE_WALL);
             add(entries, ArtisanatBlocks.GRANITE_BRICKS, Blocks.GRANITE_WALL);
             add(entries, ArtisanatBlocks.DIORITE_BRICKS, Blocks.DIORITE_WALL);
             add(entries, ArtisanatBlocks.ANDESITE_BRICKS, Blocks.ANDESITE_WALL);
+            add(entries, ArtisanatBlocks.SNOW_BRICKS, Blocks.CUT_RED_SANDSTONE_SLAB);
             add(entries, ArtisanatBlocks.SANDSTONE_BRICKS, Blocks.SANDSTONE_WALL);
             add(entries, ArtisanatBlocks.POLISHED_SANDSTONE, Blocks.SMOOTH_SANDSTONE_SLAB);
             add(entries, ArtisanatBlocks.RED_SANDSTONE_BRICKS, Blocks.RED_SANDSTONE_WALL);
@@ -49,7 +50,7 @@ public class ArtisanatItemGroupAdditions {
             add(entries, ArtisanatBlocks.CHISELED_PRISMARINE, Blocks.PRISMARINE_WALL);
             add(entries, ArtisanatBlocks.PRISMARINE_BRICK_PAVING, Blocks.PRISMARINE_BRICK_SLAB);
             add(entries, ArtisanatBlocks.BRICK_TILE_BLOCKS, Blocks.BRICK_WALL);
-            entries.addAfter(Blocks.DARK_PRISMARINE_SLAB, ArtisanatBlocks.DARK_PRISMARINE_WALL);
+            entries.insertAfter(Blocks.DARK_PRISMARINE_SLAB, ArtisanatBlocks.DARK_PRISMARINE_WALL);
 
             add(entries, ArtisanatBlocks.IRON_BLOCKS, Blocks.IRON_BLOCK);
             add(entries, ArtisanatBlocks.GOLD_BLOCKS, Blocks.GOLD_BLOCK);
@@ -61,7 +62,7 @@ public class ArtisanatItemGroupAdditions {
             add(entries, ArtisanatBlocks.NETHERITE_BLOCKS, Blocks.NETHERITE_BLOCK);
             addCopperBlocks(entries);
         });
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(entries -> {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {
             add(entries, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS, Blocks.PINK_CARPET);
             add(entries, ArtisanatBlocks.STAINED_BRICK_BLOCKS, Blocks.PINK_CARPET);
 
@@ -79,50 +80,50 @@ public class ArtisanatItemGroupAdditions {
 
     }
 
-    private static void add(FabricItemGroupEntries entries, WoodBlocks woodBlocks, ItemConvertible baseBlock) {
-        entries.addAfter(baseBlock, woodBlocks.all());
+    private static void add(FabricCreativeModeTabOutput output, WoodBlocks woodBlocks, ItemLike baseBlock) {
+        output.insertAfter(baseBlock, woodBlocks.all());
     }
 
-    private static void add(FabricItemGroupEntries entries, BSSBlocks bss, ItemConvertible baseBlock) {
-        entries.addAfter(baseBlock, bss.all());
+    private static void add(FabricCreativeModeTabOutput output, BSSBlocks bss, ItemLike baseBlock) {
+        output.insertAfter(baseBlock, bss.all());
     }
 
-    private static void add(FabricItemGroupEntries entries, BSSWBlocks bssw, ItemConvertible baseBlock) {
-        entries.addAfter(baseBlock, bssw.all());
+    private static void add(FabricCreativeModeTabOutput output, BSSWBlocks bssw, ItemLike baseBlock) {
+        output.insertAfter(baseBlock, bssw.all());
     }
 
-    private static void add(FabricItemGroupEntries entries, StainedBSSBlocks stainedBSSBlocks, ItemConvertible baseBlock) {
+    private static void add(FabricCreativeModeTabOutput output, StainedBSSBlocks stainedBSSBlocks, ItemLike baseBlock) {
         for (DyeColor dyeColor : COLOR_ORDER) {
             BSSBlocks bss = stainedBSSBlocks.colorMap().get(dyeColor);
             if (bss != null) {
-                add(entries, bss, baseBlock);
+                add(output, bss, baseBlock);
             }
         }
     }
 
-    private static void add(FabricItemGroupEntries entries, StainedBSSWBlocks stainedBSSWBlocks, ItemConvertible baseBlock) {
+    private static void add(FabricCreativeModeTabOutput output, StainedBSSWBlocks stainedBSSWBlocks, ItemLike baseBlock) {
         for (DyeColor dyeColor : COLOR_ORDER) {
             BSSWBlocks bssw = stainedBSSWBlocks.colorMap().get(dyeColor);
             if (bssw != null) {
-                add(entries, bssw, baseBlock);
+                add(output, bssw, baseBlock);
             }
         }
     }
 
-    private static void add(FabricItemGroupEntries entries, SSWPBBlocks sswpb, ItemConvertible baseBlock) {
-        entries.addAfter(baseBlock, sswpb.all());
+    private static void add(FabricCreativeModeTabOutput output, SSWPBBlocks sswpb, ItemLike baseBlock) {
+        output.insertAfter(baseBlock, sswpb.all());
     }
 
-    public static void add(FabricItemGroupEntries entries, StainedSSWPBBlocks stainedSswpb, Map<DyeColor, Block> colorMap) {
-        stainedSswpb.colorMap().forEach((dyeColor, sswpBlocks) -> add(entries, sswpBlocks, colorMap.get(dyeColor)));
+    public static void add(FabricCreativeModeTabOutput output, StainedSSWPBBlocks stainedSswpb, Map<DyeColor, Block> colorMap) {
+        stainedSswpb.colorMap().forEach((dyeColor, sswpBlocks) -> add(output, sswpBlocks, colorMap.get(dyeColor)));
     }
 
-    private static void add(FabricItemGroupEntries entries, OreBlocks oreBlocks, ItemConvertible baseBlock) {
-        entries.addAfter(baseBlock, oreBlocks.all());
+    private static void add(FabricCreativeModeTabOutput output, OreBlocks oreBlocks, ItemLike baseBlock) {
+        output.insertAfter(baseBlock, oreBlocks.all());
     }
 
-    private static void addCopperBlocks(FabricItemGroupEntries entries) {
-        Oxidizable.OxidationLevel[] levels = Oxidizable.OxidationLevel.values();
+    private static void addCopperBlocks(FabricCreativeModeTabOutput output) {
+        WeatheringCopper.WeatherState[] levels = WeatheringCopper.WeatherState.values();
 
         // Unplated
         Block[] baseBlocks = {
@@ -130,8 +131,8 @@ public class ArtisanatItemGroupAdditions {
                 Blocks.WAXED_COPPER_BLOCK, Blocks.WAXED_EXPOSED_COPPER, Blocks.WAXED_WEATHERED_COPPER, Blocks.WAXED_OXIDIZED_COPPER
         };
         for (int i = 0; i < levels.length; i++) {
-            entries.addAfter(baseBlocks[i], ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], false));
-            entries.addAfter(baseBlocks[i + 4], ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], true));
+            output.insertAfter(baseBlocks[i], ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], false));
+            output.insertAfter(baseBlocks[i + 4], ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], true));
         }
 
         // Bricks & Tiles
@@ -140,11 +141,11 @@ public class ArtisanatItemGroupAdditions {
                 Blocks.WAXED_CHISELED_COPPER, Blocks.WAXED_EXPOSED_CHISELED_COPPER, Blocks.WAXED_WEATHERED_CHISELED_COPPER, Blocks.WAXED_OXIDIZED_CHISELED_COPPER
         };
         for (int i = 0; i < levels.length; i++) {
-            entries.addAfter(chiseledBlocks[i],
+            output.insertAfter(chiseledBlocks[i],
                     ArtisanatBlocks.COPPER_BRICKS.get(levels[i], false),
                     ArtisanatBlocks.COPPER_TILES.get(levels[i], false)
             );
-            entries.addAfter(chiseledBlocks[i + 4],
+            output.insertAfter(chiseledBlocks[i + 4],
                     ArtisanatBlocks.COPPER_BRICKS.get(levels[i], true),
                     ArtisanatBlocks.COPPER_TILES.get(levels[i], true)
             );
