@@ -1,20 +1,24 @@
 package fr.hugman.artisanat.data.provider;
 
 import fr.hugman.artisanat.block.ArtisanatBlocks;
-import fr.hugman.artisanat.block.groups.*;
+import fr.hugman.artisanat.block.collection.*;
 import fr.hugman.artisanat.data.ArtisanatBlockFamilies;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.client.data.*;
-import net.minecraft.data.family.BlockFamily;
-import net.minecraft.util.DyeColor;
-import net.minecraft.util.Identifier;
-
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelLocationUtils;
+import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.data.BlockFamily;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import java.util.Map;
 
-import static net.minecraft.client.data.BlockStateModelGenerator.createWeightedVariant;
+import static net.minecraft.client.data.models.BlockModelGenerators.plainVariant;
 
 public class ArtisanatModelProvider extends FabricModelProvider {
     public ArtisanatModelProvider(FabricDataOutput output) {
@@ -22,9 +26,9 @@ public class ArtisanatModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator gen) {
-        ArtisanatBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateModels)
-                .forEach(family -> gen.registerCubeAllModelTexturePool(family.getBaseBlock()).family(family));
+    public void generateBlockStateModels(BlockModelGenerators gen) {
+        ArtisanatBlockFamilies.getFamilies().filter(BlockFamily::shouldGenerateModel)
+                .forEach(family -> gen.family(family.getBaseBlock()).generateFor(family));
 
         register(gen, ArtisanatBlocks.OAK_WOOD_BLOCKS, Blocks.OAK_WOOD, Blocks.OAK_LOG);
         register(gen, ArtisanatBlocks.SPRUCE_WOOD_BLOCKS, Blocks.SPRUCE_WOOD, Blocks.SPRUCE_LOG);
@@ -42,7 +46,7 @@ public class ArtisanatModelProvider extends FabricModelProvider {
         register(gen, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS, StainedSSWPBBlocks.TERRACOTTA_MAP);
         register(gen, ArtisanatBlocks.CONCRETE_BLOCKS, StainedSSWPBBlocks.CONCRETE_MAP);
 
-        registerWall(gen, ArtisanatBlocks.DARK_PRISMARINE_WALL, TexturedModel.CUBE_ALL.get(Blocks.DARK_PRISMARINE).getTextures());
+        registerWall(gen, ArtisanatBlocks.DARK_PRISMARINE_WALL, TexturedModel.CUBE.get(Blocks.DARK_PRISMARINE).getMapping());
 
         registerOreBlocks(gen, ArtisanatBlocks.COAL_BLOCKS);
         registerOreBlocks(gen, ArtisanatBlocks.IRON_BLOCKS);
@@ -59,9 +63,9 @@ public class ArtisanatModelProvider extends FabricModelProvider {
 
     }
 
-    private void register(BlockStateModelGenerator gen, WoodBlocks woodBlocks, Block woodBlock, Block logBlock) {
-        Identifier identifier = ModelIds.getBlockModelId(woodBlock);
-        var textures = TexturedModel.CUBE_ALL.get(logBlock).getTextures();
+    private void register(BlockModelGenerators gen, WoodBlocks woodBlocks, Block woodBlock, Block logBlock) {
+        Identifier identifier = ModelLocationUtils.getModelLocation(woodBlock);
+        var textures = TexturedModel.CUBE.get(logBlock).getMapping();
 
         registerSlab(gen, woodBlocks.slab(), textures, identifier);
         registerStairs(gen, woodBlocks.stairs(), textures);
@@ -69,9 +73,9 @@ public class ArtisanatModelProvider extends FabricModelProvider {
     }
 
 
-    private void register(BlockStateModelGenerator gen, SSWPBBlocks sswpb, Block baseBlock) {
-        Identifier identifier = ModelIds.getBlockModelId(baseBlock);
-        var textures = TexturedModel.CUBE_ALL.get(baseBlock).getTextures();
+    private void register(BlockModelGenerators gen, SSWPBBlocks sswpb, Block baseBlock) {
+        Identifier identifier = ModelLocationUtils.getModelLocation(baseBlock);
+        var textures = TexturedModel.CUBE.get(baseBlock).getMapping();
 
         registerSlab(gen, sswpb.slab(), textures, identifier);
         registerStairs(gen, sswpb.stairs(), textures);
@@ -80,77 +84,76 @@ public class ArtisanatModelProvider extends FabricModelProvider {
         registerPressurePlate(gen, sswpb.pressurePlate(), textures);
     }
 
-    private void register(BlockStateModelGenerator gen, StainedSSWPBBlocks stainedSswpb, Map<DyeColor, Block> colorMap) {
+    private void register(BlockModelGenerators gen, StainedSSWPBBlocks stainedSswpb, Map<DyeColor, Block> colorMap) {
         stainedSswpb.colorMap().forEach((dyeColor, sswpBlocks) -> register(gen, sswpBlocks, colorMap.get(dyeColor)));
     }
 
-
-    private void registerSlab(BlockStateModelGenerator gen, Block slabBlock, TextureMap textures, Identifier fullModelId) {
-        var bottomSlabModelId = Models.SLAB.upload(slabBlock, textures, gen.modelCollector);
-        gen.blockStateCollector.accept(BlockStateModelGenerator.createSlabBlockState(slabBlock,
-                createWeightedVariant(bottomSlabModelId),
-                createWeightedVariant(Models.SLAB_TOP.upload(slabBlock, textures, gen.modelCollector)),
-                createWeightedVariant(fullModelId)
+    private void registerSlab(BlockModelGenerators gen, Block slabBlock, TextureMapping textures, Identifier fullModelId) {
+        var bottomSlabModelId = ModelTemplates.SLAB_BOTTOM.create(slabBlock, textures, gen.modelOutput);
+        gen.blockStateOutput.accept(BlockModelGenerators.createSlab(slabBlock,
+                plainVariant(bottomSlabModelId),
+                plainVariant(ModelTemplates.SLAB_TOP.create(slabBlock, textures, gen.modelOutput)),
+                plainVariant(fullModelId)
         ));
-        gen.registerParentedItemModel(slabBlock, bottomSlabModelId);
+        gen.registerSimpleItemModel(slabBlock, bottomSlabModelId);
     }
 
-    private void registerStairs(BlockStateModelGenerator gen, Block stairsBlock, TextureMap textures) {
-        var stairsModelId = Models.STAIRS.upload(stairsBlock, textures, gen.modelCollector);
-        gen.blockStateCollector.accept(BlockStateModelGenerator.createStairsBlockState(stairsBlock,
-                createWeightedVariant(Models.INNER_STAIRS.upload(stairsBlock, textures, gen.modelCollector)),
-                createWeightedVariant(stairsModelId),
-                createWeightedVariant(Models.OUTER_STAIRS.upload(stairsBlock, textures, gen.modelCollector))
+    private void registerStairs(BlockModelGenerators gen, Block stairsBlock, TextureMapping textures) {
+        var stairsModelId = ModelTemplates.STAIRS_STRAIGHT.create(stairsBlock, textures, gen.modelOutput);
+        gen.blockStateOutput.accept(BlockModelGenerators.createStairs(stairsBlock,
+                plainVariant(ModelTemplates.STAIRS_INNER.create(stairsBlock, textures, gen.modelOutput)),
+                plainVariant(stairsModelId),
+                plainVariant(ModelTemplates.STAIRS_OUTER.create(stairsBlock, textures, gen.modelOutput))
         ));
-        gen.registerParentedItemModel(stairsBlock, stairsModelId);
+        gen.registerSimpleItemModel(stairsBlock, stairsModelId);
     }
 
-    private void registerWall(BlockStateModelGenerator gen, Block wallBlock, TextureMap textures) {
-        gen.blockStateCollector.accept(BlockStateModelGenerator.createWallBlockState(wallBlock,
-                createWeightedVariant(Models.TEMPLATE_WALL_POST.upload(wallBlock, textures, gen.modelCollector)),
-                createWeightedVariant(Models.TEMPLATE_WALL_SIDE.upload(wallBlock, textures, gen.modelCollector)),
-                createWeightedVariant(Models.TEMPLATE_WALL_SIDE_TALL.upload(wallBlock, textures, gen.modelCollector))));
-        gen.registerParentedItemModel(wallBlock, Models.WALL_INVENTORY.upload(wallBlock, textures, gen.modelCollector));
+    private void registerWall(BlockModelGenerators gen, Block wallBlock, TextureMapping textures) {
+        gen.blockStateOutput.accept(BlockModelGenerators.createWall(wallBlock,
+                plainVariant(ModelTemplates.WALL_POST.create(wallBlock, textures, gen.modelOutput)),
+                plainVariant(ModelTemplates.WALL_LOW_SIDE.create(wallBlock, textures, gen.modelOutput)),
+                plainVariant(ModelTemplates.WALL_TALL_SIDE.create(wallBlock, textures, gen.modelOutput))));
+        gen.registerSimpleItemModel(wallBlock, ModelTemplates.WALL_INVENTORY.create(wallBlock, textures, gen.modelOutput));
     }
 
-    private void registerPressurePlate(BlockStateModelGenerator gen, Block pressurePlateBlock, TextureMap textures) {
-        Identifier identifier = Models.PRESSURE_PLATE_UP.upload(pressurePlateBlock, textures, gen.modelCollector);
-        Identifier identifier2 = Models.PRESSURE_PLATE_DOWN.upload(pressurePlateBlock, textures, gen.modelCollector);
-        gen.blockStateCollector
-                .accept(BlockStateModelGenerator.createPressurePlateBlockState(pressurePlateBlock, createWeightedVariant(identifier), createWeightedVariant(identifier2)));
+    private void registerPressurePlate(BlockModelGenerators gen, Block pressurePlateBlock, TextureMapping textures) {
+        Identifier identifier = ModelTemplates.PRESSURE_PLATE_UP.create(pressurePlateBlock, textures, gen.modelOutput);
+        Identifier identifier2 = ModelTemplates.PRESSURE_PLATE_DOWN.create(pressurePlateBlock, textures, gen.modelOutput);
+        gen.blockStateOutput
+                .accept(BlockModelGenerators.createPressurePlate(pressurePlateBlock, plainVariant(identifier), plainVariant(identifier2)));
     }
 
-    private void registerButton(BlockStateModelGenerator gen, Block buttonBlock, TextureMap textures) {
-        Identifier identifier = Models.BUTTON.upload(buttonBlock, textures, gen.modelCollector);
-        Identifier identifier2 = Models.BUTTON_PRESSED.upload(buttonBlock, textures, gen.modelCollector);
-        gen.blockStateCollector.accept(BlockStateModelGenerator.createButtonBlockState(buttonBlock, createWeightedVariant(identifier), createWeightedVariant(identifier2)));
-        Identifier identifier3 = Models.BUTTON_INVENTORY.upload(buttonBlock, textures, gen.modelCollector);
-        gen.registerParentedItemModel(buttonBlock, identifier3);
+    private void registerButton(BlockModelGenerators gen, Block buttonBlock, TextureMapping textures) {
+        Identifier identifier = ModelTemplates.BUTTON.create(buttonBlock, textures, gen.modelOutput);
+        Identifier identifier2 = ModelTemplates.BUTTON_PRESSED.create(buttonBlock, textures, gen.modelOutput);
+        gen.blockStateOutput.accept(BlockModelGenerators.createButton(buttonBlock, plainVariant(identifier), plainVariant(identifier2)));
+        Identifier identifier3 = ModelTemplates.BUTTON_INVENTORY.create(buttonBlock, textures, gen.modelOutput);
+        gen.registerSimpleItemModel(buttonBlock, identifier3);
     }
 
-    private void registerOreBlocks(BlockStateModelGenerator gen, OreBlocks oreBlocks) {
-        gen.registerSimpleCubeAll(oreBlocks.platedBlock());
-        gen.registerSimpleCubeAll(oreBlocks.cutBlock());
-        gen.registerSimpleCubeAll(oreBlocks.bricks());
-        gen.registerSimpleCubeAll(oreBlocks.tiles());
+    private void registerOreBlocks(BlockModelGenerators gen, OreBlocks oreBlocks) {
+        gen.createTrivialCube(oreBlocks.platedBlock());
+        gen.createTrivialCube(oreBlocks.cutBlock());
+        gen.createTrivialCube(oreBlocks.bricks());
+        gen.createTrivialCube(oreBlocks.tiles());
     }
 
-    private void registerOreBlocks(BlockStateModelGenerator gen, CopperBlocks copperBlocks) {
+    private void registerOreBlocks(BlockModelGenerators gen, CopperBlocks copperBlocks) {
         copperBlocks.map().forEach((oxidationLevelBooleanPair, block) -> {
             var waxed = oxidationLevelBooleanPair.getSecond();
             if (!waxed) {
-                gen.registerSimpleCubeAll(block);
+                gen.createTrivialCube(block);
             } else {
                 var unwaxedBlock = copperBlocks.get(oxidationLevelBooleanPair.getFirst(), false);
 
-                gen.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, createWeightedVariant(ModelIds.getBlockModelId(unwaxedBlock))));
-                gen.itemModelOutput.acceptAlias(unwaxedBlock.asItem(), block.asItem());
+                gen.blockStateOutput.accept(BlockModelGenerators.createSimpleBlock(block, plainVariant(ModelLocationUtils.getModelLocation(unwaxedBlock))));
+                gen.itemModelOutput.copy(unwaxedBlock.asItem(), block.asItem());
             }
         });
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator gen) {
+    public void generateItemModels(ItemModelGenerators gen) {
         // Nothing to do here :D
     }
 }

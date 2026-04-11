@@ -3,10 +3,10 @@ package fr.hugman.artisanat;
 import com.google.common.reflect.Reflection;
 import fr.hugman.artisanat.block.ArtisanatBlocks;
 import fr.hugman.artisanat.block.ArtisanatOxidizableBlocks;
-import fr.hugman.artisanat.itemgroup.ArtisanatItemGroupAdditions;
-import fr.hugman.artisanat.itemgroup.ArtisanatItemGroups;
+import fr.hugman.artisanat.item.creative_tab.ArtisanatCreativeModeTabAdditions;
+import fr.hugman.artisanat.item.creative_tab.ArtisanatCreativeModeTabs;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.util.Identifier;
+import net.minecraft.resources.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,13 +18,13 @@ public class Artisanat implements ModInitializer {
     public void onInitialize() {
         Reflection.initialize(ArtisanatBlocks.class);
 
-        Reflection.initialize(ArtisanatItemGroups.class);
-        ArtisanatItemGroupAdditions.registerEvents();
+        Reflection.initialize(ArtisanatCreativeModeTabs.class);
+        ArtisanatCreativeModeTabAdditions.registerEvents();
 
         ArtisanatOxidizableBlocks.register();
     }
 
     public static Identifier id(String path) {
-        return Identifier.of(MOD_ID, path);
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 }

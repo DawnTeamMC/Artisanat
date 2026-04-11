@@ -1,145 +1,144 @@
 package fr.hugman.artisanat.data.provider;
 
 import fr.hugman.artisanat.block.ArtisanatBlocks;
-import fr.hugman.artisanat.block.groups.*;
+import fr.hugman.artisanat.block.collection.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.Items;
-import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import java.util.concurrent.CompletableFuture;
 
 public class ArtisanatBlockLootTableProvider extends FabricBlockLootTableProvider {
-    public ArtisanatBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    public ArtisanatBlockLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
     @Override
     public void generate() {
-        addDrop(ArtisanatBlocks.OAK_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.SPRUCE_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.BIRCH_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.JUNGLE_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.ACACIA_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.CHERRY_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.DARK_OAK_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.PALE_OAK_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.MANGROVE_WOOD_BLOCKS);
-        addDrop(ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS);
-        addDrop(ArtisanatBlocks.WARPED_HYPHAE_BLOCKS);
+        add(ArtisanatBlocks.OAK_WOOD_BLOCKS);
+        add(ArtisanatBlocks.SPRUCE_WOOD_BLOCKS);
+        add(ArtisanatBlocks.BIRCH_WOOD_BLOCKS);
+        add(ArtisanatBlocks.JUNGLE_WOOD_BLOCKS);
+        add(ArtisanatBlocks.ACACIA_WOOD_BLOCKS);
+        add(ArtisanatBlocks.CHERRY_WOOD_BLOCKS);
+        add(ArtisanatBlocks.DARK_OAK_WOOD_BLOCKS);
+        add(ArtisanatBlocks.PALE_OAK_WOOD_BLOCKS);
+        add(ArtisanatBlocks.MANGROVE_WOOD_BLOCKS);
+        add(ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS);
+        add(ArtisanatBlocks.WARPED_HYPHAE_BLOCKS);
 
-		addDrop(ArtisanatBlocks.POLISHED_STONE);
+        add(ArtisanatBlocks.POLISHED_STONE);
 
-        addDrop(ArtisanatBlocks.COBBLESTONE_BRICKS);
-        addDrop(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS);
+        add(ArtisanatBlocks.COBBLESTONE_BRICKS);
+        add(ArtisanatBlocks.MOSSY_COBBLESTONE_BRICKS);
 
-        addDrop(ArtisanatBlocks.GRANITE_BRICKS);
-        addDrop(ArtisanatBlocks.DIORITE_BRICKS);
-        addDrop(ArtisanatBlocks.ANDESITE_BRICKS);
+        add(ArtisanatBlocks.GRANITE_BRICKS);
+        add(ArtisanatBlocks.DIORITE_BRICKS);
+        add(ArtisanatBlocks.ANDESITE_BRICKS);
 
-		addDrop(ArtisanatBlocks.SNOW_BRICKS.block(), (block) -> this.drops(block, Items.SNOWBALL, ConstantLootNumberProvider.create(4.0F)));
-		addDrop(ArtisanatBlocks.SNOW_BRICKS.slab(), (block) -> this.drops(block, Items.SNOWBALL, ConstantLootNumberProvider.create(2.0F)));
-		addDrop(ArtisanatBlocks.SNOW_BRICKS.stairs(), (block) -> this.drops(block, Items.SNOWBALL, ConstantLootNumberProvider.create(6.0F)));
-		addDrop(ArtisanatBlocks.SNOW_BRICKS.wall(), (block) -> this.drops(block, Items.SNOWBALL, ConstantLootNumberProvider.create(4.0F)));
+        add(ArtisanatBlocks.SNOW_BRICKS.block(), (block) -> this.createSingleItemTableWithSilkTouch(block, Items.SNOWBALL, ConstantValue.exactly(4.0F)));
+        add(ArtisanatBlocks.SNOW_BRICKS.slab(), (block) -> this.createSingleItemTableWithSilkTouch(block, Items.SNOWBALL, ConstantValue.exactly(2.0F)));
+        add(ArtisanatBlocks.SNOW_BRICKS.stairs(), (block) -> this.createSingleItemTableWithSilkTouch(block, Items.SNOWBALL, ConstantValue.exactly(6.0F)));
+        add(ArtisanatBlocks.SNOW_BRICKS.wall(), (block) -> this.createSingleItemTableWithSilkTouch(block, Items.SNOWBALL, ConstantValue.exactly(4.0F)));
 
-        addDrop(ArtisanatBlocks.SANDSTONE_BRICKS);
-        addDrop(ArtisanatBlocks.POLISHED_SANDSTONE);
-        addDrop(ArtisanatBlocks.RED_SANDSTONE_BRICKS);
-        addDrop(ArtisanatBlocks.POLISHED_RED_SANDSTONE);
-        addDrop(ArtisanatBlocks.SMOOTH_STONE_PAVING);
-        addDrop(ArtisanatBlocks.CHISELED_PRISMARINE);
-        addDrop(ArtisanatBlocks.PRISMARINE_BRICK_PAVING);
+        add(ArtisanatBlocks.SANDSTONE_BRICKS);
+        add(ArtisanatBlocks.POLISHED_SANDSTONE);
+        add(ArtisanatBlocks.RED_SANDSTONE_BRICKS);
+        add(ArtisanatBlocks.POLISHED_RED_SANDSTONE);
+        add(ArtisanatBlocks.SMOOTH_STONE_PAVING);
+        add(ArtisanatBlocks.CHISELED_PRISMARINE);
+        add(ArtisanatBlocks.PRISMARINE_BRICK_PAVING);
 
-        addDrop(ArtisanatBlocks.STAINED_BRICK_BLOCKS);
-        addDrop(ArtisanatBlocks.BRICK_TILE_BLOCKS);
-        addDrop(ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
+        add(ArtisanatBlocks.STAINED_BRICK_BLOCKS);
+        add(ArtisanatBlocks.BRICK_TILE_BLOCKS);
+        add(ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS);
 
-        addDrop(ArtisanatBlocks.TERRACOTTA_BLOCKS);
-        addDrop(ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
-        addDrop(ArtisanatBlocks.TERRACOTTA_BRICKS);
-        addDrop(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
+        add(ArtisanatBlocks.TERRACOTTA_BLOCKS);
+        add(ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS);
+        add(ArtisanatBlocks.TERRACOTTA_BRICKS);
+        add(ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS);
 
-        addDrop(ArtisanatBlocks.DARK_PRISMARINE_WALL);
-        addDrop(ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
+        dropSelf(ArtisanatBlocks.DARK_PRISMARINE_WALL);
+        add(ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS);
 
-        addDrop(ArtisanatBlocks.CONCRETE_BLOCKS);
-        addDrop(ArtisanatBlocks.CONCRETE_BRICKS);
+        add(ArtisanatBlocks.CONCRETE_BLOCKS);
+        add(ArtisanatBlocks.CONCRETE_BRICKS);
 
-        addDrop(ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
+        add(ArtisanatBlocks.QUARTZ_PAVING_BLOCKS);
 
-        addDrop(ArtisanatBlocks.COAL_BLOCKS);
-        addDrop(ArtisanatBlocks.IRON_BLOCKS);
-        addDrop(ArtisanatBlocks.GOLD_BLOCKS);
-        addDrop(ArtisanatBlocks.LAPIS_BLOCKS);
-        addDrop(ArtisanatBlocks.REDSTONE_BLOCKS);
-        addDrop(ArtisanatBlocks.EMERALD_BLOCKS);
-        addDrop(ArtisanatBlocks.DIAMOND_BLOCKS);
-        addDrop(ArtisanatBlocks.NETHERITE_BLOCKS);
+        add(ArtisanatBlocks.COAL_BLOCKS);
+        add(ArtisanatBlocks.IRON_BLOCKS);
+        add(ArtisanatBlocks.GOLD_BLOCKS);
+        add(ArtisanatBlocks.LAPIS_BLOCKS);
+        add(ArtisanatBlocks.REDSTONE_BLOCKS);
+        add(ArtisanatBlocks.EMERALD_BLOCKS);
+        add(ArtisanatBlocks.DIAMOND_BLOCKS);
+        add(ArtisanatBlocks.NETHERITE_BLOCKS);
 
-        addDrop(ArtisanatBlocks.UNPLATED_COPPER_BLOCKS);
-        addDrop(ArtisanatBlocks.COPPER_BRICKS);
-        addDrop(ArtisanatBlocks.COPPER_TILES);
+        add(ArtisanatBlocks.UNPLATED_COPPER_BLOCKS);
+        add(ArtisanatBlocks.COPPER_BRICKS);
+        add(ArtisanatBlocks.COPPER_TILES);
 
-        this.lootTables.forEach((id, lootTable) -> lootTable.randomSequenceId(id.getValue()));
+        this.map.forEach((id, lootTable) -> lootTable.setRandomSequence(id.identifier()));
     }
 
-    public void addDrop(WoodBlocks blocks) {
-        this.addDrop(blocks.slab(), this::slabDrops);
-        this.addDrop(blocks.stairs());
-        this.addDrop(blocks.button());
+    public void add(WoodBlocks blocks) {
+        this.add(blocks.slab(), this::createSlabItemTable);
+        this.dropSelf(blocks.stairs());
+        this.dropSelf(blocks.button());
     }
 
-    public void addDrop(BSSBlocks blocks) {
-        this.addDrop(blocks.block());
-        this.addDrop(blocks.slab(), this::slabDrops);
-        this.addDrop(blocks.stairs());
+    public void add(BSSBlocks blocks) {
+        this.dropSelf(blocks.block());
+        this.add(blocks.slab(), this::createSlabItemTable);
+        this.dropSelf(blocks.stairs());
     }
 
-    public void addDrop(SSWPBBlocks blocks) {
-        this.addDrop(blocks.slab(), this::slabDrops);
-        this.addDrop(blocks.stairs());
-        this.addDrop(blocks.wall());
-        this.addDrop(blocks.pressurePlate());
-        this.addDrop(blocks.button());
+    public void add(SSWPBBlocks blocks) {
+        this.add(blocks.slab(), this::createSlabItemTable);
+        this.dropSelf(blocks.stairs());
+        this.dropSelf(blocks.wall());
+        this.dropSelf(blocks.pressurePlate());
+        this.dropSelf(blocks.button());
     }
 
-    public void addDrop(OreBlocks blocks) {
-        this.addDrop(blocks.platedBlock());
-        this.addDrop(blocks.cutBlock());
-        this.addDrop(blocks.bricks());
-        this.addDrop(blocks.tiles());
+    public void add(OreBlocks blocks) {
+        this.dropSelf(blocks.platedBlock());
+        this.dropSelf(blocks.cutBlock());
+        this.dropSelf(blocks.bricks());
+        this.dropSelf(blocks.tiles());
     }
 
-    public void addDrop(BSSWBlocks blocks) {
-        this.addDrop(blocks.block());
-        this.addDrop(blocks.slab(), this::slabDrops);
-        this.addDrop(blocks.stairs());
-        this.addDrop(blocks.wall());
+    public void add(BSSWBlocks blocks) {
+        this.dropSelf(blocks.block());
+        this.add(blocks.slab(), this::createSlabItemTable);
+        this.dropSelf(blocks.stairs());
+        this.dropSelf(blocks.wall());
     }
 
-    public void addDrop(CopperBlocks blocks) {
+    public void add(CopperBlocks blocks) {
         for (var blockz : blocks.map().values()) {
-            this.addDrop(blockz);
+            this.dropSelf(blockz);
         }
     }
 
-    public void addDrop(StainedBSSBlocks blocks) {
+    public void add(StainedBSSBlocks blocks) {
         for (var blockz : blocks.colorMap().values()) {
-            this.addDrop(blockz);
+            this.add(blockz);
         }
     }
 
-    public void addDrop(StainedBSSWBlocks blocks) {
+    public void add(StainedBSSWBlocks blocks) {
         for (var blockz : blocks.colorMap().values()) {
-            this.addDrop(blockz);
+            this.add(blockz);
         }
     }
 
-    public void addDrop(StainedSSWPBBlocks blocks) {
+    public void add(StainedSSWPBBlocks blocks) {
         for (var blockz : blocks.colorMap().values()) {
-            this.addDrop(blockz);
+            this.add(blockz);
         }
     }
 }

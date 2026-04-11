@@ -3,11 +3,11 @@ package fr.hugman.artisanat.data.provider;
 import fr.hugman.artisanat.Artisanat;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.Util;
 
 import java.util.List;
@@ -19,31 +19,31 @@ public class ArtisanatEnglishLangProvider extends FabricLanguageProvider {
 			"of", "the", "and", "a", "an", "in", "on", "for", "to", "at", "by", "from", "with"
 	);
 
-	public ArtisanatEnglishLangProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+	public ArtisanatEnglishLangProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
 		super(dataOutput, "en_us", registryLookup);
 	}
 
 	@Override
-	public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder builder) {
+	public void generateTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder builder) {
 		this.generateAutomaticTranslations(wrapperLookup, builder);
 
 		builder.add("modmenu.descriptionTranslation.artisanat", "More building blocks! Includes new types of bricks and new shapes/colors of existing blocks!");
 	}
 
-	private void generateAutomaticTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder builder) {
-		for (var block : getRegistryEntries(wrapperLookup, RegistryKeys.BLOCK)) {
-			builder.add(block.value(), snakeToTitleCase(block.registryKey().getValue().getPath()));
+	private void generateAutomaticTranslations(HolderLookup.Provider wrapperLookup, TranslationBuilder builder) {
+		for (var block : getRegistryEntries(wrapperLookup, Registries.BLOCK)) {
+			builder.add(block.value(), snakeToTitleCase(block.key().identifier().getPath()));
 		}
 
-		for (var itemGroup : getRegistryEntries(wrapperLookup, RegistryKeys.ITEM_GROUP)) {
-			var id = itemGroup.registryKey().getValue();
-			builder.add(Util.createTranslationKey("item_group", id), snakeToTitleCase(id.getPath()));
+		for (var itemGroup : getRegistryEntries(wrapperLookup, Registries.CREATIVE_MODE_TAB)) {
+			var id = itemGroup.key().identifier();
+			builder.add(Util.makeDescriptionId("item_group", id), snakeToTitleCase(id.getPath()));
 		}
 	}
 
-	private static <O> List<RegistryEntry.Reference<O>> getRegistryEntries(RegistryWrapper.WrapperLookup wrapperLookup, RegistryKey<? extends Registry<O>> registryKey) {
-		return wrapperLookup.getOrThrow(registryKey).streamEntries()
-				.filter(entry -> entry.registryKey().getValue().getNamespace().equals(Artisanat.MOD_ID))
+	private static <O> List<Holder.Reference<O>> getRegistryEntries(HolderLookup.Provider wrapperLookup, ResourceKey<? extends Registry<O>> registryKey) {
+		return wrapperLookup.lookupOrThrow(registryKey).listElements()
+				.filter(entry -> entry.key().identifier().getNamespace().equals(Artisanat.MOD_ID))
 				.toList();
 	}
 

@@ -1,9 +1,9 @@
 package fr.hugman.artisanat.tag;
 
 import fr.hugman.artisanat.Artisanat;
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 
 public class ArtisanatItemTags {
     public static final TagKey<Item> STAINED_BRICK_BLOCKS = of("stained_brick_blocks");
@@ -58,6 +58,6 @@ public class ArtisanatItemTags {
     public static final TagKey<Item> NETHERITE_BLOCKS = of("netherite_blocks");
 
     public static TagKey<Item> of(String path) {
-        return TagKey.of(RegistryKeys.ITEM, Artisanat.id(path));
+        return TagKey.create(Registries.ITEM, Artisanat.id(path));
     }
 }

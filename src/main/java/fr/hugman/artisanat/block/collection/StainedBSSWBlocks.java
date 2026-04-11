@@ -1,9 +1,9 @@
-package fr.hugman.artisanat.block.groups;
+package fr.hugman.artisanat.block.collection;
 
 import fr.hugman.artisanat.block.helper.BlockBuilder;
 import fr.hugman.artisanat.util.CustomRegisterable;
-import net.minecraft.block.Block;
-import net.minecraft.util.DyeColor;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 
 import java.util.*;
 
@@ -37,7 +37,7 @@ public record StainedBSSWBlocks(Map<DyeColor, BSSWBlocks> colorMap) {
         public StainedBSSWBlocks register(String path) {
             var colorMap = new HashMap<DyeColor, BSSWBlocks>();
             for (DyeColor color : DyeColor.values()) {
-                String blockPath = color.getId() + "_" + path;
+                String blockPath = color.getName() + "_" + path;
                 colorMap.put(color, BSSWBlocks.of(block).register(blockPath));
             }
             return new StainedBSSWBlocks(colorMap);
