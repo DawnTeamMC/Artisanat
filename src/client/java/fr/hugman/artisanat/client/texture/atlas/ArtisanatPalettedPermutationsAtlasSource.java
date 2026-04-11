@@ -142,7 +142,8 @@ public record ArtisanatPalettedPermutationsAtlasSource(
 			Identifier permutationLocation
 	) implements SpriteRegion {
 		@Nullable
-		public SpriteContents apply(SpriteOpener spriteOpener) {
+		@Override
+		public SpriteContents load(SpriteOpener spriteOpener) {
 			Object var3;
 			try {
 				NativeImage nativeImage = this.baseImage.read().applyToCopy(this.palette.get());
