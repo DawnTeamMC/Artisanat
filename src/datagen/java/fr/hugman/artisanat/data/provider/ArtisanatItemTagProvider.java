@@ -6,10 +6,14 @@ import fr.hugman.artisanat.tag.ArtisanatItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockItemTags;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 
 public class ArtisanatItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
@@ -64,24 +68,29 @@ public class ArtisanatItemTagProvider extends FabricTagsProvider.ItemTagsProvide
         copy(ArtisanatBlockTags.NETHERITE_BLOCKS, ArtisanatItemTags.NETHERITE_BLOCKS);
 
         // Vanilla
-        copy(BlockTags.SLABS, ItemTags.SLABS);
-        copy(BlockTags.STAIRS, ItemTags.STAIRS);
-        copy(BlockTags.WALLS, ItemTags.WALLS);
-        copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
+        copy(BlockItemTags.SLABS.block(), BlockItemTags.SLABS.item());
+        copy(BlockItemTags.STAIRS.block(), BlockItemTags.STAIRS.item());
+        copy(BlockItemTags.WALLS.block(), BlockItemTags.WALLS.item());
+        copy(BlockItemTags.BUTTONS.block(), BlockItemTags.BUTTONS.item());
 
-        copy(BlockTags.WOODEN_SLABS, ItemTags.WOODEN_SLABS);
-        copy(BlockTags.WOODEN_STAIRS, ItemTags.WOODEN_STAIRS);
-        copy(BlockTags.WOODEN_BUTTONS, ItemTags.WOODEN_BUTTONS);
+        copy(BlockItemTags.WOODEN_SLABS.block(), BlockItemTags.WOODEN_SLABS.item());
+        copy(BlockItemTags.WOODEN_STAIRS.block(), BlockItemTags.WOODEN_STAIRS.item());
+        copy(BlockItemTags.WOODEN_BUTTONS.block(), BlockItemTags.WOODEN_BUTTONS.item());
 
-        valueLookupBuilder(ItemTags.NON_FLAMMABLE_WOOD).add(
-                ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.stairs().asItem(),
-                ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.slab().asItem(),
-                ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.button().asItem(),
-                ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.button().asItem(),
-                ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.button().asItem(),
-                ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.button().asItem()
-        );
+        builder(ItemTags.NON_FLAMMABLE_WOOD).add(keys(
+                ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.stairs(),
+                ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.slab(),
+                ArtisanatBlocks.CRIMSON_HYPHAE_BLOCKS.button(),
+                ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.button(),
+                ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.button(),
+                ArtisanatBlocks.WARPED_HYPHAE_BLOCKS.button()
+        ));
 
-        valueLookupBuilder(ItemTags.PIGLIN_LOVED).addTag(ArtisanatItemTags.GOLD_BLOCKS);
+        builder(ItemTags.PIGLIN_LOVED).addTag(ArtisanatItemTags.GOLD_BLOCKS);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static ResourceKey<Item>[] keys(ItemLike... items) {
+        return Arrays.stream(items).map(item -> item.asItem().builtInRegistryHolder().key()).toArray(ResourceKey[]::new);
     }
 }

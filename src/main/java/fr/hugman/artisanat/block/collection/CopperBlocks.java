@@ -48,12 +48,7 @@ public record CopperBlocks(
         }
 
         private Block makeBlock(WeatheringCopper.WeatherState level, boolean waxed, String name) {
-            var builder = new BlockBuilder(switch (level) {
-                case WeatheringCopper.WeatherState.UNAFFECTED -> Blocks.COPPER_BLOCK;
-                case WeatheringCopper.WeatherState.EXPOSED -> Blocks.EXPOSED_COPPER;
-                case WeatheringCopper.WeatherState.WEATHERED -> Blocks.WEATHERED_COPPER;
-                case WeatheringCopper.WeatherState.OXIDIZED -> Blocks.OXIDIZED_COPPER;
-            });
+            var builder = new BlockBuilder(Blocks.COPPER_BLOCK.weathering().pick(level));
 
             if (!waxed) {
                 builder.factory(s -> new WeatheringCopperFullBlock(level, s));

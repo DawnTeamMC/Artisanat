@@ -5,46 +5,19 @@ import fr.hugman.artisanat.util.CustomRegisterable;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ColorCollection;
 
 import java.util.*;
 
 public record StainedSSWPBBlocks(Map<DyeColor, SSWPBBlocks> colorMap) {
-    public static final Map<DyeColor, Block> TERRACOTTA_MAP = ImmutableMap.<DyeColor, Block>builder()
-            .put(DyeColor.WHITE, Blocks.WHITE_TERRACOTTA)
-            .put(DyeColor.ORANGE, Blocks.ORANGE_TERRACOTTA)
-            .put(DyeColor.MAGENTA, Blocks.MAGENTA_TERRACOTTA)
-            .put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_TERRACOTTA)
-            .put(DyeColor.YELLOW, Blocks.YELLOW_TERRACOTTA)
-            .put(DyeColor.LIME, Blocks.LIME_TERRACOTTA)
-            .put(DyeColor.PINK, Blocks.PINK_TERRACOTTA)
-            .put(DyeColor.GRAY, Blocks.GRAY_TERRACOTTA)
-            .put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_TERRACOTTA)
-            .put(DyeColor.CYAN, Blocks.CYAN_TERRACOTTA)
-            .put(DyeColor.PURPLE, Blocks.PURPLE_TERRACOTTA)
-            .put(DyeColor.BLUE, Blocks.BLUE_TERRACOTTA)
-            .put(DyeColor.BROWN, Blocks.BROWN_TERRACOTTA)
-            .put(DyeColor.GREEN, Blocks.GREEN_TERRACOTTA)
-            .put(DyeColor.RED, Blocks.RED_TERRACOTTA)
-            .put(DyeColor.BLACK, Blocks.BLACK_TERRACOTTA)
-            .build();
-    public static final Map<DyeColor, Block> CONCRETE_MAP = ImmutableMap.<DyeColor, Block>builder()
-            .put(DyeColor.WHITE, Blocks.WHITE_CONCRETE)
-            .put(DyeColor.ORANGE, Blocks.ORANGE_CONCRETE)
-            .put(DyeColor.MAGENTA, Blocks.MAGENTA_CONCRETE)
-            .put(DyeColor.LIGHT_BLUE, Blocks.LIGHT_BLUE_CONCRETE)
-            .put(DyeColor.YELLOW, Blocks.YELLOW_CONCRETE)
-            .put(DyeColor.LIME, Blocks.LIME_CONCRETE)
-            .put(DyeColor.PINK, Blocks.PINK_CONCRETE)
-            .put(DyeColor.GRAY, Blocks.GRAY_CONCRETE)
-            .put(DyeColor.LIGHT_GRAY, Blocks.LIGHT_GRAY_CONCRETE)
-            .put(DyeColor.CYAN, Blocks.CYAN_CONCRETE)
-            .put(DyeColor.PURPLE, Blocks.PURPLE_CONCRETE)
-            .put(DyeColor.BLUE, Blocks.BLUE_CONCRETE)
-            .put(DyeColor.BROWN, Blocks.BROWN_CONCRETE)
-            .put(DyeColor.GREEN, Blocks.GREEN_CONCRETE)
-            .put(DyeColor.RED, Blocks.RED_CONCRETE)
-            .put(DyeColor.BLACK, Blocks.BLACK_CONCRETE)
-            .build();
+    public static final Map<DyeColor, Block> TERRACOTTA_MAP = toMap(Blocks.DYED_TERRACOTTA);
+    public static final Map<DyeColor, Block> CONCRETE_MAP = toMap(Blocks.CONCRETE);
+
+    private static Map<DyeColor, Block> toMap(ColorCollection<Block> blocks) {
+        var builder = ImmutableMap.<DyeColor, Block>builder();
+        ColorCollection.zipApply(ColorCollection.VALUES, blocks, builder::put);
+        return builder.build();
+    }
 
     public static Builder of(Map<DyeColor, Block> baseBlockColorMap) {
         return new Builder(baseBlockColorMap);

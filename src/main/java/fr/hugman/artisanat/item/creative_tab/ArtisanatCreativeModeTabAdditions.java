@@ -63,19 +63,19 @@ public class ArtisanatCreativeModeTabAdditions {
             addCopperBlocks(entries);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COLORED_BLOCKS).register(entries -> {
-            add(entries, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS, Blocks.PINK_CARPET);
-            add(entries, ArtisanatBlocks.STAINED_BRICK_BLOCKS, Blocks.PINK_CARPET);
+            add(entries, ArtisanatBlocks.STAINED_BRICK_TILE_BLOCKS, Blocks.CARPET.pink());
+            add(entries, ArtisanatBlocks.STAINED_BRICK_BLOCKS, Blocks.CARPET.pink());
 
-            add(entries, ArtisanatBlocks.TERRACOTTA_BRICKS, Blocks.PINK_TERRACOTTA);
+            add(entries, ArtisanatBlocks.TERRACOTTA_BRICKS, Blocks.DYED_TERRACOTTA.pink());
             add(entries, ArtisanatBlocks.STAINED_TERRACOTTA_BRICKS, ArtisanatBlocks.TERRACOTTA_BRICKS.wall());
             add(entries, ArtisanatBlocks.TERRACOTTA_BLOCKS, Blocks.TERRACOTTA);
             add(entries, ArtisanatBlocks.STAINED_TERRACOTTA_BLOCKS, StainedSSWPBBlocks.TERRACOTTA_MAP);
-            add(entries, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS, Blocks.PINK_CONCRETE_POWDER);
+            add(entries, ArtisanatBlocks.STAINED_DARK_PRISMARINE_BLOCKS, Blocks.CONCRETE_POWDER.pink());
 
-            add(entries, ArtisanatBlocks.CONCRETE_BRICKS, Blocks.PINK_CONCRETE);
+            add(entries, ArtisanatBlocks.CONCRETE_BRICKS, Blocks.CONCRETE.pink());
             add(entries, ArtisanatBlocks.CONCRETE_BLOCKS, StainedSSWPBBlocks.CONCRETE_MAP);
 
-            add(entries, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS, Blocks.PINK_CONCRETE_POWDER);
+            add(entries, ArtisanatBlocks.QUARTZ_PAVING_BLOCKS, Blocks.CONCRETE_POWDER.pink());
         });
 
     }
@@ -126,26 +126,18 @@ public class ArtisanatCreativeModeTabAdditions {
         WeatheringCopper.WeatherState[] levels = WeatheringCopper.WeatherState.values();
 
         // Unplated
-        Block[] baseBlocks = {
-                Blocks.COPPER_BLOCK, Blocks.EXPOSED_COPPER, Blocks.WEATHERED_COPPER, Blocks.OXIDIZED_COPPER,
-                Blocks.WAXED_COPPER_BLOCK, Blocks.WAXED_EXPOSED_COPPER, Blocks.WAXED_WEATHERED_COPPER, Blocks.WAXED_OXIDIZED_COPPER
-        };
         for (int i = 0; i < levels.length; i++) {
-            output.insertAfter(baseBlocks[i], ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], false));
-            output.insertAfter(baseBlocks[i + 4], ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], true));
+            output.insertAfter(Blocks.COPPER_BLOCK.weathering().pick(levels[i]), ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], false));
+            output.insertAfter(Blocks.COPPER_BLOCK.waxed().pick(levels[i]), ArtisanatBlocks.UNPLATED_COPPER_BLOCKS.get(levels[i], true));
         }
 
         // Bricks & Tiles
-        Block[] chiseledBlocks = {
-                Blocks.CHISELED_COPPER, Blocks.EXPOSED_CHISELED_COPPER, Blocks.WEATHERED_CHISELED_COPPER, Blocks.OXIDIZED_CHISELED_COPPER,
-                Blocks.WAXED_CHISELED_COPPER, Blocks.WAXED_EXPOSED_CHISELED_COPPER, Blocks.WAXED_WEATHERED_CHISELED_COPPER, Blocks.WAXED_OXIDIZED_CHISELED_COPPER
-        };
         for (int i = 0; i < levels.length; i++) {
-            output.insertAfter(chiseledBlocks[i],
+            output.insertAfter(Blocks.CHISELED_COPPER.weathering().pick(levels[i]),
                     ArtisanatBlocks.COPPER_BRICKS.get(levels[i], false),
                     ArtisanatBlocks.COPPER_TILES.get(levels[i], false)
             );
-            output.insertAfter(chiseledBlocks[i + 4],
+            output.insertAfter(Blocks.CHISELED_COPPER.waxed().pick(levels[i]),
                     ArtisanatBlocks.COPPER_BRICKS.get(levels[i], true),
                     ArtisanatBlocks.COPPER_TILES.get(levels[i], true)
             );
