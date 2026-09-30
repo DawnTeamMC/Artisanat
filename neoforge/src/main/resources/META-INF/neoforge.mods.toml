@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "PolyForm Shield 1.0.0"
+issueTrackerURL = "https://github.com/DawnTeamMC/Artisanat/issues"
+
+[[mods]]
+modId = "artisanat"
+version = "${version}"
+displayName = "Artisanat"
+iconFile = "assets/artisanat/textures/logo.png"
+authors = "Hugman"
+displayURL = "https://dawnteammc.github.io/artisanat"
+description = '''A mod that adds a ton of new decorative blocks, such as new bricks, stairs and slabs, colorful variants and more.'''
+
+[[dependencies.artisanat]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoforge_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.artisanat]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"

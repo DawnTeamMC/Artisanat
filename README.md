@@ -61,16 +61,15 @@ Artisanat currently adds 682 blocks to the game, including:
 
 ## 📦 Download
 
-We use [CurseForge](https://www.curseforge.com/minecraft/mc-mods/artisanat) and [Modrinth](https://modrinth.com/mod/artisanat) to publish **stable builds** of Artisanat for Minecraft.
+We use [CurseForge](https://www.curseforge.com/minecraft/mc-mods/artisanat) and [Modrinth](https://modrinth.com/mod/artisanat) to publish **stable builds** of Artisanat for Minecraft, for both **Fabric** and **NeoForge**.
 
 You can download the latest stable builds from both pages without signing up for an account, although [downloading on CurseForge](https://www.curseforge.com/minecraft/mc-mods/artisanat) is currently preferred.
 
 ### Required mods
 
-⚠ Artisanat **needs** the following mods to be installed:
+⚠ On **Fabric**, Artisanat **requires** Fabric API to be installed: [GitHub](https://github.com/FabricMC/fabric) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-api) / [Modrinth](https://modrinth.com/mod/fabric-api)
 
-- Fabric API: [GitHub](https://github.com/FabricMC/fabric) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/fabric-api) / [Modrinth](https://modrinth.com/mod/fabric-api)
-- Dawn API: [GitHub](https://github.com/DawnTeamMC/DawnAPI) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/dawn) / [Modrinth](https://modrinth.com/mod/dawn)
+On **NeoForge**, Artisanat has no other dependencies.
 
 ## 🐛 Reporting bugs
 

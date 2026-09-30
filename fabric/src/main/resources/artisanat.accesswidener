@@ -1,0 +1,3 @@
+accessWidener	v1	official
+# Keep in sync with neoforge/src/main/resources/META-INF/accesstransformer.cfg
+accessible	method	net/minecraft/world/level/block/state/properties/BlockSetType	register	(Lnet/minecraft/world/level/block/state/properties/BlockSetType;)Lnet/minecraft/world/level/block/state/properties/BlockSetType;

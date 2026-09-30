@@ -13,6 +13,16 @@ Before getting started, you'll need to install the latest 64-bit version of the 
 
 We strongly recommend you use [IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/) when making code contributions. While other IDEs may work (in theory, anyway), you will often run into issues and other roadblocks. If you're not familiar with setting up IntelliJ IDEA for use with Fabric projects, the community of Fabric has created a wiki which runs over a lot of the basics of Fabric [here](https://fabricmc.net/wiki/doku.php).
 
+### Project layout
+
+Artisanat is built for both Fabric and NeoForge from a single source:
+
+- `common`: the shared code and assets, compiled against vanilla Minecraft only. Anything loader-specific goes through `fr.hugman.artisanat.platform.ArtisanatPlatform`, or a registrar callback that each loader passes.
+- `fabric`: the Fabric entrypoints, platform implementation, `fabric.mod.json` and the data generators. Run `./gradlew :fabric:runDatagen` to regenerate `common/src/main/generated`, which both loaders ship.
+- `neoforge`: the NeoForge entrypoints, platform implementation and `neoforge.mods.toml`.
+
+The Fabric access widener (`fabric/src/main/resources/artisanat.accesswidener`) and the NeoForge access transformer (`neoforge/src/main/resources/META-INF/accesstransformer.cfg`) must be kept in sync. The common project compiles against the access transformer.
+
 If you have any questions or issues, or would just like to discuss Artisanat development, feel free to [join us on Discord](https://discord.gg/8ksTVJu).
 
 ### Creating pull requests
